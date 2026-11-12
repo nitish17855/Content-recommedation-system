@@ -1,0 +1,333 @@
+[
+  {
+    "service_id": "seo-core",
+    "name": "Search Engine Optimization (SEO)",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Comprehensive SEO including keyword research, on-page optimization, technical audit fixes, link building and monthly reporting.",
+    "india_pricing": "Silver ₹6,999/mo · Gold ₹11,999/mo · Platinum ₹19,999/mo",
+    "customer_problems": [
+      "Low Google organic rankings and visibility",
+      "Insufficient qualified organic traffic and enquiries",
+      "Dependence on paid ads for leads"
+    ],
+    "target_audiences": ["Startups", "Local businesses", "SMEs", "B2B & SaaS companies", "E-commerce brands"],
+    "business_outcomes": ["Higher search visibility", "Qualified organic traffic", "Consistent inbound leads"],
+    "verified_claims": ["No long-term lock-in contracts (.com)"],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/",
+      "https://nspglobalservices.in/seo-packages/"
+    ]
+  },
+  {
+    "service_id": "technical-seo",
+    "name": "Technical SEO",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Improving website crawlability, indexing, Core Web Vitals, schema and site architecture.",
+    "india_pricing": "Silver ₹6,999/mo · Gold ₹11,999/mo · Platinum ₹18,999/mo",
+    "customer_problems": [
+      "Pages not getting crawled or indexed properly",
+      "Slow site speed or Core Web Vitals bottlenecks",
+      "Site migration or traffic drops after updates"
+    ],
+    "target_audiences": ["SaaS companies", "E-commerce stores", "Growing & enterprise websites"],
+    "business_outcomes": ["Healthy crawl/index coverage", "Better organic stability during algorithm updates"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/technical-seo/",
+      "https://nspglobalservices.in/technical-seo-packages/"
+    ]
+  },
+  {
+    "service_id": "keyword-research",
+    "name": "Keyword Research & SEO Strategy",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Search-intent and competitor keyword analysis to identify commercial and informational ranking opportunities.",
+    "india_pricing": "Silver ₹4,999/mo (25 keywords) · Gold ₹9,999/mo (50 keywords) · Platinum ₹14,999/mo (100 keywords)",
+    "customer_problems": [
+      "Targeting wrong or low-intent keywords",
+      "Content failing to attract buyers"
+    ],
+    "target_audiences": ["Startups", "SMEs", "SaaS & e-commerce marketers"],
+    "business_outcomes": ["Clear topical roadmap", "Higher-converting organic search terms"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/seo-keywords-research/",
+      "https://nspglobalservices.in/keyword-research-packages/"
+    ]
+  },
+  {
+    "service_id": "link-building",
+    "name": "Link Building & Authority",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Digital PR, authoritative backlinks, entity signals and brand citations.",
+    "india_pricing": "Silver ₹3,999/mo (10 links) · Gold ₹7,999/mo (25 links) · Platinum ₹14,999/mo (50+ links)",
+    "customer_problems": [
+      "Low domain authority compared to competitors",
+      "Pages stuck outside top search positions"
+    ],
+    "target_audiences": ["Growing brands", "SaaS companies", "Competitive niches"],
+    "business_outcomes": ["Stronger domain authority", "Better search and AI citation trust"],
+    "verified_claims": ["No black-hat tactics (.in)"],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/link-building-services/",
+      "https://nspglobalservices.in/link-building-packages/"
+    ]
+  },
+  {
+    "service_id": "enterprise-seo",
+    "name": "Enterprise SEO",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Large-scale multi-page, multi-site and competitive SEO architecture and execution.",
+    "india_pricing": "Silver ₹24,999/mo · Gold ₹39,999/mo · Platinum ₹59,999/mo",
+    "customer_problems": [
+      "Complex multi-category indexing and internal linking at scale",
+      "Siloed SEO execution across large teams"
+    ],
+    "target_audiences": ["Mid-market & large enterprises", "Multi-location & e-commerce leaders"],
+    "business_outcomes": ["Scalable organic market share"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/",
+      "https://nspglobalservices.in/enterprise-seo-packages/"
+    ]
+  },
+  {
+    "service_id": "local-ecommerce-international-seo",
+    "name": "Local, E-commerce & International SEO",
+    "category": "SEO",
+    "status_india": "confirmed_india",
+    "description": "Location-based GBP/map SEO across Indian cities, product/category Shopify & marketplace SEO, and multilingual international SEO.",
+    "india_pricing": "Custom / bundled in SEO packages (UK reference: Ecommerce £399–£1,499/mo)",
+    "customer_problems": [
+      "Poor local map visibility across target cities",
+      "Low organic sales on product/category pages"
+    ],
+    "target_audiences": ["Indian local/multi-city businesses", "D2C & e-commerce brands", "Exporting SaaS/brands"],
+    "business_outcomes": ["Local enquiries", "Product search revenue"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-services/local-seo/",
+      "https://www.nspglobalservices.com/seo-services/ecommerce-seo/",
+      "https://www.nspglobalservices.com/seo-services/international-seo/",
+      "https://nspglobalservices.in/our-locations/"
+    ]
+  },
+  {
+    "service_id": "geo-aeo-ai-search",
+    "name": "AI Search Optimization (GEO / AEO / ChatGPT / Perplexity / AI Overviews)",
+    "category": "AI Search",
+    "status_india": "needs_confirmation",
+    "description": "Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), entity optimization, answer-first content, structured schema and AI visibility audits across ChatGPT, Gemini, Perplexity and Google AI Overviews.",
+    "india_pricing": "unknown (not yet published on .in; listed on .com without fixed INR tier)",
+    "customer_problems": [
+      "Brand invisible when buyers ask ChatGPT, Gemini or Perplexity for recommendations",
+      "Competitors getting cited in Google AI Overviews instead",
+      "Zero-click AI answers reducing traditional website clicks"
+    ],
+    "target_audiences": ["B2B SaaS founders", "E-commerce & D2C brands", "Service businesses"],
+    "business_outcomes": ["AI brand mentions and citations", "Higher share of AI-generated recommendations"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/ai-search-optimization-services/",
+      "https://www.nspglobalservices.com/generative-engine-optimization-services/",
+      "https://www.nspglobalservices.com/answer-engine-optimization-services/",
+      "https://www.nspglobalservices.com/google-ai-overview-optimization/"
+    ]
+  },
+  {
+    "service_id": "seo-ai-rank-tracking",
+    "name": "SEO & AI Visibility Rank Tracking",
+    "category": "AI Search",
+    "status_india": "needs_confirmation",
+    "description": "Productized daily tracking for Google keyword rankings and AI search visibility.",
+    "india_pricing": "unknown on .in (UK reference: £99–£599/mo + VAT with 14-day free trial)",
+    "customer_problems": [
+      "No visibility into whether brand appears in AI search vs Google",
+      "Slow or opaque agency reporting"
+    ],
+    "target_audiences": ["Founders", "Marketing managers", "In-house SEO teams"],
+    "business_outcomes": ["Transparent daily search and AI visibility tracking"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/seo-rank-tracking/",
+      "https://nspglobalservices.in/seo-rank-tracking/"
+    ]
+  },
+  {
+    "service_id": "ai-commerce-solutions",
+    "name": "AI Commerce & AI Solutions (AI Shopify, ChatGPT Ads, Agentic Commerce, AI CRO, Perplexity Ads)",
+    "category": "AI Solutions",
+    "status_india": "needs_confirmation",
+    "description": "AI readiness for e-commerce stores, agentic commerce readiness, AI-powered CRO, ChatGPT Ads and Perplexity Ads strategy.",
+    "india_pricing": "unknown on .in (custom on .com)",
+    "customer_problems": [
+      "E-commerce stores unprepared for AI shopping agents and emerging ad formats",
+      "Low conversion rates on high-intent traffic"
+    ],
+    "target_audiences": ["Shopify & WooCommerce D2C brands", "Online retailers"],
+    "business_outcomes": ["Higher store conversion", "Early positioning on emerging AI ad/shopping channels"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/web-services/ai-solutions/",
+      "https://www.nspglobalservices.com/web-services/ai-solutions/agentic-commerce-readiness/",
+      "https://www.nspglobalservices.com/web-services/ai-solutions/ai-shopify/"
+    ]
+  },
+  {
+    "service_id": "ppc-paid-media",
+    "name": "PPC & Paid Advertising (Google, Meta, LinkedIn, YouTube, Programmatic)",
+    "category": "Paid Media",
+    "status_india": "confirmed_india",
+    "description": "Google Search/Shopping/PMax, Meta Ads, LinkedIn Ads, YouTube Ads, remarketing and programmatic advertising.",
+    "india_pricing": "Silver ₹5,999/mo (1 campaign) · Gold ₹12,999/mo (up to 3 campaigns) · Platinum ₹24,999/mo (unlimited)",
+    "customer_problems": [
+      "Wasted ad spend and high CAC",
+      "Need immediate qualified leads while SEO compounds"
+    ],
+    "target_audiences": ["Startups", "E-commerce/D2C", "B2B SaaS", "Local service businesses"],
+    "business_outcomes": ["Measurable ROAS", "Qualified enquiries and sales"],
+    "verified_claims": ["Google & Meta Partner (.com)"],
+    "source_urls": [
+      "https://www.nspglobalservices.com/ppc-services/",
+      "https://www.nspglobalservices.com/programmatic-advertising-agency/",
+      "https://nspglobalservices.in/ppc-advertising-packages/"
+    ]
+  },
+  {
+    "service_id": "content-marketing",
+    "name": "Content Marketing & SEO Copywriting",
+    "category": "Content",
+    "status_india": "confirmed_india",
+    "description": "Content strategy, SEO blog writing, website copywriting, product descriptions, content audits, repurposing and AEO/GEO-structured content.",
+    "india_pricing": "Silver ₹5,999/mo · Gold ₹11,999/mo · Platinum ₹18,999/mo",
+    "customer_problems": [
+      "Thin or generic AI-written blog posts failing to rank or convert",
+      "Lack of topical authority and answer-ready content"
+    ],
+    "target_audiences": ["SaaS companies", "B2B brands", "E-commerce stores", "SMEs"],
+    "business_outcomes": ["Topical authority", "Higher organic & AI search discovery", "Better conversion copy"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/content-marketing-services/",
+      "https://nspglobalservices.in/content-marketing-packages/"
+    ]
+  },
+  {
+    "service_id": "smm-and-smo",
+    "name": "Social Media Marketing (SMM) & Optimization (SMO)",
+    "category": "Social Media",
+    "status_india": "confirmed_india",
+    "description": "Social media strategy, regular content creation, platform optimization and audience engagement across Instagram, LinkedIn, Facebook and X.",
+    "india_pricing": "SMM: Silver ₹7,499/mo · Gold ₹13,999/mo · Platinum ₹21,999/mo | SMO: Silver ₹4,999/mo · Gold ₹9,999/mo · Platinum ₹14,999/mo",
+    "customer_problems": [
+      "Inconsistent or irrelevant social presence",
+      "Low engagement and brand recall on social channels"
+    ],
+    "target_audiences": ["Indian startups", "SMEs", "D2C & B2B brands"],
+    "business_outcomes": ["Consistent brand relevance", "Audience engagement and trust"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/services/",
+      "https://nspglobalservices.in/smm-packages/",
+      "https://nspglobalservices.in/smo-packages/"
+    ]
+  },
+  {
+    "service_id": "web-design-dev-cro",
+    "name": "Website Design, Development & Conversion Rate Optimization (CRO)",
+    "category": "Web & Conversion",
+    "status_india": "confirmed_india",
+    "description": "Responsive SEO-ready websites, WordPress/Shopify stores, landing pages, website redesigns, CRO and ongoing maintenance.",
+    "india_pricing": "Silver ₹7,999 (1–3 pages) · Gold ₹14,999 (up to 7 pages) · Platinum ₹24,999 (10+ pages)",
+    "customer_problems": [
+      "High traffic with poor lead/checkout conversion",
+      "Outdated, slow or non-SEO-friendly websites"
+    ],
+    "target_audiences": ["Startups", "SMEs", "E-commerce stores", "B2B SaaS"],
+    "business_outcomes": ["Faster, conversion-ready websites", "Lower bounce rate and higher enquiry conversion"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/design-development/",
+      "https://nspglobalservices.in/website-design-packages/"
+    ]
+  },
+  {
+    "service_id": "branding",
+    "name": "Branding & Visual Identity",
+    "category": "Branding",
+    "status_india": "confirmed_india",
+    "description": "Brand strategy, positioning, voice/messaging, logo design, visual identity and brand guidelines.",
+    "india_pricing": "Custom quote",
+    "customer_problems": [
+      "Indistinguishable positioning in crowded markets",
+      "Inconsistent brand voice across website and social"
+    ],
+    "target_audiences": ["New startups", "Rebranding SMEs", "Growth-stage companies"],
+    "business_outcomes": ["Clear market differentiation and brand trust"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/brandingagency/",
+      "https://nspglobalservices.in/branding-services/"
+    ]
+  },
+  {
+    "service_id": "email-marketing",
+    "name": "Email Marketing",
+    "category": "Digital Marketing",
+    "status_india": "confirmed_india",
+    "description": "Lifecycle and promotional email campaign planning and execution.",
+    "india_pricing": "Silver ₹4,999/mo · Gold ₹8,999/mo · Platinum ₹14,999/mo",
+    "customer_problems": [
+      "Low repeat engagement or trial-to-paid conversion"
+    ],
+    "target_audiences": ["SaaS", "E-commerce", "SMEs"],
+    "business_outcomes": ["Higher retention and pipeline nurture"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://nspglobalservices.in/email-marketing-packages/",
+      "https://nspglobalservices.in/saas-email-marketing/"
+    ]
+  },
+  {
+    "service_id": "linkedin-lead-engine-pr",
+    "name": "LinkedIn Lead Engine & Strategic PR (India/SaaS)",
+    "category": "B2B Growth",
+    "status_india": "confirmed_india",
+    "description": "Executive LinkedIn profile optimization, 5 posts/week content, engagement, outreach and appointment setting (.in), plus strategic PR.",
+    "india_pricing": "LinkedIn Lead Engine: Starter ₹22,000/mo · Growth ₹35,000/mo · Full Engine ₹52,000/mo",
+    "customer_problems": [
+      "B2B founders struggling to generate qualified pipeline on LinkedIn"
+    ],
+    "target_audiences": ["Indian B2B SaaS founders", "Consultancies", "Enterprise service firms"],
+    "business_outcomes": ["Consistent B2B thought leadership and booked sales calls"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://nspglobalservices.in/linkedin-lead-engine/",
+      "https://nspglobalservices.in/pr-services/"
+    ]
+  },
+  {
+    "service_id": "translation-and-apps",
+    "name": "Translation Services, Mobile Apps & Custom Software",
+    "category": "Specialized / Tech",
+    "status_india": "needs_confirmation",
+    "description": "Human translation (.com £0.09/word), mobile app development and custom software engineering.",
+    "india_pricing": "unknown on .in",
+    "customer_problems": [
+      "Multilingual market expansion and custom software needs"
+    ],
+    "target_audiences": ["International brands", "Growth businesses"],
+    "business_outcomes": ["Localized market reach and custom digital products"],
+    "verified_claims": [],
+    "source_urls": [
+      "https://www.nspglobalservices.com/translation-services/",
+      "https://www.nspglobalservices.com/design-development/"
+    ]
+  }
+]
+

@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Diwali",
+    "category": "cultural",
+    "geography": ["India"],
+    "date_type": "variable_annual",
+    "preparation_window_days": 21,
+    "relevant_services": ["seo-core", "local-ecommerce-international-seo", "ppc-paid-media", "content-marketing", "web-design-dev-cro"],
+    "angle_guidance": "Connect only via festive e-commerce search surges, D2C ad competition or local business discovery — never generic Happy Diwali greetings.",
+    "status": "verify_each_year"
+  },
+  {
+    "name": "Holi",
+    "category": "cultural",
+    "geography": ["India"],
+    "date_type": "variable_annual",
+    "preparation_window_days": 14,
+    "relevant_services": ["branding", "smm-and-smo", "ppc-paid-media"],
+    "angle_guidance": "Only recommend if tied to D2C festive campaigns, creative brand storytelling or ad fatigue insights.",
+    "status": "verify_each_year"
+  },
+  {
+    "name": "Eid",
+    "category": "cultural",
+    "geography": ["India", "Global"],
+    "date_type": "variable_annual",
+    "preparation_window_days": 14,
+    "relevant_services": ["local-ecommerce-international-seo", "ppc-paid-media", "content-marketing"],
+    "angle_guidance": "Retail/festive search demand or regional commerce insights only; handle cultural sensitivity with care.",
+    "status": "verify_each_year"
+  },
+  {
+    "name": "Republic Day",
+    "category": "national",
+    "geography": ["India"],
+    "date_type": "fixed_annual",
+    "month_day": "01-26",
+    "preparation_window_days": 14,
+    "relevant_services": ["ppc-paid-media", "local-ecommerce-international-seo", "branding"],
+    "angle_guidance": "Republic Day e-commerce sales / Indian digital business growth stories; avoid hollow flag-waving.",
+    "status": "active"
+  },
+  {
+    "name": "Independence Day",
+    "category": "national",
+    "geography": ["India"],
+    "date_type": "fixed_annual",
+    "month_day": "08-15",
+    "preparation_window_days": 14,
+    "relevant_services": ["branding", "content-marketing", "local-ecommerce-international-seo"],
+    "angle_guidance": "Made-in-India / Indian SaaS & SME global digital reach stories; avoid generic greetings.",
+    "status": "active"
+  },
+  {
+    "name": "Indian Union Budget",
+    "category": "business",
+    "geography": ["India"],
+    "date_type": "announced_annual",
+    "preparation_window_days": 14,
+    "relevant_services": ["content-marketing", "seo-core", "ppc-paid-media", "linkedin-lead-engine-pr"],
+    "angle_guidance": "SME/startup digital budgets, tech/AI policy impact, and fintech/B2B search demand spikes.",
+    "status": "verify_announcement"
+  },
+  {
+    "name": "Indian Festive E-commerce Sale Season (Flipkart Big Billion Days / Amazon Great Indian Festival)",
+    "category": "ecommerce",
+    "geography": ["India"],
+    "date_type": "announced_annual",
+    "preparation_window_days": 28,
+    "relevant_services": ["local-ecommerce-international-seo", "ppc-paid-media", "web-design-dev-cro", "ai-commerce-solutions"],
+    "angle_guidance": "D2C landing page speed/CRO, shopping feed SEO, rising festive CPCs and AI shopping discovery.",
+    "status": "verify_announcement"
+  },
+  {
+    "name": "IPL Season",
+    "category": "cultural_sports",
+    "geography": ["India"],
+    "date_type": "announced_annual",
+    "preparation_window_days": 14,
+    "relevant_services": ["ppc-paid-media", "smm-and-smo", "branding", "content-marketing"],
+    "angle_guidance": "Second-screen consumer attention, CTV/programmatic ad spend lessons, brand moment-marketing execution.",
+    "status": "verify_announcement"
+  },
+  {
+    "name": "Black Friday & Cyber Monday",
+    "category": "ecommerce",
+    "geography": ["Global", "India"],
+    "date_type": "variable_annual",
+    "preparation_window_days": 21,
+    "relevant_services": ["local-ecommerce-international-seo", "ppc-paid-media", "web-design-dev-cro", "email-marketing"],
+    "angle_guidance": "Relevant for Indian SaaS/D2C selling globally and Indian e-commerce discounting/conversion prep.",
+    "status": "verify_each_year"
+  },
+  {
+    "name": "Google I/O",
+    "category": "industry",
+    "geography": ["Global", "India"],
+    "date_type": "announced_annual",
+    "preparation_window_days": 7,
+    "relevant_services": ["seo-core", "geo-aeo-ai-search", "ppc-paid-media", "ai-commerce-solutions"],
+    "angle_guidance": "Translate Search/AI/Gemini/Ads announcements into practical implications for Indian businesses.",
+    "status": "verify_announcement"
+  },
+  {
+    "name": "Google Search Core Updates",
+    "category": "industry",
+    "geography": ["Global", "India"],
+    "date_type": "ad_hoc_recurring",
+    "preparation_window_days": 0,
+    "relevant_services": ["seo-core", "technical-seo", "content-marketing"],
+    "angle_guidance": "Calm, evidence-backed breakdown of who won/lost and why thin AI content gets hit.",
+    "status": "monitor_via_feeds"
+  }
+]
+

@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-11-12T07:01:51.999Z",
+  "model": "gemini-3.5-flash-lite",
+  "ideas_count": 4,
+  "ideas": [
+    {
+      "concept": "Decoding the 'Crawled - Currently Not Indexed' dilemma for Indian website owners",
+      "relevant_service": "Technical SEO",
+      "target_audience": "SaaS companies, e-commerce stores, and growing Indian websites",
+      "why_timely": "Google's John Mueller recently reiterated that 'Crawled/Discovered - Currently Not Indexed' status often signals a site quality issue rather than just a crawling queue delay.",
+      "creative_direction": "Break down technical search console metrics into practical, easy-to-understand explanations for in-house teams. Focus on how content depth and quality impact crawl prioritization without making guarantees.",
+      "suggested_platform": "LinkedIn",
+      "suggested_format": "Carousel",
+      "objective": "Educate technical decision-makers on diagnosing site indexing bottlenecks and positioning NSP's technical auditing expertise.",
+      "supporting_source_urls": [
+        "https://www.seroundtable.com/google-crawled-discovered-currently-not-indexed-42507.html"
+      ]
+    },
+    {
+      "concept": "Safeguarding origin servers and Googlebot when migrating to a CDN",
+      "relevant_service": "Technical SEO",
+      "target_audience": "Growing and enterprise web development teams in India",
+      "why_timely": "Google Search Central published recent technical guidance addressing how to migrate to a Content Delivery Network without overwhelming origin servers or accidentally blocking Googlebot.",
+      "creative_direction": "Highlight technical best practices for web architecture upgrades, focusing on maintaining search engine crawl accessibility during infrastructure changes.",
+      "suggested_platform": "LinkedIn",
+      "suggested_format": "Infographic / Text Post",
+      "objective": "Establish authority in complex enterprise technical SEO and website infrastructure management.",
+      "supporting_source_urls": [
+        "https://developers.google.com/search/blog/2026/11/crawling-cdn"
+      ]
+    },
+    {
+      "concept": "Navigating Google Ads Customer Journey Insights and Performance Max page feeds",
+      "relevant_service": "PPC & Paid Advertising (Google, Meta, LinkedIn, YouTube, Programmatic)",
+      "target_audience": "Digital marketing managers and performance marketers across India",
+      "why_timely": "Google Ads recently introduced reporting updates including the Customer Journey Insights Overview page pilot and clarified Performance Max page feed functionalities.",
+      "creative_direction": "Discuss how marketers can utilize updated attribution transparency to understand how campaigns move users across different conversion journey stages.",
+      "suggested_platform": "LinkedIn",
+      "suggested_format": "Short-form video script / Carousel",
+      "objective": "Demonstrate up-to-date platform expertise in paid media optimization and funnel transparency.",
+      "supporting_source_urls": [
+        "https://www.seroundtable.com/google-ads-customer-journey-insights-42510.html",
+        "https://www.seroundtable.com/google-ads-performance-max-page-feeds-update-42503.html"
+      ]
+    },
+    {
+      "concept": "Managing global brand lists across regional marketing campaigns",
+      "relevant_service": "PPC & Paid Advertising (Google, Meta, LinkedIn, YouTube, Programmatic)",
+      "target_audience": "E-commerce brands and multi-location businesses managing international or multi-region ad spends",
+      "why_timely": "Google Ads updated its brand settings help documentation, emphasizing the use of single, global canonical brands within its brand library rather than disparate regional fragments.",
+      "creative_direction": "Provide a practical walkthrough on structuring brand lists correctly within PPC dashboards to ensure accurate ad delivery control.",
+      "suggested_platform": "LinkedIn",
+      "suggested_format": "Document / PDF Carousel",
+      "objective": "Provide actionable account management insights to performance marketers handling multi-market campaigns.",
+      "supporting_source_urls": [
+        "https://www.seroundtable.com/google-ads-brand-lists-library-42506.html"
+      ]
+    }
+  ]
+}

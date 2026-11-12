@@ -1,0 +1,71 @@
+{
+  "report_date": "2026-11-11",
+  "evaluation_instructions": "Review each recommendation and record decision (Accept | Revise | Reject) plus reason (Relevant | Too generic | Forced service connection | Too late | Weak evidence | Not creative enough | Risky | Not actionable). Owner acceptance measures selection only, not post performance.",
+  "pipeline_reviews": [
+    {
+      "index": 1,
+      "title": "The Invisible Gatekeeper: CDN vs. Googlebot",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "title": "Performance Max Page Feeds: Beyond the Automated Default",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "title": "The Quality Filter Metaphor",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "title": "Local Nuance vs. Global Canonical Brands",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    }
+  ],
+  "baseline_reviews": [
+    {
+      "index": 1,
+      "concept": "Decoding the 'Crawled - Not Indexed' Dilemma: Quality Over Quantity in Technical SEO",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "concept": "Mapping the Conversion Journey: Moving Beyond Last-Click Attribution in PPC",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "concept": "CDN Migration & SEO: Protecting Googlebot While Scaling Speed",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "concept": "Managing Global Brand Lists: Why Unified Canonical Settings Matter for Multi-Region Ads",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "concept": "Balancing AI Execution with Human Strategy in Content Operations",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    }
+  ]
+}

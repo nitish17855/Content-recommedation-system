@@ -1,0 +1,4071 @@
+{
+  "generated_at": "2026-11-11T20:49:51.085Z",
+  "lookback_days": 14,
+  "source_runs": [
+    {
+      "sourceId": "google-search-central",
+      "sourceName": "Google Search Central Blog",
+      "status": "ok",
+      "fetchedCount": 10,
+      "inWindowCount": 3
+    },
+    {
+      "sourceId": "google-ads-dev",
+      "sourceName": "Google Ads Developer Blog",
+      "status": "ok",
+      "fetchedCount": 25,
+      "inWindowCount": 5
+    },
+    {
+      "sourceId": "et-brandequity-marketing",
+      "sourceName": "ET BrandEquity Marketing",
+      "status": "ok",
+      "fetchedCount": 19,
+      "inWindowCount": 19
+    },
+    {
+      "sourceId": "inc42",
+      "sourceName": "Inc42",
+      "status": "ok",
+      "fetchedCount": 24,
+      "inWindowCount": 24
+    },
+    {
+      "sourceId": "seroundtable",
+      "sourceName": "Search Engine Roundtable",
+      "status": "ok",
+      "fetchedCount": 15,
+      "inWindowCount": 15
+    },
+    {
+      "sourceId": "et-brandequity-digital",
+      "sourceName": "ET BrandEquity Digital",
+      "status": "ok",
+      "fetchedCount": 20,
+      "inWindowCount": 20
+    }
+  ],
+  "total_signals": 86,
+  "total_clusters": 82,
+  "selected_candidate_ids": [
+    "evt_008",
+    "evt_009",
+    "evt_012",
+    "evt_024",
+    "evt_060",
+    "evt_081",
+    "evt_046",
+    "evt_032"
+  ],
+  "clusters": [
+    {
+      "event_id": "evt_001",
+      "cluster_title": "Google Ads API Version 26.2 Now Out Available",
+      "signal_ids": [
+        "sig_052"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_052",
+          "source_id": "seroundtable",
+          "title": "Google Ads API Version 26.2 Now Out Available",
+          "url": "https://www.seroundtable.com/google-ads-api-version-262-42517.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T20:45:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google Ads has just released a minor update to its Google Ads API - version 26.2. This update touches on assets, campaigns, reporting, and more general updates.",
+          "content_hash": "fc02f30849dbf99c95b504d036fce163507d2c7adddd6f22af838e2301b2a090",
+          "keywords": [
+            "google ads",
+            "google",
+            "ads",
+            "api",
+            "version",
+            "now",
+            "available"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T20:45:00.000Z",
+      "last_seen_at": "2026-11-11T20:45:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "google",
+        "ads",
+        "api",
+        "version",
+        "now",
+        "available"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_002",
+      "cluster_title": "Google Search AI Overview Definitions Expanded By Default",
+      "signal_ids": [
+        "sig_053"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_053",
+          "source_id": "seroundtable",
+          "title": "Google Search AI Overview Definitions Expanded By Default",
+          "url": "https://www.seroundtable.com/google-expanding-definitions-42514.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T19:51:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google is expanding the AI Overviews for definitions by default, where you no longer have to click on \"Show more\" to see the full version of the AI Overview. This is similar to when Google confirmed it dynamically expands some AI Overviews based on the query, but now Google is doing this for all definition searches.",
+          "content_hash": "1492d9a6e704f32fcf52a75a9edebcceaea73827f159031d45ddd5c0ba0e342a",
+          "keywords": [
+            "ai overviews",
+            "ai overview",
+            "google search",
+            "google",
+            "search",
+            "overview",
+            "definitions",
+            "expanded",
+            "default"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T19:51:00.000Z",
+      "last_seen_at": "2026-11-11T19:51:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "ai overviews",
+        "ai overview",
+        "google search",
+        "google",
+        "search",
+        "overview",
+        "definitions",
+        "expanded",
+        "default"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_003",
+      "cluster_title": "Google: How Moving to a CDN Can Accidentally Overwhelm Your Website",
+      "signal_ids": [
+        "sig_054"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_054",
+          "source_id": "seroundtable",
+          "title": "Google: How Moving to a CDN Can Accidentally Overwhelm Your Website",
+          "url": "https://www.seroundtable.com/google-search-cdn-42511.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T15:55:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Gary Illyes and Chery Prommawin released the final video in the Non-Canonical Cabinet series, this one is on CDNs, content delivery networks. They discuss why migrating a website to a CDN can suddenly increase Googlebot crawling activity, why this may overload your origin server, and how to avoid accidentally blocking Google's crawlers.",
+          "content_hash": "47da66731283075ff5e24b1b5c8a5e64f0f9842d381cea5dbcedcd347c2ae626",
+          "keywords": [
+            "content",
+            "crawl",
+            "google",
+            "moving",
+            "cdn",
+            "can",
+            "accidentally",
+            "overwhelm"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T15:55:00.000Z",
+      "last_seen_at": "2026-11-11T15:55:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "content",
+        "crawl",
+        "google",
+        "moving",
+        "cdn",
+        "can",
+        "accidentally",
+        "overwhelm"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_004",
+      "cluster_title": "Retail Smartphone Sales Tanked 20% In 2026 Diwali Season: AIMRA",
+      "signal_ids": [
+        "sig_028"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_028",
+          "source_id": "inc42",
+          "title": "Retail Smartphone Sales Tanked 20% In 2026 Diwali Season: AIMRA",
+          "url": "https://inc42.com/buzz/retail-smartphone-sales-tanked-20-in-2026-diwali-season-aimra",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T15:12:52.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Weak consumer demand and rising prices weighed heavily on the offline smartphone market in the recently-concluded Diwali festive season. According&#8230;",
+          "content_hash": "13256c8cab5c2bb996b8d9e0c4d0cbcdf3e2fbfcdeaacd8e06657ba39b544406",
+          "keywords": [
+            "festive",
+            "retail",
+            "news",
+            "spot news",
+            "smartphone",
+            "sales",
+            "tanked",
+            "2026",
+            "diwali"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T15:12:52.000Z",
+      "last_seen_at": "2026-11-11T15:12:52.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "festive",
+        "retail",
+        "news",
+        "spot news",
+        "smartphone",
+        "sales",
+        "tanked",
+        "2026",
+        "diwali"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_005",
+      "cluster_title": "Daily Search Forum Recap: November 11, 2026",
+      "signal_ids": [
+        "sig_055"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_055",
+          "source_id": "seroundtable",
+          "title": "Daily Search Forum Recap: November 11, 2026",
+          "url": "https://www.seroundtable.com/recap-11-11-2026-42509.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T15:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Here is a recap of what happened in the search forums today, through the eyes of the Search Engine Roundtable and other search forums on the web. Google has begun the rollout of the November 2026 core update...",
+          "content_hash": "5e0520212acf9e05326c430aea43317d24ce3f8f368eb94d3fc043e6d5788717",
+          "keywords": [
+            "core update",
+            "daily",
+            "search",
+            "forum",
+            "recap",
+            "november",
+            "2026"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T15:00:00.000Z",
+      "last_seen_at": "2026-11-11T15:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "core update",
+        "daily",
+        "search",
+        "forum",
+        "recap",
+        "november",
+        "2026"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_006",
+      "cluster_title": "After A Decade-Long Stint, Gaurav Munjal To Step Down As Unacademy CEO",
+      "signal_ids": [
+        "sig_029"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_029",
+          "source_id": "inc42",
+          "title": "After A Decade-Long Stint, Gaurav Munjal To Step Down As Unacademy CEO",
+          "url": "https://inc42.com/buzz/after-a-decade-long-stint-gaurav-munjal-to-step-down-as-unacademy-ceo",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T14:14:35.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Barely two months after rival upGrad acquired Unacademy, cofounder Gaurav Munjal is now stepping down as the chief executive officer&#8230;",
+          "content_hash": "5f954228e31a14939f86e0a2d736a83f0aa5e4bbe9279fddd3eb3e1ea03408e3",
+          "keywords": [
+            "news",
+            "after",
+            "decade-long",
+            "stint",
+            "gaurav",
+            "munjal",
+            "step"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T14:14:35.000Z",
+      "last_seen_at": "2026-11-11T14:14:35.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "after",
+        "decade-long",
+        "stint",
+        "gaurav",
+        "munjal",
+        "step"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_007",
+      "cluster_title": "Centre Bans Export of Lithium-Ion Battery’s ‘Black Mass’",
+      "signal_ids": [
+        "sig_030"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_030",
+          "source_id": "inc42",
+          "title": "Centre Bans Export of Lithium-Ion Battery’s ‘Black Mass’",
+          "url": "https://inc42.com/buzz/centre-bans-export-of-lithium-ion-batterys-black-mass",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T12:57:14.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "In a major regulatory shift for India&#8217;s EV supply chain ecosystem, the Centre has issued directions to prohibit export of&#8230;",
+          "content_hash": "6a3a9cba01e82eb8612c04ca8bfbf2d2bacda1be356b9b892c9f4ac36c69b7c6",
+          "keywords": [
+            "india",
+            "news",
+            "spot news",
+            "centre",
+            "bans",
+            "export",
+            "lithium-ion",
+            "battery",
+            "black"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:57:14.000Z",
+      "last_seen_at": "2026-11-11T12:57:14.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "news",
+        "spot news",
+        "centre",
+        "bans",
+        "export",
+        "lithium-ion",
+        "battery",
+        "black"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_008",
+      "cluster_title": "New Google Ads Overview Page: Customer Journey Insights",
+      "signal_ids": [
+        "sig_056",
+        "sig_060"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_056",
+          "source_id": "seroundtable",
+          "title": "New Google Ads Overview Page: Customer Journey Insights",
+          "url": "https://www.seroundtable.com/google-ads-customer-journey-insights-42510.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:51:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google Ads posted a new help document about customer journey insights. \"Customer Journey Insights is a new Google Ads Overview page reporting card pilot for eligible advertisers. It provides transparency into how your campaigns move users across conversion journey stages,\" Google wrote.",
+          "content_hash": "6b9c9e4ea9838ee32f2670fd5ce9418b35f8f27a0783ca8e92e5f4f7e1f264ab",
+          "keywords": [
+            "google ads",
+            "conversion",
+            "cro",
+            "google",
+            "ads",
+            "overview",
+            "page",
+            "customer",
+            "journey"
+          ],
+          "summary": null
+        },
+        {
+          "signal_id": "sig_060",
+          "source_id": "seroundtable",
+          "title": "Google Ads Performance Max Page Feeds Updated",
+          "url": "https://www.seroundtable.com/google-ads-performance-max-page-feeds-update-42503.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:11:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google Ads has updated its Page feeds section for Performance Max campaigns to help advertisers understand how it works. These changes look like they should make it easier for advertisers to know which pages to feed to the ad algorithms.",
+          "content_hash": "f2e3b425a38a26513d0cfec74da8592271432fc62e672ebe60b8d19f7c8557c7",
+          "keywords": [
+            "google ads",
+            "performance max",
+            "google",
+            "ads",
+            "performance",
+            "max",
+            "page",
+            "feeds"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:11:00.000Z",
+      "last_seen_at": "2026-11-11T12:51:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "conversion",
+        "cro",
+        "google",
+        "ads",
+        "overview",
+        "page",
+        "customer",
+        "journey",
+        "performance max",
+        "performance",
+        "max",
+        "feeds"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_009",
+      "cluster_title": "Google Crawled/Discovered - Currently Not Indexed A Site Quality Issue",
+      "signal_ids": [
+        "sig_057"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_057",
+          "source_id": "seroundtable",
+          "title": "Google Crawled/Discovered - Currently Not Indexed A Site Quality Issue",
+          "url": "https://www.seroundtable.com/google-crawled-discovered-currently-not-indexed-42507.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:41:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "This is not new, but hey, John Mueller from Google said it again, getting a status of Crawled/Discovered - Currently Not Indexed within Google Search Console's page indexing report may be a sign that Google doesn't think your site or those pages are high-quality enough to index.",
+          "content_hash": "04d4e843523ffe1320b994fb0c771ee699fd2e4cde3ee564d63d9c65d2312f13",
+          "keywords": [
+            "search console",
+            "google search",
+            "crawl",
+            "indexing",
+            "google",
+            "crawled",
+            "discovered",
+            "currently",
+            "not",
+            "indexed"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:41:00.000Z",
+      "last_seen_at": "2026-11-11T12:41:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "search console",
+        "google search",
+        "crawl",
+        "indexing",
+        "google",
+        "crawled",
+        "discovered",
+        "currently",
+        "not",
+        "indexed"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_010",
+      "cluster_title": "Google Ads Visit Site Link In Mobile Search Ad Description",
+      "signal_ids": [
+        "sig_058"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_058",
+          "source_id": "seroundtable",
+          "title": "Google Ads Visit Site Link In Mobile Search Ad Description",
+          "url": "https://www.seroundtable.com/google-ads-visit-site-description-42444.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:31:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google Ads is also adding the Visit site link in the mobile ad descriptions for search ads. We saw them on the desktop ads with a Visit site button and also on organic results search and now also as a plain text anchor link in the mobile ad descriptions.",
+          "content_hash": "e7c5d46239d02c6bf385bf873fda94d5ed653a61f624680667203c0171252fc3",
+          "keywords": [
+            "google ads",
+            "google",
+            "ads",
+            "visit",
+            "site",
+            "link",
+            "mobile"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:31:00.000Z",
+      "last_seen_at": "2026-11-11T12:31:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "google",
+        "ads",
+        "visit",
+        "site",
+        "link",
+        "mobile"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_011",
+      "cluster_title": "Google Merchant Loyalty Program New Eligibility Requirements",
+      "signal_ids": [
+        "sig_059"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_059",
+          "source_id": "seroundtable",
+          "title": "Google Merchant Loyalty Program New Eligibility Requirements",
+          "url": "https://www.seroundtable.com/google-merchant-loyalty-program-eligibility-42495.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:21:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google has posted new eligibility requirements for the merchant loyalty program. As a reminder, Loyalty is an add-on feature in the Merchant Center for merchants with an existing loyalty program who want to showcase its benefits on Google.",
+          "content_hash": "5b3a427b17d624e8697f2f73d08600395449a04219630d581c9684aab857a374",
+          "keywords": [
+            "google",
+            "merchant",
+            "loyalty",
+            "program",
+            "eligibility",
+            "requirements"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:21:00.000Z",
+      "last_seen_at": "2026-11-11T12:21:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google",
+        "merchant",
+        "loyalty",
+        "program",
+        "eligibility",
+        "requirements"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_012",
+      "cluster_title": "Google Ads Brand Lists Global Brand Library",
+      "signal_ids": [
+        "sig_061"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_061",
+          "source_id": "seroundtable",
+          "title": "Google Ads Brand Lists Global Brand Library",
+          "url": "https://www.seroundtable.com/google-ads-brand-lists-library-42506.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T12:05:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google updated its About brand settings for Search and Performance Max help document to clarify how to manage brands within your brand list. Specifically, Google said, \"Google's brand library uses single, global canonical brands rather than individual localized or regional variants.\"",
+          "content_hash": "e68c1960ee4c3b9c1f2f9c3d8f720171bdc22e6191e45da459a75e8d6038cd54",
+          "keywords": [
+            "google ads",
+            "performance max",
+            "brand",
+            "google",
+            "ads",
+            "lists",
+            "global"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T12:05:00.000Z",
+      "last_seen_at": "2026-11-11T12:05:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "performance max",
+        "brand",
+        "google",
+        "ads",
+        "lists",
+        "global"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_013",
+      "cluster_title": "[Update] Greenjoules Closes Series B Round At ₹150 Cr",
+      "signal_ids": [
+        "sig_031"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_031",
+          "source_id": "inc42",
+          "title": "[Update] Greenjoules Closes Series B Round At ₹150 Cr",
+          "url": "https://inc42.com/buzz/exclusive-greenjoules-raises-%e2%82%b962-cr-funding-from-amazon-singularity-to-scale-green-energy-operations",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T11:48:36.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Update &#124; November 11, 17:18 IST Months after Inc42 exclusively reported on Greenjoules’s fundraise, the cleantech startup announced the closure&#8230;",
+          "content_hash": "d4c1e1d7a7dd274f81c3f6eeede346600a8b2ed0eba8ddd9f15fe68d125c9c90",
+          "keywords": [
+            "startup",
+            "news",
+            "exclusive",
+            "update",
+            "greenjoules",
+            "closes",
+            "series",
+            "round",
+            "150"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T11:48:36.000Z",
+      "last_seen_at": "2026-11-11T11:48:36.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "startup",
+        "news",
+        "exclusive",
+        "update",
+        "greenjoules",
+        "closes",
+        "series",
+        "round",
+        "150"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_014",
+      "cluster_title": "Rentomojo Q2 Revenue Jumps 53% YoY To ₹142 Cr, Net Profit Slumps 63%",
+      "signal_ids": [
+        "sig_032",
+        "sig_044"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_032",
+          "source_id": "inc42",
+          "title": "Rentomojo Q2 Revenue Jumps 53% YoY To ₹142 Cr, Net Profit Slumps 63%",
+          "url": "https://inc42.com/buzz/rentomojo-q2-fy27-revenue-jumps-53-yoy-to-%e2%82%b9142-cr-net-profit-slumps-63-to-%e2%82%b918-2-cr",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T11:03:19.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Recently listed furniture rental company Rentomojo reported a 62.6% year-on-year (YoY) decline in its profit after tax to ₹18.2 Cr&#8230;",
+          "content_hash": "050f6d4668a6969001c1a43214ef33a0a8da7de34eee7b50bffc45c654e689f7",
+          "keywords": [
+            "news",
+            "rentomojo",
+            "revenue",
+            "jumps",
+            "yoy",
+            "142",
+            "net"
+          ],
+          "summary": null
+        },
+        {
+          "signal_id": "sig_044",
+          "source_id": "inc42",
+          "title": "Matrimony Q2 Profit Soars 2.7X YoY To ₹20.7 Cr, Revenue up 17.6%",
+          "url": "https://inc42.com/buzz/matrimony-q2-profit-soars-2-7x-yoy-to-%e2%82%b920-7-cr-revenue-up-17-6",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T13:10:43.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Listed matchmaking platform Matrimony’s consolidated net profit for the September quarter (Q2 FY27) skyrocketed 165.4% YoY to ₹20.7 Cr from&#8230;",
+          "content_hash": "a0e96368fe37d6adbc87cda163062209d636ff6b8a3fbaed006f8bc18b3853fb",
+          "keywords": [
+            "news",
+            "matrimony",
+            "profit",
+            "soars",
+            "yoy",
+            "revenue"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T13:10:43.000Z",
+      "last_seen_at": "2026-11-11T11:03:19.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "rentomojo",
+        "revenue",
+        "jumps",
+        "yoy",
+        "142",
+        "net",
+        "matrimony",
+        "profit",
+        "soars"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_015",
+      "cluster_title": "IPO-Bound Cult.fit Faces Fresh Legal Challenge Over CULT Trademark",
+      "signal_ids": [
+        "sig_033"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_033",
+          "source_id": "inc42",
+          "title": "IPO-Bound Cult.fit Faces Fresh Legal Challenge Over CULT Trademark",
+          "url": "https://inc42.com/buzz/ipo-bound-cult-fit-faces-fresh-legal-challenge-over-cult-trademark",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T10:40:09.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "In a fresh legal challenge ahead of Cult.fit&#8217;s proposed public listing, the Madras High Court (HC) has issued a notice&#8230;",
+          "content_hash": "9ad5e769537d1bff21fb55b2adbe01c7b3d4ea3eb21c1a0b54b05be5455449b6",
+          "keywords": [
+            "news",
+            "ipo-bound",
+            "cult",
+            "fit",
+            "faces",
+            "fresh",
+            "legal"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T10:40:09.000Z",
+      "last_seen_at": "2026-11-11T10:40:09.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "ipo-bound",
+        "cult",
+        "fit",
+        "faces",
+        "fresh",
+        "legal"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_016",
+      "cluster_title": "OpenAI posts steep losses even as quarterly revenue rises to $10 billion, WSJ reports",
+      "signal_ids": [
+        "sig_067"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_067",
+          "source_id": "et-brandequity-digital",
+          "title": "OpenAI posts steep losses even as quarterly revenue rises to $10 billion, WSJ reports",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/openai-posts-steep-losses-even-as-quarterly-revenue-rises-to-10-billion-wsj-reports/135730343",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-11T08:28:43.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "OpenAI&#039;s quarterly revenue rose about 50 per cent to $10 billion in the third quarter, but the ChatGPT maker continued to post steep operating losses, the Wall Street Journal reported on Tuesday.",
+          "content_hash": "d0e2aa6c86f181bfc7a3bafcc9d24b020428bb32f858f560690de4b8a99720f3",
+          "keywords": [
+            "chatgpt",
+            "openai",
+            "posts",
+            "steep",
+            "losses",
+            "even",
+            "quarterly"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T08:28:43.000Z",
+      "last_seen_at": "2026-11-11T08:28:43.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "chatgpt",
+        "openai",
+        "posts",
+        "steep",
+        "losses",
+        "even",
+        "quarterly"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_017",
+      "cluster_title": "Fintech SaaS Company Veefin Migrates To NSE, BSE Mainboard",
+      "signal_ids": [
+        "sig_034"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_034",
+          "source_id": "inc42",
+          "title": "Fintech SaaS Company Veefin Migrates To NSE, BSE Mainboard",
+          "url": "https://inc42.com/buzz/fintech-saas-company-veefin-migrates-to-nse-bse-mainboard",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T08:08:54.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Update&#124; Nov 11, 18:43 IST Shares of Veefin ended today’s trading session 2% higher at ₹248.70 apiece on the BSE,&#8230;",
+          "content_hash": "80ca668a752bb62cfd720f298812d7abffa3fbfbd3ea0bf6c6f8b038fdc755b3",
+          "keywords": [
+            "saas",
+            "fintech",
+            "news",
+            "company",
+            "veefin",
+            "migrates",
+            "nse"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T08:08:54.000Z",
+      "last_seen_at": "2026-11-11T08:08:54.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "saas",
+        "fintech",
+        "news",
+        "company",
+        "veefin",
+        "migrates",
+        "nse"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_018",
+      "cluster_title": "ED Attaches ₹14 Cr Assets In HashPe Crypto Ponzi Fraud Case",
+      "signal_ids": [
+        "sig_035"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_035",
+          "source_id": "inc42",
+          "title": "ED Attaches ₹14 Cr Assets In HashPe Crypto Ponzi Fraud Case",
+          "url": "https://inc42.com/buzz/ed-attaches-%e2%82%b914-cr-assets-in-hashpe-crypto-ponzi-fraud-case",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T07:46:56.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The Enforcement Directorate (ED), Chennai, has provisionally attached movable and immovable assets worth approximately ₹14.2 Cr in connection with an&#8230;",
+          "content_hash": "0561d8fc3a4254ff68554cc19862e2e1643f7d02ce5c8205ca548382a337a129",
+          "keywords": [
+            "news",
+            "attaches",
+            "assets",
+            "hashpe",
+            "crypto",
+            "ponzi",
+            "fraud"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T07:46:56.000Z",
+      "last_seen_at": "2026-11-11T07:46:56.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "attaches",
+        "assets",
+        "hashpe",
+        "crypto",
+        "ponzi",
+        "fraud"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_019",
+      "cluster_title": "Anthropic expands Claude into spreadsheets, dashboards and collaborative workplace tools",
+      "signal_ids": [
+        "sig_068"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_068",
+          "source_id": "et-brandequity-digital",
+          "title": "Anthropic expands Claude into spreadsheets, dashboards and collaborative workplace tools",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/anthropic-expands-claude-into-spreadsheets-dashboards-and-collaborative-workplace-tools/135729524",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-11T07:37:03.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Artificial intelligence company Anthropic has expanded its Claude platform with new tools for creating spreadsheets, digital whiteboards and data dashboards, broadening its capabilities in workplace productivity and collaboration.",
+          "content_hash": "4f19b4f8f98a3434a4af9218fe854c893211ef6dcc3540fd350a1b37ca129a3d",
+          "keywords": [
+            "digital",
+            "anthropic",
+            "expands",
+            "claude",
+            "spreadsheets",
+            "dashboards",
+            "collaborative"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T07:37:03.000Z",
+      "last_seen_at": "2026-11-11T07:37:03.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "digital",
+        "anthropic",
+        "expands",
+        "claude",
+        "spreadsheets",
+        "dashboards",
+        "collaborative"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_020",
+      "cluster_title": "From Face Recognition to WhatsApp Control Room: 7 Trends in Gen-Z Weddings",
+      "signal_ids": [
+        "sig_069"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_069",
+          "source_id": "et-brandequity-digital",
+          "title": "From Face Recognition to WhatsApp Control Room: 7 Trends in Gen-Z Weddings",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/from-face-recognition-to-whatsapp-control-room-7-trends-in-gen-z-weddings/135719571",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-11T07:29:32.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Move over Pinterest boards, Instagram photographers, and WhatsApp groups. The next generation of weddings are heavily tech mediated, says Madhulika Sachdeva Mathur",
+          "content_hash": "424257fb7314b58abeb8f6c64f75459868154052328bf334e82296797c880cfd",
+          "keywords": [
+            "instagram",
+            "face",
+            "recognition",
+            "whatsapp",
+            "control",
+            "room",
+            "trends"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T07:29:32.000Z",
+      "last_seen_at": "2026-11-11T07:29:32.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "instagram",
+        "face",
+        "recognition",
+        "whatsapp",
+        "control",
+        "room",
+        "trends"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_021",
+      "cluster_title": "Vice Hits India",
+      "signal_ids": [
+        "sig_070"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_070",
+          "source_id": "et-brandequity-digital",
+          "title": "Vice Hits India",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/vice-hits-india/135718859",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-11T07:05:18.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Industry places bets on the GTA VI release to bring a console gaming boom",
+          "content_hash": "c1b6a4def76d7dc980d7ddf7bcdb17710735376b7cc1ef5430facaf5d86b0e44",
+          "keywords": [
+            "india",
+            "vice",
+            "hits"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T07:05:18.000Z",
+      "last_seen_at": "2026-11-11T07:05:18.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "vice",
+        "hits"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_022",
+      "cluster_title": "[Update] Kissht Raises ₹832 Cr Via Preferential Issue, 24 New Investors Join Cap Table",
+      "signal_ids": [
+        "sig_036"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_036",
+          "source_id": "inc42",
+          "title": "[Update] Kissht Raises ₹832 Cr Via Preferential Issue, 24 New Investors Join Cap Table",
+          "url": "https://inc42.com/buzz/kissht-gets-board-nod-to-raise-%e2%82%b9832-cr-via-preferential-issue",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T06:46:52.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Update &#124; November 11, 12:15 IST Kissht parent OnEMI Technology Solutions has completed its ₹832.20 Cr preferential issue, allotting 2.65&#8230;",
+          "content_hash": "76dfd716bede536039340fc393775fc967b8e3e7edf02dc8be0559815695f8f2",
+          "keywords": [
+            "news",
+            "update",
+            "kissht",
+            "raises",
+            "832",
+            "preferential",
+            "issue"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T06:46:52.000Z",
+      "last_seen_at": "2026-11-11T06:46:52.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "update",
+        "kissht",
+        "raises",
+        "832",
+        "preferential",
+        "issue"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_023",
+      "cluster_title": "AI, Financial Services, Better Connections: Kunal Shah Outlines Three Priorities For WhatsApp",
+      "signal_ids": [
+        "sig_037"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_037",
+          "source_id": "inc42",
+          "title": "AI, Financial Services, Better Connections: Kunal Shah Outlines Three Priorities For WhatsApp",
+          "url": "https://inc42.com/buzz/ai-financial-services-better-connections-kunal-shah-outlines-three-priorities-for-whatsapp",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T06:08:50.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Under its new global head Kunal Shah, WhatsApp is looking to expand beyond messaging. In a social media post, Shah&#8230;",
+          "content_hash": "bd280afe022541163e3063a71603f4fed367c1deaf5c17841a657ff9cc289085",
+          "keywords": [
+            "news",
+            "financial",
+            "services",
+            "better",
+            "connections",
+            "kunal",
+            "shah"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T06:08:50.000Z",
+      "last_seen_at": "2026-11-11T06:08:50.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "financial",
+        "services",
+        "better",
+        "connections",
+        "kunal",
+        "shah"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_024",
+      "cluster_title": "Axis Bank’s ‘open ki aadat’ campaign uses creators to showcase its mobile banking app",
+      "signal_ids": [
+        "sig_009"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_009",
+          "source_id": "et-brandequity-marketing",
+          "title": "Axis Bank’s ‘open ki aadat’ campaign uses creators to showcase its mobile banking app",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/axis-banks-open-ki-aadat-campaign-uses-creators-to-showcase-its-mobile-banking-app/135727217",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-11T05:44:40.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The campaign uses an unbranded notification to introduce the open app before creators demonstrate how its features address everyday banking needs.",
+          "content_hash": "982989d9a1c13c8ac50a2a9946f6b778274bb1d5dcc7017dbc13be4151b205d7",
+          "keywords": [
+            "brand",
+            "axis",
+            "bank",
+            "open",
+            "aadat",
+            "campaign",
+            "uses"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T05:44:40.000Z",
+      "last_seen_at": "2026-11-11T05:44:40.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "brand",
+        "axis",
+        "bank",
+        "open",
+        "aadat",
+        "campaign",
+        "uses"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_025",
+      "cluster_title": "Can Indian Startups Win The AI Inference Race?",
+      "signal_ids": [
+        "sig_038"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_038",
+          "source_id": "inc42",
+          "title": "Can Indian Startups Win The AI Inference Race?",
+          "url": "https://inc42.com/features/can-indian-startups-win-the-ai-inference-race",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T05:30:41.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Nations worldwide have spent the last few years obsessing over bigger models and the compute power needed to train them.&#8230;",
+          "content_hash": "2e0d0ef6dc46e9efe9d2ff56041ca8c34d4cbba6ccb162a6c52a8a43b7190ad4",
+          "keywords": [
+            "startup",
+            "startups",
+            "india",
+            "indian",
+            "in-depth",
+            "the ai shift",
+            "can",
+            "win",
+            "inference",
+            "race"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T05:30:41.000Z",
+      "last_seen_at": "2026-11-11T05:30:41.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "startup",
+        "startups",
+        "india",
+        "indian",
+        "in-depth",
+        "the ai shift",
+        "can",
+        "win",
+        "inference",
+        "race"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_026",
+      "cluster_title": "TrueTalks: Enterprise leaders share their take on transforming business communication at Global Fintech Fest ‘26",
+      "signal_ids": [
+        "sig_010"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_010",
+          "source_id": "et-brandequity-marketing",
+          "title": "TrueTalks: Enterprise leaders share their take on transforming business communication at Global Fintech Fest ‘26",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/truetalks-enterprise-leaders-share-their-take-on-transforming-business-communication-at-global-fintech-fest-26/135726834",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-11T05:27:20.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "As the landscape of business communication evolves, companies are departing from the old ways of indiscriminate cold calling. Building trust in caller identity has become crucial for effective consumer interaction, particularly as concerns about spam rise. Notable players like Bandhan Bank and Generali Central Life Insurance are embracing a contextual approach to their calls. This strategic focus on trustworthy co...",
+          "content_hash": "53a08968b643f6e8b0ce66bb4f405eac1f52faa2cb8c48c402c537fe46734f48",
+          "keywords": [
+            "fintech",
+            "truetalks",
+            "enterprise",
+            "leaders",
+            "share",
+            "take",
+            "transforming"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T05:27:20.000Z",
+      "last_seen_at": "2026-11-11T05:27:20.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "fintech",
+        "truetalks",
+        "enterprise",
+        "leaders",
+        "share",
+        "take",
+        "transforming"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_027",
+      "cluster_title": "ShareChat’s FY26 Snapshot, MakeMyTrip’s IPO &#038; More",
+      "signal_ids": [
+        "sig_039"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_039",
+          "source_id": "inc42",
+          "title": "ShareChat’s FY26 Snapshot, MakeMyTrip’s IPO &#038; More",
+          "url": "https://inc42.com/buzz/sharechats-fy26-snapshot-makemytrips-ipo-more",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T02:30:12.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Inside ShareChat’s Mixed FY26 ShareChat parent Mohalla Tech delivered some hits and some misses in FY26. While the homegrown social&#8230;",
+          "content_hash": "d604e1d9379fad8326a0e4c7841f0056fceccf74ee55b46a6dc57f5cc6b81f73",
+          "keywords": [
+            "news",
+            "inc42 daily brief",
+            "sharechat",
+            "fy26",
+            "snapshot",
+            "makemytrip",
+            "ipo",
+            "038"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T02:30:12.000Z",
+      "last_seen_at": "2026-11-11T02:30:12.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "inc42 daily brief",
+        "sharechat",
+        "fy26",
+        "snapshot",
+        "makemytrip",
+        "ipo",
+        "038"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_028",
+      "cluster_title": "Temple Run",
+      "signal_ids": [
+        "sig_011"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_011",
+          "source_id": "et-brandequity-marketing",
+          "title": "Temple Run",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/temple-run/135718526",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-11T01:55:21.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Deepinder Goyal’s latest venture has turned into a clash between blind faith and scientific scrutiny",
+          "content_hash": "3b89827d8cecf6a023f047461bff661c9db9f5d7aaa288e8e6ffcc59a5471262",
+          "keywords": [
+            "temple",
+            "run"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T01:55:21.000Z",
+      "last_seen_at": "2026-11-11T01:55:21.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "temple",
+        "run"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_029",
+      "cluster_title": "For Your Eyes Only",
+      "signal_ids": [
+        "sig_071"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_071",
+          "source_id": "et-brandequity-digital",
+          "title": "For Your Eyes Only",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/for-your-eyes-only/135715470",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-11T01:43:55.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Instagram’s 90-minute video bet could soon take it into direct confrontation with the Big Daddy of online platforms, YouTube",
+          "content_hash": "abb196cc7478e7dad7d14b0f725d94473ca4858498006f55557c6730da8075db",
+          "keywords": [
+            "youtube",
+            "instagram",
+            "eyes",
+            "only"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T01:43:55.000Z",
+      "last_seen_at": "2026-11-11T01:43:55.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "youtube",
+        "instagram",
+        "eyes",
+        "only"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_030",
+      "cluster_title": "GoKwik’s Golden Handcuffs: Non-Compete Clause Puts Vested ESOPs In Jeopardy",
+      "signal_ids": [
+        "sig_040"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_040",
+          "source_id": "inc42",
+          "title": "GoKwik’s Golden Handcuffs: Non-Compete Clause Puts Vested ESOPs In Jeopardy",
+          "url": "https://inc42.com/features/gokwiks-golden-handcuffs-non-compete-clause-puts-vested-esops-in-jeopardy",
+          "publisher": "Inc42",
+          "published_at": "2026-11-11T01:30:50.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Employee stock options (ESOPs) have become a major talking point in India’s startup ecosystem this year, with questions around liquidity,&#8230;",
+          "content_hash": "d7cb0dea29f6107688f5cc7b51da62877cf0dbfa8acfe844f9b3c381c7affd94",
+          "keywords": [
+            "startup",
+            "india",
+            "in-depth",
+            "investigative",
+            "gokwik",
+            "golden",
+            "handcuffs",
+            "non-compete",
+            "clause",
+            "puts"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T01:30:50.000Z",
+      "last_seen_at": "2026-11-11T01:30:50.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "startup",
+        "india",
+        "in-depth",
+        "investigative",
+        "gokwik",
+        "golden",
+        "handcuffs",
+        "non-compete",
+        "clause",
+        "puts"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_031",
+      "cluster_title": "Google Loses Another Round in Legal Battle Against SerpApi Over Scraping",
+      "signal_ids": [
+        "sig_062"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_062",
+          "source_id": "seroundtable",
+          "title": "Google Loses Another Round in Legal Battle Against SerpApi Over Scraping",
+          "url": "https://www.seroundtable.com/google-loses-again-against-serpapi-42508.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-11T00:09:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google has lost again in SerpApi's scraping legal fight in court, with the court giving Google 21 days to amend its complaint. But this is a major win for SerpApi and this case seems like it might be coming to a close soon.",
+          "content_hash": "608a2d3dec6233d41e112c2770c40160fb59bf5afbe41f68eae4b301a07653ad",
+          "keywords": [
+            "google",
+            "loses",
+            "another",
+            "round",
+            "legal",
+            "battle"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T00:09:00.000Z",
+      "last_seen_at": "2026-11-11T00:09:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google",
+        "loses",
+        "another",
+        "round",
+        "legal",
+        "battle"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_032",
+      "cluster_title": "Moving to a CDN without overwhelming your origin (or blocking Googlebot)",
+      "signal_ids": [
+        "sig_001"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_001",
+          "source_id": "google-search-central",
+          "title": "Moving to a CDN without overwhelming your origin (or blocking Googlebot)",
+          "url": "https://developers.google.com/search/blog/2026/11/crawling-cdn",
+          "publisher": "Google Search Central Blog",
+          "published_at": "2026-11-11T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Deploying a Content Delivery Network (CDN) to distribute your site's assets across fast, globally distributed edge servers closer to users can be a major upgrade for any growing site: it lowers visitor latency and shields your origin server (the backend source of truth holding your original content) from heavy traffic.",
+          "content_hash": "eb292e0c3d9656cbd36e42568bcb38e018104750f2b4974ed547d52bbafc8717",
+          "keywords": [
+            "content",
+            "cro",
+            "moving",
+            "cdn",
+            "without",
+            "overwhelming",
+            "origin",
+            "blocking"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-11T00:00:00.000Z",
+      "last_seen_at": "2026-11-11T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "content",
+        "cro",
+        "moving",
+        "cdn",
+        "without",
+        "overwhelming",
+        "origin",
+        "blocking"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_033",
+      "cluster_title": "SoftBank Q2: Lenskart &#038; Meesho Drive Valuation Gains, Ola Electric Books Losses",
+      "signal_ids": [
+        "sig_041"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_041",
+          "source_id": "inc42",
+          "title": "SoftBank Q2: Lenskart &#038; Meesho Drive Valuation Gains, Ola Electric Books Losses",
+          "url": "https://inc42.com/buzz/softbank-q2-lenskart-meesho-drive-valuation-gains-ola-electric-books-losses",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T19:57:18.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Japanese tech investor SoftBank’s Vision Fund 2 (SVF2) booked a valuation loss of $42 Mn on its investment in listed&#8230;",
+          "content_hash": "a90a71eff3c738740ff3531f87989c6a4b15f92a5e7b6e6e2990baf9e40c9e7b",
+          "keywords": [
+            "news",
+            "softbank",
+            "lenskart",
+            "038",
+            "meesho",
+            "drive",
+            "valuation"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T19:57:18.000Z",
+      "last_seen_at": "2026-11-10T19:57:18.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "softbank",
+        "lenskart",
+        "038",
+        "meesho",
+        "drive",
+        "valuation"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_034",
+      "cluster_title": "Businesses in ChatGPT Business Hub Live With Click Data",
+      "signal_ids": [
+        "sig_063"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_063",
+          "source_id": "seroundtable",
+          "title": "Businesses in ChatGPT Business Hub Live With Click Data",
+          "url": "https://www.seroundtable.com/chatgpt-business-hub-42505.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-10T18:45:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "OpenAI has just announced the ChatGPT Business Hub, Businesses in ChatGPT. This business hub offers analytics on mentions, profile views, and, you guessed it, clicks to websites! Yes, OpenAI is showing us how many people click from ChatGPT to our website.",
+          "content_hash": "11420ab7cddbc7aef2b6d46ad382a79fab43cca4edd427d449bf6d836011b0c7",
+          "keywords": [
+            "chatgpt",
+            "analytics",
+            "businesses",
+            "business",
+            "hub",
+            "live",
+            "click"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T18:45:00.000Z",
+      "last_seen_at": "2026-11-10T18:45:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "chatgpt",
+        "analytics",
+        "businesses",
+        "business",
+        "hub",
+        "live",
+        "click"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_035",
+      "cluster_title": "Google November 2026 Core Update Is Rolling Out",
+      "signal_ids": [
+        "sig_064"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_064",
+          "source_id": "seroundtable",
+          "title": "Google November 2026 Core Update Is Rolling Out",
+          "url": "https://www.seroundtable.com/google-november-2026-core-update-42504.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-10T18:25:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google officially announced the rollout of the November 2026 core update just now, on Tuesday at around 1:07 pm ET. This core update is expected to take about 2 weeks to roll out. Google said, \"This is a regular update designed to better surface relevant, satisfying content for searchers from all types of sites.\"",
+          "content_hash": "a4da858f0e0e94d8d2a5d635db730ac42e7a2b6c64933b66c307b5587eb7db47",
+          "keywords": [
+            "core update",
+            "content",
+            "google",
+            "november",
+            "2026",
+            "core",
+            "update",
+            "rolling"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T18:25:00.000Z",
+      "last_seen_at": "2026-11-10T18:25:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "core update",
+        "content",
+        "google",
+        "november",
+        "2026",
+        "core",
+        "update",
+        "rolling"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_036",
+      "cluster_title": "Gemini 4 Carbon Available In Google Search AI Mode",
+      "signal_ids": [
+        "sig_065"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_065",
+          "source_id": "seroundtable",
+          "title": "Gemini 4 Carbon Available In Google Search AI Mode",
+          "url": "https://www.seroundtable.com/gemini-4-carbon-google-search-ai-mode-42502.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-10T16:50:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Google released Gemini 4 Carbon, its \"strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows across complex knowledge work, software engineering, and scientific reasoning,\" and it is now available in Google Search via AI Mode for subscribers.",
+          "content_hash": "711d7aeac10a8f9987ff13c98369216455df2666f80d4e053b42dafca3527b33",
+          "keywords": [
+            "gemini",
+            "google search",
+            "cro",
+            "carbon",
+            "available",
+            "google",
+            "search",
+            "mode"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T16:50:00.000Z",
+      "last_seen_at": "2026-11-10T16:50:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "gemini",
+        "google search",
+        "cro",
+        "carbon",
+        "available",
+        "google",
+        "search",
+        "mode"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_037",
+      "cluster_title": "NVIDIA Scandal &#038; AI Selloff In the US: India’s Neocloud Boom Faces Twin Tests",
+      "signal_ids": [
+        "sig_042"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_042",
+          "source_id": "inc42",
+          "title": "NVIDIA Scandal &#038; AI Selloff In the US: India’s Neocloud Boom Faces Twin Tests",
+          "url": "https://inc42.com/features/nvidia-scandal-ai-selloff-in-the-us-indias-neocloud-boom-faces-twin-tests",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T16:37:51.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The alleged espionage scandal involving NVIDIA CEO Jensen Huang and the growing scrutiny of the chipmaker’s business dealings with China&#8230;",
+          "content_hash": "c9a29b7300ab7202615f37d5e37a8bd2b07977512a13674ccb703d63b3f09239",
+          "keywords": [
+            "india",
+            "in-depth",
+            "follow up",
+            "nvidia",
+            "scandal",
+            "038",
+            "selloff",
+            "neocloud"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T16:37:51.000Z",
+      "last_seen_at": "2026-11-10T16:37:51.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "in-depth",
+        "follow up",
+        "nvidia",
+        "scandal",
+        "038",
+        "selloff",
+        "neocloud"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_038",
+      "cluster_title": "Yahoo Search Launches Pivot Search, Yahoo Scout App & More",
+      "signal_ids": [
+        "sig_066"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_066",
+          "source_id": "seroundtable",
+          "title": "Yahoo Search Launches Pivot Search, Yahoo Scout App & More",
+          "url": "https://www.seroundtable.com/yahoo-pivot-search-yahoo-scout-42501.html",
+          "publisher": "Search Engine Roundtable",
+          "published_at": "2026-11-10T15:50:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Yahoo announced updates across Yahoo Search and Yahoo Scout including that Yahoo Scout is now out of beta and Yahoo Search added Pivot Search. Plus, Scout has now processed over 3 billion answers since it launched earlier this year.",
+          "content_hash": "b41403c9557de177fcaeac60aa8ec22238139f88e7c24a7fed5cdec68789c958",
+          "keywords": [
+            "cro",
+            "yahoo",
+            "search",
+            "launches",
+            "pivot"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T15:50:00.000Z",
+      "last_seen_at": "2026-11-10T15:50:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "cro",
+        "yahoo",
+        "search",
+        "launches",
+        "pivot"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_039",
+      "cluster_title": "Three Workers Die After Inhaling Toxic Gases At Tata’s TN iPhone Factory",
+      "signal_ids": [
+        "sig_043"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_043",
+          "source_id": "inc42",
+          "title": "Three Workers Die After Inhaling Toxic Gases At Tata’s TN iPhone Factory",
+          "url": "https://inc42.com/buzz/three-workers-die-after-inhaling-toxic-gases-at-tatas-tn-iphone-factory",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T15:31:45.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Three contract workers died after allegedly inhaling toxic gases during maintenance work at Tata Electronics’ iPhone manufacturing unit in Tamil&#8230;",
+          "content_hash": "3792ff5984ee4e5b96157f3d2923f755ad20c8bc31225f4fb9cfd8fbbc9633c4",
+          "keywords": [
+            "news",
+            "three",
+            "workers",
+            "die",
+            "after",
+            "inhaling",
+            "toxic"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T15:31:45.000Z",
+      "last_seen_at": "2026-11-10T15:31:45.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "news",
+        "three",
+        "workers",
+        "die",
+        "after",
+        "inhaling",
+        "toxic"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_040",
+      "cluster_title": "ShareChat Parent Mohalla Tech’s FY26 Revenue Crosses ₹1,000 Cr Mark; Loss Widens 79% To ₹1,978 Cr",
+      "signal_ids": [
+        "sig_045"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_045",
+          "source_id": "inc42",
+          "title": "ShareChat Parent Mohalla Tech’s FY26 Revenue Crosses ₹1,000 Cr Mark; Loss Widens 79% To ₹1,978 Cr",
+          "url": "https://inc42.com/buzz/sharechat-parent-mohalla-techs-fy26-loss-widens-79-to-%e2%82%b91978-cr-revenue-inches-past-%e2%82%b91000-cr-mark",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T13:06:42.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Mohalla Tech, the parent of social media platforms ShareChat and Moj, reported a 78.5% YoY increase in its consolidated net&#8230;",
+          "content_hash": "d62abd3a6d4f780af7c94e4b8c6343cad0252b4e577c5deb3b63a985f20cd96b",
+          "keywords": [
+            "cro",
+            "news",
+            "sharechat",
+            "parent",
+            "mohalla",
+            "tech",
+            "fy26",
+            "revenue"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T13:06:42.000Z",
+      "last_seen_at": "2026-11-10T13:06:42.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "cro",
+        "news",
+        "sharechat",
+        "parent",
+        "mohalla",
+        "tech",
+        "fy26",
+        "revenue"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_041",
+      "cluster_title": "Froncort.AI Raises $2.3 Mn From Google.org To Expand AI-Based Disease Surveillance",
+      "signal_ids": [
+        "sig_046"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_046",
+          "source_id": "inc42",
+          "title": "Froncort.AI Raises $2.3 Mn From Google.org To Expand AI-Based Disease Surveillance",
+          "url": "https://inc42.com/buzz/froncort-ai-raises-2-3-mn-from-google-org-to-expand-ai-based-disease-surveillance",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T12:52:54.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Healthcare AI startup Froncort.AI has secured $2.3 Mn (₹21.5 Cr) in fresh capital from Google’s philanthropic arm, Google.org, to scale&#8230;",
+          "content_hash": "2d1ed2297e51aacc880af042a26a3da4218e91806ee7160c5b9695fccf0280d8",
+          "keywords": [
+            "startup",
+            "news",
+            "froncort",
+            "raises",
+            "google",
+            "org",
+            "expand",
+            "ai-based"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T12:52:54.000Z",
+      "last_seen_at": "2026-11-10T12:52:54.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "startup",
+        "news",
+        "froncort",
+        "raises",
+        "google",
+        "org",
+        "expand",
+        "ai-based"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_042",
+      "cluster_title": "Anthropic IPO to raise as much as USD 64.4 billion, latest draft prospectus shows",
+      "signal_ids": [
+        "sig_072"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_072",
+          "source_id": "et-brandequity-digital",
+          "title": "Anthropic IPO to raise as much as USD 64.4 billion, latest draft prospectus shows",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/anthropic-ipo-to-raise-as-much-as-usd-64-4-billion-latest-draft-prospectus-shows/135709572",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T12:24:51.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Anthropic is gearing up for an initial public offering, aiming to secure USD 64.4 billion this year, coupled with a private placement. With significant backing of USD 26 billion from key investors like Alphabet&#039;s Google and Nvidia, they project share prices between USD 70 and USD 78. This bold move comes as many AI firms navigate the challenges posed by rising interest rates.",
+          "content_hash": "a7df14e3c7f18d5a7fbd6456ed303cfd8206c9990c079b35aa0fe382e0184257",
+          "keywords": [
+            "anthropic",
+            "ipo",
+            "raise",
+            "much",
+            "usd",
+            "billion"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T12:24:51.000Z",
+      "last_seen_at": "2026-11-10T12:24:51.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "anthropic",
+        "ipo",
+        "raise",
+        "much",
+        "usd",
+        "billion"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_043",
+      "cluster_title": "How intelligent commerce is shaping the next frontier of merchant payments",
+      "signal_ids": [
+        "sig_073"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_073",
+          "source_id": "et-brandequity-digital",
+          "title": "How intelligent commerce is shaping the next frontier of merchant payments",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/how-intelligent-commerce-is-shaping-the-next-frontier-of-merchant-payments/135707282",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T12:00:07.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "For a decade, the task in India’s merchant payments was to get every shop and website to accept digital money. The value, leaders argued, at GFF 2026, is now moving to identity, risk, credit and growth, and to preparing the checkout for AI agents that may soon shop on consumers’ behalf.",
+          "content_hash": "535b6702c77d7967882f86e82948273eab5dddb735b03566355cbe2a56e4fcca",
+          "keywords": [
+            "india",
+            "digital",
+            "intelligent",
+            "commerce",
+            "shaping",
+            "next",
+            "frontier",
+            "merchant"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T12:00:07.000Z",
+      "last_seen_at": "2026-11-10T12:00:07.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "digital",
+        "intelligent",
+        "commerce",
+        "shaping",
+        "next",
+        "frontier",
+        "merchant"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_044",
+      "cluster_title": "Why Gramiyaa Had To Think Like A Supermarket To Win On Quick Commerce",
+      "signal_ids": [
+        "sig_047"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_047",
+          "source_id": "inc42",
+          "title": "Why Gramiyaa Had To Think Like A Supermarket To Win On Quick Commerce",
+          "url": "https://inc42.com/startups/why-gramiyaa-had-to-think-like-a-supermarket-to-win-on-quick-commerce",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T11:30:19.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "It would be naive to think that getting listed on quick commerce platforms is half the battle won. If anything,&#8230;",
+          "content_hash": "d9eed90ea46fa30b526e9db93fd77ee44954f9f647e0ca6b2511c856e397b3e9",
+          "keywords": [
+            "quick commerce",
+            "startup stories",
+            "gramiyaa",
+            "had",
+            "think",
+            "like",
+            "supermarket",
+            "win"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T11:30:19.000Z",
+      "last_seen_at": "2026-11-10T11:30:19.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "quick commerce",
+        "startup stories",
+        "gramiyaa",
+        "had",
+        "think",
+        "like",
+        "supermarket",
+        "win"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_045",
+      "cluster_title": "US-China AI race could face financial setbacks, mass layoffs over next three years: Report",
+      "signal_ids": [
+        "sig_074"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_074",
+          "source_id": "et-brandequity-digital",
+          "title": "US-China AI race could face financial setbacks, mass layoffs over next three years: Report",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/us-china-ai-race-could-face-financial-setbacks-mass-layoffs-over-next-three-years-report/135707762",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T11:02:48.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The intensifying artificial intelligence (AI) race between the US and China could face growing financial risks, including a potential \"AI bubble burst\" and mass layoffs over the next three years, according to S&P Global Ratings.",
+          "content_hash": "9123307e5b69c2ca4bedd7c8f41f36698891f7a0fe28f9b72d0923535105e06a",
+          "keywords": [
+            "us-china",
+            "race",
+            "could",
+            "face",
+            "financial",
+            "setbacks"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T11:02:48.000Z",
+      "last_seen_at": "2026-11-10T11:02:48.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "us-china",
+        "race",
+        "could",
+        "face",
+        "financial",
+        "setbacks"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_046",
+      "cluster_title": "ShareChat hires creative directors as AI cuts microdrama costs by 40%: CTO Nitin Jain",
+      "signal_ids": [
+        "sig_075"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_075",
+          "source_id": "et-brandequity-digital",
+          "title": "ShareChat hires creative directors as AI cuts microdrama costs by 40%: CTO Nitin Jain",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/sharechat-hires-creative-directors-as-ai-cuts-microdrama-costs-by-40-cto-nitin-jain/135707637",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T10:33:43.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Nitin Jain told the Economic Times Digital that AI has lowered the barrier to entry for creators, while the company&#039;s engineers now supervise AI-written code instead of writing it by hand.",
+          "content_hash": "7b97f17c4146ebdbfe1e52e814254f8d0863b311f2e4d55da1fc61547b89c4ca",
+          "keywords": [
+            "digital",
+            "cro",
+            "sharechat",
+            "hires",
+            "creative",
+            "directors",
+            "cuts",
+            "microdrama"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T10:33:43.000Z",
+      "last_seen_at": "2026-11-10T10:33:43.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "digital",
+        "cro",
+        "sharechat",
+        "hires",
+        "creative",
+        "directors",
+        "cuts",
+        "microdrama"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_047",
+      "cluster_title": "Nvidia CEO Jensen Huang loses $7.4 billion in 30 minutes, drops 2 spots in Forbes rich list",
+      "signal_ids": [
+        "sig_076"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_076",
+          "source_id": "et-brandequity-digital",
+          "title": "Nvidia CEO Jensen Huang loses $7.4 billion in 30 minutes, drops 2 spots in Forbes rich list",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/nvidia-ceo-jensen-huang-loses-7-4-billion-in-30-minutes-drops-2-spots-in-forbes-rich-list/135702704",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T07:30:34.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Nvidia&#039;s CEO Jensen Huang faced a notable drop in net worth, tumbling from USD 162.2 billion to USD 154.7 billion, following revelations of an ongoing investigation into his supposed involvement with a Chinese spy. The resulting unrest caused Nvidia&#039;s shares to plunge by more than 7 per cent, raising alarms about its market stability as broader questions emerge regarding Nokia&#039;s dealings in China an...",
+          "content_hash": "bac2ba1b01373604de570832a946b9e8d8bc0033be549fb1bd86f66d5aec23ba",
+          "keywords": [
+            "nvidia",
+            "ceo",
+            "jensen",
+            "huang",
+            "loses",
+            "billion"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T07:30:34.000Z",
+      "last_seen_at": "2026-11-10T07:30:34.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "nvidia",
+        "ceo",
+        "jensen",
+        "huang",
+        "loses",
+        "billion"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_048",
+      "cluster_title": "Sarvam Ropes In Google Cloud India MD Sashikumar Sreedharan As President &#038; CBO",
+      "signal_ids": [
+        "sig_048"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_048",
+          "source_id": "inc42",
+          "title": "Sarvam Ropes In Google Cloud India MD Sashikumar Sreedharan As President &#038; CBO",
+          "url": "https://inc42.com/buzz/sarvam-ropes-in-google-cloud-india-md-sashikumar-sreedharan-as-president-cbo",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T07:00:39.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "AI unicorn Sarvam has appointed former Google Cloud India managing director Sashikumar Sreedharan as its president and chief business officer&#8230;",
+          "content_hash": "ddca0ba00391599d62653b9eed12604e692d382b7518017938e235a526217e99",
+          "keywords": [
+            "india",
+            "news",
+            "sarvam",
+            "ropes",
+            "google",
+            "cloud",
+            "sashikumar"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T07:00:39.000Z",
+      "last_seen_at": "2026-11-10T07:00:39.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "news",
+        "sarvam",
+        "ropes",
+        "google",
+        "cloud",
+        "sashikumar"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_049",
+      "cluster_title": "InMobi Secures Naming Rights For Bengaluru’s Ibbaluru Metro Station For ₹65 Cr",
+      "signal_ids": [
+        "sig_049"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_049",
+          "source_id": "inc42",
+          "title": "InMobi Secures Naming Rights For Bengaluru’s Ibbaluru Metro Station For ₹65 Cr",
+          "url": "https://inc42.com/buzz/inmobi-secures-naming-rights-for-bengalurus-ibbaluru-metro-station-for-%e2%82%b965-cr",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T06:37:10.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Ahead of its long due IPO, adtech unicorn InMobi has bolstered its marketing by securing a naming rights for Bengaluru&#8217;s&#8230;",
+          "content_hash": "2bfbbe21c6a00979300b2555f3ba6070d591ae501ba7fc6f5146f629e07e9efa",
+          "keywords": [
+            "marketing",
+            "news",
+            "inmobi",
+            "secures",
+            "naming",
+            "rights",
+            "bengaluru",
+            "ibbaluru"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T06:37:10.000Z",
+      "last_seen_at": "2026-11-10T06:37:10.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "news",
+        "inmobi",
+        "secures",
+        "naming",
+        "rights",
+        "bengaluru",
+        "ibbaluru"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_050",
+      "cluster_title": "OpenAI Deploys Control Room With 35-Second Kill Switch Amid Security Concerns",
+      "signal_ids": [
+        "sig_050"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_050",
+          "source_id": "inc42",
+          "title": "OpenAI Deploys Control Room With 35-Second Kill Switch Amid Security Concerns",
+          "url": "https://inc42.com/buzz/openai-deploys-control-room-with-35-second-kill-switch-amid-security-concerns",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T06:09:32.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Amid growing threats of rogue AI agents, ChatGPT parent OpenAI has developed and deployed Control Room, a centralised system to&#8230;",
+          "content_hash": "6a11bbc349e4716c456fdfbc3482de03b6974e10764332a45aac905aceffb13e",
+          "keywords": [
+            "chatgpt",
+            "news",
+            "ai economy",
+            "openai",
+            "deploys",
+            "control",
+            "room",
+            "35-second",
+            "kill"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T06:09:32.000Z",
+      "last_seen_at": "2026-11-10T06:09:32.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "chatgpt",
+        "news",
+        "ai economy",
+        "openai",
+        "deploys",
+        "control",
+        "room",
+        "35-second",
+        "kill"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_051",
+      "cluster_title": "SEBI Clears MakeMyTrip&#8217;s India IPO",
+      "signal_ids": [
+        "sig_051"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_051",
+          "source_id": "inc42",
+          "title": "SEBI Clears MakeMyTrip&#8217;s India IPO",
+          "url": "https://inc42.com/buzz/sebi-clears-makemytrips-india-ipo",
+          "publisher": "Inc42",
+          "published_at": "2026-11-10T06:07:44.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Nasdaq-listed online travel aggregator (OTA) MakeMyTrip’s India arm has received SEBI’s approval to launch its initial public offering (IPO) in&#8230;",
+          "content_hash": "6d2a1b350a07c69f11e30e82bb1f50f29f624e15914a56ea3f42f5560a154d9c",
+          "keywords": [
+            "india",
+            "news",
+            "sebi",
+            "clears",
+            "makemytrip",
+            "8217",
+            "ipo"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T06:07:44.000Z",
+      "last_seen_at": "2026-11-10T06:07:44.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "news",
+        "sebi",
+        "clears",
+        "makemytrip",
+        "8217",
+        "ipo"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_052",
+      "cluster_title": "EU to crack down on influencer marketing",
+      "signal_ids": [
+        "sig_012"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_012",
+          "source_id": "et-brandequity-marketing",
+          "title": "EU to crack down on influencer marketing",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/eu-to-crack-down-on-influencer-marketing/135700395",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-10T06:00:15.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The EU will clamp down on influencer marketing and ban online features that trick Europeans under plans to overhaul the bloc&#039;on Monday. According to the draft documents, the EU will ban deceptive practices known as \"dark patterns\" -- features designed to trick users into making choices preferred by a seller -- and demand greater transparency over pricing.",
+          "content_hash": "4ec25aaf90972d1e8f9a42913c581e969dbdf260b89b5a1697ad3b57131b54fe",
+          "keywords": [
+            "marketing",
+            "crack",
+            "down",
+            "influencer"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T06:00:15.000Z",
+      "last_seen_at": "2026-11-10T06:00:15.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "crack",
+        "down",
+        "influencer"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_053",
+      "cluster_title": "Anthropic must face lawsuit over Claude subscription marketing",
+      "signal_ids": [
+        "sig_077"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_077",
+          "source_id": "et-brandequity-digital",
+          "title": "Anthropic must face lawsuit over Claude subscription marketing",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/anthropic-must-face-lawsuit-over-claude-subscription-marketing/135700326",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-10T05:34:41.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "A federal court has instructed Anthropic to respond to allegations regarding deceptive advertising practices, detractors assert that the Claude Max subscription misrepresents the usage allowances in comparison to more affordable plans.",
+          "content_hash": "3f6b2648445ae43df2922b8c70fe5c1e4d7db4b716354f26cd3dd50c876b8bc6",
+          "keywords": [
+            "marketing",
+            "advertising",
+            "anthropic",
+            "must",
+            "face",
+            "lawsuit",
+            "claude",
+            "subscription"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T05:34:41.000Z",
+      "last_seen_at": "2026-11-10T05:34:41.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "advertising",
+        "anthropic",
+        "must",
+        "face",
+        "lawsuit",
+        "claude",
+        "subscription"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_054",
+      "cluster_title": "Why BIAL is making crisis response part of its larger brand strategy",
+      "signal_ids": [
+        "sig_013"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_013",
+          "source_id": "et-brandequity-marketing",
+          "title": "Why BIAL is making crisis response part of its larger brand strategy",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/why-bial-is-making-crisis-response-part-of-its-larger-brand-strategy/135697946",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-10T03:41:17.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Bengaluru Airport is transforming the airport advertising space and enhancing the passenger journey through cutting-edge installations that emphasize brand identity. Chief Marketing Officer Shalini Rao highlights the significance of merging marketing efforts with operational strategies to boost communication and strengthen reputation, particularly in challenging times. The airport&#039;s goal is to deliver a disti...",
+          "content_hash": "a0585dd34f51a6524d24175c218af212512f492d8c6807cb931fc0f8aed8109d",
+          "keywords": [
+            "marketing",
+            "advertising",
+            "brand",
+            "bial",
+            "making",
+            "crisis",
+            "response",
+            "part",
+            "larger"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T03:41:17.000Z",
+      "last_seen_at": "2026-11-10T03:41:17.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "advertising",
+        "brand",
+        "bial",
+        "making",
+        "crisis",
+        "response",
+        "part",
+        "larger"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_055",
+      "cluster_title": "The Google Ads Developer Blog is moving!",
+      "signal_ids": [
+        "sig_004"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_004",
+          "source_id": "google-ads-dev",
+          "title": "The Google Ads Developer Blog is moving!",
+          "url": "https://developers.google.com/ads/blog/posts/2026/11/the-google-ads-developer-blog-is-moving",
+          "publisher": "Google Ads Developer Blog",
+          "published_at": "2026-11-10T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Today we're announcing the move of the Google Ads Developer Blog from Blogger to the Google for Developers platform, where it will be joining the Google Advertising and Measurement Developers Hub and be known as the Google Advertising and Measurement Developer Blog . You're probably already familiar with this platform: it's where we host guides and reference documentation for our various products. While this move...",
+          "content_hash": "269261892cdf62d89d842661d3a250f6dd3d9af7bf446da3049ad90595d73086",
+          "keywords": [
+            "google ads",
+            "advertising",
+            "google",
+            "ads",
+            "developer",
+            "blog",
+            "moving"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-10T00:00:00.000Z",
+      "last_seen_at": "2026-11-10T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "advertising",
+        "google",
+        "ads",
+        "developer",
+        "blog",
+        "moving"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_056",
+      "cluster_title": "Display targeting changes in Demand Gen campaigns starting the week of December 1, 2026",
+      "signal_ids": [
+        "sig_005"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_005",
+          "source_id": "google-ads-dev",
+          "title": "Display targeting changes in Demand Gen campaigns starting the week of December 1, 2026",
+          "url": "https://developers.google.com/ads/blog/posts/2026/11/display-targeting-changes-in-demand-gen",
+          "publisher": "Google Ads Developer Blog",
+          "published_at": "2026-11-09T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Starting the week of December 1, 2026, campaign-level Display targeting ( network_settings.target_content_network ) will default to enabled ( true ) for newly created Demand Gen campaigns. Display network targeting will be managed directly at the ad group level using channel controls ( demand_gen_ad_group_settings.channel_controls.selected_channels.display ) and channel strategies. Overall default campaign serving...",
+          "content_hash": "c5a4d2245b5099dd9ecdff2d10cda1b2017a639d16ec9d155d30cdf4595261ed",
+          "keywords": [
+            "content",
+            "display",
+            "targeting",
+            "changes",
+            "demand",
+            "gen",
+            "campaigns"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-09T00:00:00.000Z",
+      "last_seen_at": "2026-11-09T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "content",
+        "display",
+        "targeting",
+        "changes",
+        "demand",
+        "gen",
+        "campaigns"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_057",
+      "cluster_title": "OpenAI gets $11 billion funding at $1.25 trillion valuation: Report",
+      "signal_ids": [
+        "sig_078"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_078",
+          "source_id": "et-brandequity-digital",
+          "title": "OpenAI gets $11 billion funding at $1.25 trillion valuation: Report",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/openai-gets-11-billion-funding-at-1-25-trillion-valuation-report/135632927",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-07T11:38:01.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "OpenAI completed a substantial funding round, securing USD 11 billion to increase its valuation to USD 1.25 trillion. The funding was finalized after the company scaled back its initial plans for over USD 30 billion. Citing market conditions, OpenAI has encountered shifting investor sentiment toward AI investments and infrastructure costs. Additional funds, which may raise the total to USD 20 billion, are expected...",
+          "content_hash": "f3ec585aebe0527711553a00753d3ab6cb5bc0f0e733e877b69767cba965369b",
+          "keywords": [
+            "openai",
+            "gets",
+            "billion",
+            "funding",
+            "trillion",
+            "valuation"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-07T11:38:01.000Z",
+      "last_seen_at": "2026-11-07T11:38:01.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "openai",
+        "gets",
+        "billion",
+        "funding",
+        "trillion",
+        "valuation"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_058",
+      "cluster_title": "Adobe brings CX Enterprise Coworker to ChatGPT, Gemini, Copilot and other AI platforms",
+      "signal_ids": [
+        "sig_079"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_079",
+          "source_id": "et-brandequity-digital",
+          "title": "Adobe brings CX Enterprise Coworker to ChatGPT, Gemini, Copilot and other AI platforms",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/adobe-brings-cx-enterprise-coworker-to-chatgpt-gemini-copilot-and-other-ai-platforms/135631051",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-07T08:32:46.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Adobe has rolled out its CX Enterprise Coworker across various AI platforms, aimed at boosting customer experience management. This intelligent AI solution empowers businesses to enhance customer engagement and improve conversion rates. Additionally, new connectors facilitate streamlined data access among different systems. Collaborations with tech companies and global integrators are set to enrich industry-specif...",
+          "content_hash": "6a32ba90a28f50008c228fdc74e08f3a7b04e90e4f63e77c516c7888432efd77",
+          "keywords": [
+            "chatgpt",
+            "gemini",
+            "conversion",
+            "cro",
+            "adobe",
+            "brings",
+            "enterprise",
+            "coworker"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-07T08:32:46.000Z",
+      "last_seen_at": "2026-11-07T08:32:46.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "chatgpt",
+        "gemini",
+        "conversion",
+        "cro",
+        "adobe",
+        "brings",
+        "enterprise",
+        "coworker"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_059",
+      "cluster_title": "Amazon rolls out text-based shopping through Alexa",
+      "signal_ids": [
+        "sig_080"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_080",
+          "source_id": "et-brandequity-digital",
+          "title": "Amazon rolls out text-based shopping through Alexa",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/amazon-rolls-out-text-based-shopping-through-alexa/135630875",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-07T08:07:25.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Amazon said the new text feature lets users research and compare products, track deals and price drops, and have Alexa for Shopping complete purchases on their behalf.",
+          "content_hash": "879bbfd4843e54601d87bed85ad0d98907b2d1be2ded3a32ff8b27c6cf63d992",
+          "keywords": [
+            "shopping",
+            "amazon",
+            "rolls",
+            "text-based",
+            "through",
+            "alexa"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-07T08:07:25.000Z",
+      "last_seen_at": "2026-11-07T08:07:25.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "shopping",
+        "amazon",
+        "rolls",
+        "text-based",
+        "through",
+        "alexa"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_060",
+      "cluster_title": "Why Swiggy is betting on Sweety this Diwali",
+      "signal_ids": [
+        "sig_014"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_014",
+          "source_id": "et-brandequity-marketing",
+          "title": "Why Swiggy is betting on Sweety this Diwali",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/why-swiggy-is-betting-on-sweety-this-diwali/135582908",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-06T02:44:34.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Swiggy recently adopted the name &#039;Sweety&#039; in a campaign to celebrate Diwali and engage consumers. The unique branding extended to delivery partners, packaging, and social media, creating buzz among users. Employees also participated by posting about their roles under the &#039;Sweety&#039; identity. Experts commented on the risks of altering a well-established brand identity for marketing purposes.",
+          "content_hash": "43318a0094f5b2bfd9e8fa46151d5cad7f59ea8b9773a5fafcc41bdcbbcd6794",
+          "keywords": [
+            "marketing",
+            "brand",
+            "branding",
+            "swiggy",
+            "betting",
+            "sweety",
+            "diwali"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-06T02:44:34.000Z",
+      "last_seen_at": "2026-11-06T02:44:34.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "brand",
+        "branding",
+        "swiggy",
+        "betting",
+        "sweety",
+        "diwali"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_061",
+      "cluster_title": "Prepare for CocoaPods read-only mode: Migrate your iOS apps to Swift Package Manager",
+      "signal_ids": [
+        "sig_006"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_006",
+          "source_id": "google-ads-dev",
+          "title": "Prepare for CocoaPods read-only mode: Migrate your iOS apps to Swift Package Manager",
+          "url": "https://developers.google.com/ads/blog/posts/2026/11/prepare-for-cocoapods-read-only-mode",
+          "publisher": "Google Ads Developer Blog",
+          "published_at": "2026-11-06T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "On December 2, 2026 , the CocoaPods Specs repository will permanently transition to read-only mode. As a result, we will no longer publish new versions of the Google Mobile Ads SDK or mediation adapters for iOS to CocoaPods after this date. What this means for your iOS apps If you currently use CocoaPods to install the Google Mobile Ads SDK ( Google-Mobile-Ads-SDK ) or User Messaging Platform SDK ( GoogleUserMessa...",
+          "content_hash": "61daaa8a14155eff1f6025fb934ef7bf1be731b51add960fc351f14a093a0043",
+          "keywords": [
+            "prepare",
+            "cocoapods",
+            "read-only",
+            "mode",
+            "migrate",
+            "ios"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-06T00:00:00.000Z",
+      "last_seen_at": "2026-11-06T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "prepare",
+        "cocoapods",
+        "read-only",
+        "mode",
+        "migrate",
+        "ios"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_062",
+      "cluster_title": "AI to reshape India&#039;s office space demand, workforce seen at 48 million by 2030: Report",
+      "signal_ids": [
+        "sig_081",
+        "sig_027"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_081",
+          "source_id": "et-brandequity-digital",
+          "title": "AI to reshape India&#039;s office space demand, workforce seen at 48 million by 2030: Report",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/ai-to-reshape-indias-office-space-demand-workforce-seen-at-48-million-by-2030-report/135570742",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-05T11:52:15.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "AI is expected to change the nature of India&#039;s office space demand rather than reduce it, with the country&#039;s office-using workforce projected to grow from around 38 million in 2025 to 48 million by 2030, according to a study by Cushman & Wakefield.",
+          "content_hash": "600dafd598553d2acdcffd43448d9fd6e3428ffffb630326f19e0958b564d7d1",
+          "keywords": [
+            "india",
+            "reshape",
+            "039",
+            "office",
+            "space",
+            "demand"
+          ],
+          "summary": null
+        },
+        {
+          "signal_id": "sig_027",
+          "source_id": "et-brandequity-marketing",
+          "title": "De Beers steps up marketing as India&#039;s natural diamond market targets 2x growth by 2030",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/de-beers-steps-up-marketing-as-indias-natural-diamond-market-targets-2x-growth-by-2030/135443250",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-02T03:32:58.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "India&#039;s natural diamond jewellery market is experiencing growth, with a projected value of Rs 1.52 lakh crore by 2030. De Beers is increasing its marketing investment to expand consumer ownership, currently at just 15 per cent, by promoting diamond purchases beyond traditional milestones and reaching potential buyers in Tier II and Tier III cities.",
+          "content_hash": "de09ae4b6dee0a3832aa351bb99451a44cc530b4e12a7705de020df716e023a6",
+          "keywords": [
+            "india",
+            "marketing",
+            "cro",
+            "beers",
+            "steps",
+            "039",
+            "natural"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-02T03:32:58.000Z",
+      "last_seen_at": "2026-11-05T11:52:15.000Z",
+      "independent_source_count": 2,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "reshape",
+        "039",
+        "office",
+        "space",
+        "demand",
+        "marketing",
+        "cro",
+        "beers",
+        "steps",
+        "natural"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_063",
+      "cluster_title": "Apple slashes daily AI spending limits for engineers to $200, plans further reductions: Report",
+      "signal_ids": [
+        "sig_082"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_082",
+          "source_id": "et-brandequity-digital",
+          "title": "Apple slashes daily AI spending limits for engineers to $200, plans further reductions: Report",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/apple-slashes-daily-ai-spending-limits-for-engineers-to-200-plans-further-reductions-report/135567595",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-05T09:50:11.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Apple has lowered daily AI spending limits for employees to manage expenses while expanding AI use across operations. Previously, some engineering teams had a cap of USD 300, which is now reduced to USD 200. Future reductions may lead to allowances as low as USD 100 for engineers and USD 25 for non-engineering teams. Employees needing greater access can seek exemptions from senior executives, according to reports.",
+          "content_hash": "8f89ec0306bf7a81dcb11bf50b3985c8f8f42fbaddcedc1f08b0238ae0e5f74f",
+          "keywords": [
+            "cro",
+            "apple",
+            "slashes",
+            "daily",
+            "spending",
+            "limits",
+            "engineers"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-05T09:50:11.000Z",
+      "last_seen_at": "2026-11-05T09:50:11.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "cro",
+        "apple",
+        "slashes",
+        "daily",
+        "spending",
+        "limits",
+        "engineers"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_064",
+      "cluster_title": "Canva to cut 22% of workforce as growth slows for first time in a decade",
+      "signal_ids": [
+        "sig_083"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_083",
+          "source_id": "et-brandequity-digital",
+          "title": "Canva to cut 22% of workforce as growth slows for first time in a decade",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/canva-to-cut-22-of-workforce-as-growth-slows-for-first-time-in-a-decade/135566302",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-05T09:10:10.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Canva Group is set to cut 1,271 jobs, which accounts for about 22 percent of its workforce. The restructuring is a response to a slowdown in growth and increasing pressures in the software market. Sydney will become the main base for the product teams, requiring some employees to relocate. Departing employees will receive USD 10,000 grants to assist in their future endeavors.",
+          "content_hash": "50b3b6c513ee89452ce36eb1aae3d0c0534d1bc40b58c9b9f4dcc5f908c49f3a",
+          "keywords": [
+            "canva",
+            "cut",
+            "workforce",
+            "growth",
+            "slows",
+            "first"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-05T09:10:10.000Z",
+      "last_seen_at": "2026-11-05T09:10:10.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "canva",
+        "cut",
+        "workforce",
+        "growth",
+        "slows",
+        "first"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_065",
+      "cluster_title": "OpenAI launches Images 2.6 in ChatGPT, Codex and API; adds GIF creation feature",
+      "signal_ids": [
+        "sig_084"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_084",
+          "source_id": "et-brandequity-digital",
+          "title": "OpenAI launches Images 2.6 in ChatGPT, Codex and API; adds GIF creation feature",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/openai-launches-images-2-6-in-chatgpt-codex-and-api-adds-gif-creation-feature/135559313",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-05T06:31:22.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "OpenAI has released Images 2.6, which improves image generation speed and editing tools for users. The new model can produce images 50 per cent faster than the previous version while allowing for greater control over visual details. Users can now create animated GIFs, which can be useful for various creative projects such as social media and marketing. The product is available globally across subscription tiers on...",
+          "content_hash": "1d66e7a46127a4cc7e9d1d0fbd5675c04fb33cc6b923787bf888d9cd9c7b9228",
+          "keywords": [
+            "chatgpt",
+            "marketing",
+            "cro",
+            "openai",
+            "launches",
+            "images",
+            "codex",
+            "api"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-05T06:31:22.000Z",
+      "last_seen_at": "2026-11-05T06:31:22.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "chatgpt",
+        "marketing",
+        "cro",
+        "openai",
+        "launches",
+        "images",
+        "codex",
+        "api"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_066",
+      "cluster_title": "MarTech Dialogues: Dabur&#039;s Global CIO on creating differentiated consumer experiences with MarTech",
+      "signal_ids": [
+        "sig_085"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_085",
+          "source_id": "et-brandequity-digital",
+          "title": "MarTech Dialogues: Dabur&#039;s Global CIO on creating differentiated consumer experiences with MarTech",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/martech-dialogues-daburs-global-cio-on-creating-differentiated-consumer-experiences-with-martech/135556760",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-05T03:07:44.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Dabur is set to improve its digital prowess by establishing Global Capability Centres aimed at enhancing marketing and IT functions. The Digital Marketing Centre will utilize AI and automation to refine audience targeting, improve content intelligence, and advance performance tracking with standardized processes. Collaborating with Accenture, Dabur aims to fast-track AI adoption, leading to enhanced operational ef...",
+          "content_hash": "fa4e850de909d33a89684d558fc1a45478915e4720b25bb633d73b4007bed877",
+          "keywords": [
+            "marketing",
+            "digital",
+            "content",
+            "martech",
+            "dialogues",
+            "dabur",
+            "039",
+            "global",
+            "cio"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-05T03:07:44.000Z",
+      "last_seen_at": "2026-11-05T03:07:44.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "digital",
+        "content",
+        "martech",
+        "dialogues",
+        "dabur",
+        "039",
+        "global",
+        "cio"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_067",
+      "cluster_title": "Can at-home services move beyond early adoption to become a mainstream category?",
+      "signal_ids": [
+        "sig_015"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_015",
+          "source_id": "et-brandequity-marketing",
+          "title": "Can at-home services move beyond early adoption to become a mainstream category?",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/can-at-home-services-move-beyond-early-adoption-to-become-a-mainstream-category/135544060",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-05T02:57:44.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "India&#039;s convenience economy is evolving as companies offer at-home services like cleaning and beauty treatments. These ventures require substantial marketing investments to acquire and retain customers effectively. Platforms such as Snabbit and Yes Madam are increasing their advertising expenses to build consumer trust. This shift helps meet the rising demand for convenient household and personal care service...",
+          "content_hash": "d39d41317052c5ac1d4866750edd7a9fbcf3aba2a2b560e87bc303a81d1fcace",
+          "keywords": [
+            "india",
+            "marketing",
+            "advertising",
+            "can",
+            "at-home",
+            "services",
+            "move",
+            "beyond",
+            "early"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-05T02:57:44.000Z",
+      "last_seen_at": "2026-11-05T02:57:44.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "marketing",
+        "advertising",
+        "can",
+        "at-home",
+        "services",
+        "move",
+        "beyond",
+        "early"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_068",
+      "cluster_title": "Trust Is the New Performance Metric in Digital Marketing",
+      "signal_ids": [
+        "sig_016"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_016",
+          "source_id": "et-brandequity-marketing",
+          "title": "Trust Is the New Performance Metric in Digital Marketing",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/trust-is-the-new-performance-metric-in-digital-marketing/135535332",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-04T11:00:37.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Trust is a key performance metric in digital marketing, especially for health insurance providers. Consumers have many touchpoints in their decision-making journey, making trust essential before and after purchases. Marketers must focus not just on visibility but on building credibility and consumer confidence. Technology can enhance understanding but should prioritize human connection. The goal is to promote info...",
+          "content_hash": "a79dc6f1c523ed9d081fc16d8e1e48ca27f5cd7cdc03d5044e0bfa871f869fc8",
+          "keywords": [
+            "marketing",
+            "digital",
+            "trust",
+            "performance",
+            "metric"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T11:00:37.000Z",
+      "last_seen_at": "2026-11-04T11:00:37.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "digital",
+        "trust",
+        "performance",
+        "metric"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_069",
+      "cluster_title": "How businesses are using generative AI to create content at scale",
+      "signal_ids": [
+        "sig_086"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_086",
+          "source_id": "et-brandequity-digital",
+          "title": "How businesses are using generative AI to create content at scale",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/digital/how-businesses-are-using-generative-ai-to-create-content-at-scale/135529771",
+          "publisher": "ET BrandEquity Digital",
+          "published_at": "2026-11-04T07:51:02.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The integration of generative AI into creative workflows is revolutionizing content production and innovation. Many Indian creators are witnessing enhanced business success and operational efficiency through these tools. Nonetheless, human intervention is vital to uphold brand consistency and quality in the final results. At the ET AI Awards 2027, outstanding organizations leveraging generative AI in their creativ...",
+          "content_hash": "8cdd11aa8de7ccc117d9b6078a49f0d38cfe66a3538c17d9deb5ac4baa33bdd6",
+          "keywords": [
+            "india",
+            "indian",
+            "content",
+            "brand",
+            "businesses",
+            "using",
+            "generative",
+            "create",
+            "scale"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T07:51:02.000Z",
+      "last_seen_at": "2026-11-04T07:51:02.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "indian",
+        "content",
+        "brand",
+        "businesses",
+        "using",
+        "generative",
+        "create",
+        "scale"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_070",
+      "cluster_title": "Tata-Iveco combine eyes significant growth in volumes, revenues over next 5 years: Chandrasekaran",
+      "signal_ids": [
+        "sig_017"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_017",
+          "source_id": "et-brandequity-marketing",
+          "title": "Tata-Iveco combine eyes significant growth in volumes, revenues over next 5 years: Chandrasekaran",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/tata-iveco-combine-eyes-significant-growth-in-volumes-revenues-over-next-5-years-chandrasekaran/135524813",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-04T05:30:29.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Tata Motors has acquired an 89 per cent stake in Iveco Group, aiming to create a global commercial vehicle leader. The partnership is expected to increase volumes, revenues, and margins over the next five years, leveraging both companies&#039; strengths in various markets, including India, Europe, and Latin America. Immediate priorities include localizing Iveco products for the Indian market and collaborating on p...",
+          "content_hash": "e2074577e4e91130dee484dcb28070a154bba1227aa66853e3b2159bee2b0787",
+          "keywords": [
+            "india",
+            "indian",
+            "tata-iveco",
+            "combine",
+            "eyes",
+            "significant",
+            "growth",
+            "volumes"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T05:30:29.000Z",
+      "last_seen_at": "2026-11-04T05:30:29.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "indian",
+        "tata-iveco",
+        "combine",
+        "eyes",
+        "significant",
+        "growth",
+        "volumes"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_071",
+      "cluster_title": "Ather’s Next Test: Can Product Philosophy Survive Scale?",
+      "signal_ids": [
+        "sig_018"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_018",
+          "source_id": "et-brandequity-marketing",
+          "title": "Ather’s Next Test: Can Product Philosophy Survive Scale?",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/athers-next-test-can-product-philosophy-survive-scale/135506151",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-04T02:59:09.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The 450 built Ather Energy’s reputation. Rizta broadened its appeal. The upcoming Konarc scooter is for a conventional customer, explains co-founder and CEO Tarun Mehta.",
+          "content_hash": "9d9afb8a72b44af678de54a93af3241039d811667abc0ddd90296e811bf7f94e",
+          "keywords": [
+            "ather",
+            "next",
+            "test",
+            "can",
+            "product",
+            "philosophy"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T02:59:09.000Z",
+      "last_seen_at": "2026-11-04T02:59:09.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "ather",
+        "next",
+        "test",
+        "can",
+        "product",
+        "philosophy"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_072",
+      "cluster_title": "Rush of Marketing Vs Slow Burn of Making",
+      "signal_ids": [
+        "sig_019"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_019",
+          "source_id": "et-brandequity-marketing",
+          "title": "Rush of Marketing Vs Slow Burn of Making",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/rush-of-marketing-vs-slow-burn-of-making/135506574",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-04T02:57:25.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "In the tug-of-war between the glamorous world of marketing and the arduous process of making, the former is winning. But a successful brand straddles both equally, says Joseph George.",
+          "content_hash": "aed5d0b20084516874a0ec68fe4de8d4d955d9d45c0cee7ea1851b22f00620cd",
+          "keywords": [
+            "geo",
+            "marketing",
+            "brand",
+            "rush",
+            "slow",
+            "burn",
+            "making"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T02:57:25.000Z",
+      "last_seen_at": "2026-11-04T02:57:25.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "geo",
+        "marketing",
+        "brand",
+        "rush",
+        "slow",
+        "burn",
+        "making"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_073",
+      "cluster_title": "Search Central Live in Zurich is back!",
+      "signal_ids": [
+        "sig_002"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_002",
+          "source_id": "google-search-central",
+          "title": "Search Central Live in Zurich is back!",
+          "url": "https://developers.google.com/search/blog/2026/11/search-central-live-zurich-2026",
+          "publisher": "Google Search Central Blog",
+          "published_at": "2026-11-04T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Search Central Live is coming to Zurich on December 4, 2026!",
+          "content_hash": "c157cacc359cc5fdc3c21b0d420626009dda05d9018b4bcac574c09bdda422b8",
+          "keywords": [
+            "search",
+            "central",
+            "live",
+            "zurich",
+            "back"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T00:00:00.000Z",
+      "last_seen_at": "2026-11-04T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "search",
+        "central",
+        "live",
+        "zurich",
+        "back"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_074",
+      "cluster_title": "Data Manager API now supports Google Ads call conversions and row-level diagnostics",
+      "signal_ids": [
+        "sig_007",
+        "sig_008"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_007",
+          "source_id": "google-ads-dev",
+          "title": "Data Manager API now supports Google Ads call conversions and row-level diagnostics",
+          "url": "https://developers.google.com/ads/blog/posts/2026/11/data-manager-api-now-supports-google",
+          "publisher": "Google Ads Developer Blog",
+          "published_at": "2026-11-04T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "The latest release of the Data Manager API adds support for Google Ads call conversions. It also adds row-level details to diagnostics to help you find and fix the exact records that had problems during processing. Send call conversions to Google Ads You can now use the Data Manager API to send call conversions to Google Ads . Call conversions track when your ads lead to phone calls and when those calls lead to va...",
+          "content_hash": "c2b2a81713a1b3000bd1f783bb7bb8fab3e0b5933603518281a7eb442c767c49",
+          "keywords": [
+            "google ads",
+            "conversion",
+            "data",
+            "manager",
+            "api",
+            "now",
+            "supports",
+            "google"
+          ],
+          "summary": null
+        },
+        {
+          "signal_id": "sig_008",
+          "source_id": "google-ads-dev",
+          "title": "Upcoming changes to multi-party approvals in the Google Ads API",
+          "url": "https://developers.google.com/ads/blog/posts/2026/11/upcoming-changes-to-multi-party",
+          "publisher": "Google Ads Developer Blog",
+          "published_at": "2026-11-04T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Earlier this year, the Google Ads API started requiring multi-party approvals (MPA) when performing sensitive API actions. Starting the week of December 7, 2026 , we are introducing additional changes to improve the developer experience for multi-party approvals. What's changing? Deferred access invitation creation: If a multi-party approval is required, the CustomerUserAccessInvitationService.MutateCustomerUserAc...",
+          "content_hash": "5c5380fd120e42133b376d50a7a5d0fd7872a9258e16fed0a107fe4815a70fea",
+          "keywords": [
+            "google ads",
+            "upcoming",
+            "changes",
+            "multi-party",
+            "approvals",
+            "google",
+            "ads"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-04T00:00:00.000Z",
+      "last_seen_at": "2026-11-04T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "google ads",
+        "conversion",
+        "data",
+        "manager",
+        "api",
+        "now",
+        "supports",
+        "google",
+        "upcoming",
+        "changes",
+        "multi-party",
+        "approvals",
+        "ads"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_075",
+      "cluster_title": "London Fog Watches onboards Arjun Kapoor as co-creative director and brand face",
+      "signal_ids": [
+        "sig_020"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_020",
+          "source_id": "et-brandequity-marketing",
+          "title": "London Fog Watches onboards Arjun Kapoor as co-creative director and brand face",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/london-fog-watches-onboards-arjun-kapoor-as-co-creative-director-and-brand-face/135486240",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-03T07:01:56.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "London Fog Watches has partnered with actor Arjun Kapoor, who will take on the role of brand ambassador. As co-creative director, Kapoor will actively participate in product design and styling. This partnership aims to create a limited-edition watch collection that reflects Kapoor&#039;s personal aesthetic. Marketing support will be provided across various digital and retail platforms. The collaboration seeks to e...",
+          "content_hash": "9cb5f2dba26b5576a9703c02305fd28324cfe159f687b5e185dc3cc5772c6b67",
+          "keywords": [
+            "marketing",
+            "digital",
+            "brand",
+            "cro",
+            "retail",
+            "london",
+            "fog",
+            "watches",
+            "onboards",
+            "arjun",
+            "kapoor"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-03T07:01:56.000Z",
+      "last_seen_at": "2026-11-03T07:01:56.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "digital",
+        "brand",
+        "cro",
+        "retail",
+        "london",
+        "fog",
+        "watches",
+        "onboards",
+        "arjun",
+        "kapoor"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_076",
+      "cluster_title": "Reading Between the Lines: The Management Wisdom Behind Strong Brands",
+      "signal_ids": [
+        "sig_021"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_021",
+          "source_id": "et-brandequity-marketing",
+          "title": "Reading Between the Lines: The Management Wisdom Behind Strong Brands",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/reading-between-the-lines-the-management-wisdom-behind-strong-brands/135484674",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-03T06:23:47.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Familiar business wisdom is quoted often and examined rarely. Organisations that swallow it whole risk undermining the very brands they hope to build.",
+          "content_hash": "b1eab5cbe938a565442761a4787dafb1a5dc6fb52ef0abe9cb81ead0fb84d558",
+          "keywords": [
+            "brand",
+            "reading",
+            "between",
+            "lines",
+            "management",
+            "wisdom",
+            "behind"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-03T06:23:47.000Z",
+      "last_seen_at": "2026-11-03T06:23:47.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "brand",
+        "reading",
+        "between",
+        "lines",
+        "management",
+        "wisdom",
+        "behind"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_077",
+      "cluster_title": "CMO at Crossroads: Brand Builder or Business Leader?",
+      "signal_ids": [
+        "sig_022"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_022",
+          "source_id": "et-brandequity-marketing",
+          "title": "CMO at Crossroads: Brand Builder or Business Leader?",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/cmo-at-crossroads-brand-builder-or-business-leader/135482507",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-03T05:21:52.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "The strongest marketing leaders are connecting customer insight, commercial decisions and brand-building to create lasting growth.",
+          "content_hash": "bba21f63463a76c0335acfc08a861acfaaae33bdcdf6b6020691f44876408a05",
+          "keywords": [
+            "marketing",
+            "brand",
+            "cro",
+            "cmo",
+            "crossroads",
+            "builder",
+            "business",
+            "leader"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-03T05:21:52.000Z",
+      "last_seen_at": "2026-11-03T05:21:52.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "brand",
+        "cro",
+        "cmo",
+        "crossroads",
+        "builder",
+        "business",
+        "leader"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_078",
+      "cluster_title": "Income doesn’t decide how India shops for fashion. Mindset does",
+      "signal_ids": [
+        "sig_023"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_023",
+          "source_id": "et-brandequity-marketing",
+          "title": "Income doesn’t decide how India shops for fashion. Mindset does",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/income-doesnt-decide-how-india-shops-for-fashion-mindset-does/135481277",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-03T04:12:07.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Fashion brands often focus on demographics, but consumer choices are influenced by mindsets rather than income. There are four key shopping mindsets: the Taste Maker, Trend Seeker, Statement Seeker, and Utility Seeker. Effective brands recognize and design for these mindsets, adapting their products and marketing strategies to meet the evolving needs of their customers throughout different contexts.",
+          "content_hash": "6e528e3413870bba12b061fbfc4a379cafbabcff31fdcdb4aada975040db2bb3",
+          "keywords": [
+            "india",
+            "marketing",
+            "brand",
+            "shopping",
+            "income",
+            "doesn",
+            "decide",
+            "shops",
+            "fashion"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-03T04:12:07.000Z",
+      "last_seen_at": "2026-11-03T04:12:07.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "india",
+        "marketing",
+        "brand",
+        "shopping",
+        "income",
+        "doesn",
+        "decide",
+        "shops",
+        "fashion"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_079",
+      "cluster_title": "Differentiation begins with identifying problems customers have to solve today while anticipating challenges they will face tomorrow: ServiceNow&#039;s Simon Mouyal",
+      "signal_ids": [
+        "sig_024"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_024",
+          "source_id": "et-brandequity-marketing",
+          "title": "Differentiation begins with identifying problems customers have to solve today while anticipating challenges they will face tomorrow: ServiceNow&#039;s Simon Mouyal",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/differentiation-begins-with-identifying-problems-customers-have-to-solve-today-while-anticipating-challenges-they-will-face-tomorrow-servicenows-simon-mouyal/135480540",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-03T03:49:40.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "As AI makes marketing tools more accessible, the ability to understand customer needs, build distinctive narratives and connect brand building with business growth will determine how B2B brands stand apart.",
+          "content_hash": "a7a8f9c5f343e0cb6ed0a1dc077a47d5cad21dd69b99c4058f15770785fe867d",
+          "keywords": [
+            "b2b",
+            "marketing",
+            "brand",
+            "differentiation",
+            "begins",
+            "identifying",
+            "problems",
+            "customers",
+            "solve"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-03T03:49:40.000Z",
+      "last_seen_at": "2026-11-03T03:49:40.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "b2b",
+        "marketing",
+        "brand",
+        "differentiation",
+        "begins",
+        "identifying",
+        "problems",
+        "customers",
+        "solve"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_080",
+      "cluster_title": "The CMO Signs the Ads. The CEO Signs the Brand.",
+      "signal_ids": [
+        "sig_025"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_025",
+          "source_id": "et-brandequity-marketing",
+          "title": "The CMO Signs the Ads. The CEO Signs the Brand.",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/the-cmo-signs-the-ads-the-ceo-signs-the-brand-/135452047",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-02T09:48:12.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Tony Hsieh revolutionized brand perception as Zappos&#039; CEO by prioritizing thoughtful hiring practices. He dismissed conventional performance metrics that often stifle exceptional service, advocating instead for empowering employees. By tuning in closely to customer feedback, leaders can gain valuable insights into their brand&#039;s influence. This strategy highlights how leadership choices shape brand identi...",
+          "content_hash": "d4386351896d1d321eef285998cb3a0f93d3c737e7cbf18bfc00d7e9b7ed9b0d",
+          "keywords": [
+            "brand",
+            "cmo",
+            "signs",
+            "ads",
+            "ceo"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-02T09:48:12.000Z",
+      "last_seen_at": "2026-11-02T09:48:12.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "brand",
+        "cmo",
+        "signs",
+        "ads",
+        "ceo"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_081",
+      "cluster_title": "The Copyright Gap in Creator Marketing: Why Brands Need to Rethink How They License Music",
+      "signal_ids": [
+        "sig_026"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_026",
+          "source_id": "et-brandequity-marketing",
+          "title": "The Copyright Gap in Creator Marketing: Why Brands Need to Rethink How They License Music",
+          "url": "https://brandequity.economictimes.indiatimes.com/news/marketing/the-copyright-gap-in-creator-marketing-why-brands-need-to-rethink-how-they-license-music/135443865",
+          "publisher": "ET BrandEquity Marketing",
+          "published_at": "2026-11-02T03:46:39.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "industry_news",
+          "country_relevance": "India",
+          "excerpt": "Brands partnering with creators for marketing campaigns face legal challenges regarding music licensing. Recent lawsuits emphasize that music used in promotional content requires proper synchronization licenses, highlighting the need for brands to prioritize licensing in their planning stages. As the influencer marketing industry grows, navigating music rights becomes increasingly crucial for successful campaigns.",
+          "content_hash": "de067b2883629f728751532f0624a8c2de3a64db9bc66014c4e8fc4c630a74db",
+          "keywords": [
+            "marketing",
+            "content",
+            "brand",
+            "copyright",
+            "gap",
+            "creator",
+            "brands",
+            "need"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-11-02T03:46:39.000Z",
+      "last_seen_at": "2026-11-02T03:46:39.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "India",
+      "keywords": [
+        "marketing",
+        "content",
+        "brand",
+        "copyright",
+        "gap",
+        "creator",
+        "brands",
+        "need"
+      ],
+      "status": "active"
+    },
+    {
+      "event_id": "evt_082",
+      "cluster_title": "Supporting a shared AI training control for websites",
+      "signal_ids": [
+        "sig_003"
+      ],
+      "signals": [
+        {
+          "signal_id": "sig_003",
+          "source_id": "google-search-central",
+          "title": "Supporting a shared AI training control for websites",
+          "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+          "publisher": "Google Search Central Blog",
+          "published_at": "2026-10-30T00:00:00.000Z",
+          "fetched_at": "2026-11-11T20:49:51.085Z",
+          "source_type": "official_platform",
+          "country_relevance": "Global (India-relevant)",
+          "excerpt": "Today, we're announcing our plans to support a shared AI training control in robots.txt. This will help websites express their AI training preferences across multiple AI providers in a single step and is based on work from the AIPREF working group at the Internet Engineering Task Force (IETF). This builds on our long history of providing website owners with clear controls, including through Google-Extended, the AI...",
+          "content_hash": "89da6c41c52885057d92b8ea34c18a86bb09e9f04839a453fcbf9d7bca222243",
+          "keywords": [
+            "cro",
+            "supporting",
+            "shared",
+            "training",
+            "control",
+            "websites"
+          ],
+          "summary": null
+        }
+      ],
+      "first_seen_at": "2026-10-30T00:00:00.000Z",
+      "last_seen_at": "2026-10-30T00:00:00.000Z",
+      "independent_source_count": 1,
+      "source_diversity": 1,
+      "country_relevance": "Global (India-relevant)",
+      "keywords": [
+        "cro",
+        "supporting",
+        "shared",
+        "training",
+        "control",
+        "websites"
+      ],
+      "status": "active"
+    }
+  ]
+}

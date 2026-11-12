@@ -1,0 +1,96 @@
+{
+  "brand": "NSP Global Services",
+  "primary_domain": "https://www.nspglobalservices.com/",
+  "secondary_domain": "https://nspglobalservices.in/",
+  "target_market": "India",
+  "language": "English",
+  "source_precedence_rule": "Search .com first for company identity and services; consult .in only as fallback and specifically for India location-affected details (INR pricing, Indian cities, Indian contact).",
+  "positioning": {
+    "current_global_primary": "SEO & AI Search Agency That Turns Rankings into Enquiries — visibility across Google, ChatGPT, Gemini, Perplexity and AI-powered search combining SEO, GEO/AEO, content, authority and conversion strategy",
+    "india_secondary": "B2B SaaS & Full-Service Digital Marketing and SEO Agency serving startups, SMEs and enterprises across India",
+    "provenance": "website_verified (.com primary + .in secondary)"
+  },
+  "differentiators": [
+    "Data-driven decisions",
+    "Human expertise rather than purely automated content",
+    "AI-search ready (GEO/AEO)",
+    "Transparent reporting",
+    "No long-term lock-in contracts",
+    "Full-funnel capability (SEO + Content + PPC + Website + CRO)"
+  ],
+  "partnerships_and_ratings": {
+    "certifications": ["Google & Meta Partner"],
+    "headline_claims": {
+      "experience": "12+ years",
+      "projects_delivered": "500+",
+      "client_satisfaction": "98%",
+      "review_scores": {
+        "google": "4.9/5",
+        "trustpilot": "4.8/5",
+        "clutch": "4.7/5"
+      },
+      "note": "Case study detail pages on .com currently lack named client baselines/timeframes; never invent client metrics."
+    }
+  },
+  "india_location_details": {
+    "contact_email": "info@nspglobalservices.in",
+    "contact_phone": "+91 9304383915",
+    "legal_reference_region": "Bihar, India",
+    "cities_listed_on_in": [
+      "Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Bangalore", "Mumbai",
+      "Pune", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad", "Jaipur", "Kochi",
+      "Chandigarh", "Lucknow", "Bhubaneswar", "Patna", "Ranchi", "Jamshedpur",
+      "Gwalior", "Mysore", "Pondicherry", "Indore", "Nagpur", "Surat", "Vadodara",
+      "Coimbatore", "Madurai", "Trivandrum", "Visakhapatnam", "Guwahati", "Raipur",
+      "Goa", "Uttarakhand", "Allahabad", "Varanasi", "Kanpur", "Nashik", "Rajkot",
+      "Thane", "Siliguri", "Bokaro", "Cuttack", "Hisar", "Thrissur", "Kannur",
+      "Calicut", "Amaravati", "Siwan"
+    ],
+    "provenance": "website_verified (.in location rules)"
+  },
+  "uk_hq_details": {
+    "location": "London, United Kingdom",
+    "contact_email": "info@nspglobalservices.com",
+    "contact_phone": "+44 7466 364464",
+    "governing_law": "United Kingdom",
+    "provenance": "website_verified (.com)"
+  },
+  "social_presence": {
+    "instagram": "https://www.instagram.com/nspglobalservices/",
+    "linkedin": "https://in.linkedin.com/company/nsp-global-services",
+    "facebook": "https://www.facebook.com/NSP-Digital-Services-100469205109746",
+    "youtube": "https://www.youtube.com/channel/UC4wKp8QpucRLEx77xS5JuLw",
+    "trustpilot": "https://www.trustpilot.com/review/nspglobalservices.com"
+  },
+  "tone": [
+    "authoritative",
+    "practical",
+    "transparent",
+    "outcome-focused",
+    "approachable"
+  ],
+  "creative_boundaries": {
+    "memes_and_playful_humour": "allowed_if_natural_for_indian_audience",
+    "algorithm_and_industry_jokes": "allowed_if_accurate",
+    "competitor_banter": "allowed_only_if_respectful_and_non_defamatory",
+    "sarcasm": "caution",
+    "political_content": "blocked",
+    "religious_content": "caution",
+    "prohibited_claims": [
+      "Guaranteed #1 Google rankings",
+      "Guaranteed ChatGPT or AI search citations",
+      "Guaranteed 10x revenue or ROAS",
+      "Fabricated client metrics or timeframes",
+      "Generic discount offers as default creative angle",
+      "Generic festival greeting posts without natural brand connection"
+    ]
+  },
+  "unknowns": [
+    "Exact legal entity name and registration number",
+    "Exact founding year and employee headcount",
+    "Highest-margin and highest-priority services for India growth",
+    "Whether .com-only AI/GEO services are actively priced and delivered for India",
+    "Client confidentiality/NDA rules on naming portfolio logos"
+  ]
+}
+

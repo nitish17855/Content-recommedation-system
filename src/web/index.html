@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NSP India — Content Recommendations</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --muted-bg: #f1f5f9;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+      --accent-hover: #0d5e58;
+      --accent-soft: #e6f4f1;
+      --amber: #b45309;
+      --amber-soft: #fef3c7;
+      --red: #b91c1c;
+      --red-soft: #fee2e2;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    button {
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 9px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--accent-hover);
+    }
+
+    .banner {
+      display: none;
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.9rem;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .banner.visible { display: flex; }
+    .banner.running { background: #eff6ff; border-color: #bfdbfe; color: #1e3a8a; }
+    .banner.completed { background: var(--accent-soft); border-color: #99f6e4; color: #115e59; }
+    .banner.failed { background: var(--red-soft); border-color: #fca5a5; color: #7f1d1d; }
+
+    .ask-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 26px;
+    }
+
+    .ask-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ask-row input {
+      flex: 1;
+      min-width: 240px;
+      font: inherit;
+      font-size: 0.94rem;
+      padding: 10px 12px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+    }
+
+    .answer-box {
+      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .answer-box.visible { display: block; }
+
+    .direct-answer {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 11px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 0.94rem;
+    }
+
+    .section-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .section-bar h2 {
+      margin: 0;
+      font-size: 1.12rem;
+    }
+
+    .run-meta {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .recs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .card-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .pill {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--muted-bg);
+      color: var(--ink);
+    }
+
+    .pill-safe { background: var(--accent-soft); color: var(--accent); }
+    .pill-caution { background: var(--amber-soft); color: var(--amber); }
+    .pill-blocked { background: var(--red-soft); color: var(--red); }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+    }
+
+    .post-idea {
+      background: var(--muted-bg);
+      border-radius: 8px;
+      padding: 11px 13px;
+      font-size: 0.93rem;
+      margin-bottom: 10px;
+    }
+
+    .why-line {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    details {
+      margin-top: 10px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--accent);
+      user-select: none;
+    }
+
+    .details-body {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .details-body a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .details-body a:hover { text-decoration: underline; }
+
+    .empty-state {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>NSP India — Recommendations</h1>
+        <p id="scheduleSub" class="subtitle">Loading recommendations...</p>
+      </div>
+      <div class="actions">
+        <button id="triggerReportBtn" class="btn-primary" type="button">Generate Fresh Recommendations</button>
+      </div>
+    </header>
+
+    <div id="jobBanner" class="banner">
+      <span id="jobBannerText"></span>
+      <span id="jobBannerMeta"></span>
+    </div>
+
+    <section class="ask-panel">
+      <form id="askForm" class="ask-row">
+        <input id="askInput" type="text" placeholder="Want something right now? Ask for a post topic or marketing angle..." />
+        <button id="askBtn" class="btn-primary" type="submit">Ask Right Now</button>
+      </form>
+      <div id="answerBox" class="answer-box">
+        <div id="directAnswer" class="direct-answer"></div>
+        <div id="onDemandCards" class="recs-list"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-bar">
+        <h2 id="recsHeading">Recommended by Engine</h2>
+        <span id="runMeta" class="run-meta"></span>
+      </div>
+      <div id="recsContainer" class="recs-list"></div>
+    </section>
+  </div>
+
+  <script>
+    let pollingTimer = null;
+
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined && text !== null) node.textContent = String(text);
+      return node;
+    }
+
+    function safeLink(url, label) {
+      const a = document.createElement("a");
+      a.textContent = label || url;
+      try {
+        const parsed = new URL(url);
+        if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+          a.href = parsed.href;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+        }
+      } catch {
+        a.href = "#";
+      }
+      return a;
+    }
+
+    function formatDate(iso) {
+      if (!iso) return "Not scheduled";
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return iso;
+      return d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+    }
+
+    function riskClass(risk) {
+      const r = String(risk || "").toLowerCase();
+      if (r === "safe") return "pill pill-safe";
+      if (r === "caution") return "pill pill-caution";
+      return "pill pill-blocked";
+    }
+
+    function buildRecommendationCard(index, rec) {
+      const card = el("article", "card");
+      const top = el("div", "card-top");
+      const pills = el("div", "pills");
+
+      pills.appendChild(el("span", "pill", `#${index + 1}`));
+      if (rec.platform) pills.appendChild(el("span", "pill", rec.platform));
+      if (rec.format) pills.appendChild(el("span", "pill", rec.format));
+      if (rec.category) pills.appendChild(el("span", "pill", rec.category));
+      pills.appendChild(el("span", riskClass(rec.risk), String(rec.risk || "safe").toUpperCase()));
+
+      top.appendChild(pills);
+      if (rec.urgency) top.appendChild(el("span", "run-meta", `Urgency: ${rec.urgency}`));
+      card.appendChild(top);
+
+      card.appendChild(el("h3", null, rec.title));
+
+      if (rec.whatToPost) {
+        const box = el("div", "post-idea");
+        const strong = el("strong", null, "What to post: ");
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(rec.whatToPost));
+        card.appendChild(box);
+      }
+
+      if (rec.whyNow) {
+        card.appendChild(el("p", "why-line", `Why now: ${rec.whyNow}`));
+      }
+
+      const hasDetails = rec.brandConnection || rec.executionNote || (rec.evidenceUrls && rec.evidenceUrls.length > 0);
+      if (hasDetails) {
+        const details = document.createElement("details");
+        details.appendChild(el("summary", null, "Brand fit & sources"));
+        const body = el("div", "details-body");
+        if (rec.brandConnection) body.appendChild(el("div", null, `Brand connection: ${rec.brandConnection}`));
+        if (rec.executionNote) body.appendChild(el("div", null, `Execution note: ${rec.executionNote}`));
+        if (rec.evidenceUrls && rec.evidenceUrls.length > 0) {
+          for (const url of rec.evidenceUrls) {
+            body.appendChild(safeLink(url, url));
+          }
+        }
+        details.appendChild(body);
+        card.appendChild(details);
+      }
+
+      return card;
+    }
+
+    function renderRecommendations(items) {
+      const container = document.getElementById("recsContainer");
+      const heading = document.getElementById("recsHeading");
+      container.replaceChildren();
+
+      heading.textContent = `Recommended by Engine (${items.length})`;
+
+      if (items.length === 0) {
+        container.appendChild(el("div", "empty-state", "No recommendations yet. Click 'Generate Fresh Recommendations' above to run the engine now."));
+        return;
+      }
+
+      items.forEach((item, idx) => {
+        const c = item.cardJson || {};
+        container.appendChild(
+          buildRecommendationCard(idx, {
+            title: c.title || item.title,
+            category: c.category || item.category,
+            platform: c.suggested_platform,
+            format: c.suggested_format,
+            risk: c.risk || item.risk,
+            urgency: c.urgency,
+            whatToPost: c.what_to_post,
+            whyNow: c.why_now,
+            brandConnection: c.brand_connection,
+            executionNote: c.execution_note,
+            evidenceUrls: Array.isArray(c.evidence) ? c.evidence.map((e) => e.url).filter(Boolean) : [],
+          }),
+        );
+      });
+    }
+
+    function renderJobBanner(job) {
+      const banner = document.getElementById("jobBanner");
+      const text = document.getElementById("jobBannerText");
+      const meta = document.getElementById("jobBannerMeta");
+      const btn = document.getElementById("triggerReportBtn");
+
+      if (!job || job.status === "idle") {
+        banner.className = "banner";
+        btn.disabled = false;
+        btn.textContent = "Generate Fresh Recommendations";
+        return;
+      }
+
+      banner.className = `banner visible ${job.status}`;
+      if (job.status === "running") {
+        btn.disabled = true;
+        btn.textContent = "Generating...";
+        text.textContent = job.phase || "Running engine...";
+        meta.textContent = job.startedAt ? formatDate(job.startedAt) : "";
+      } else if (job.status === "completed") {
+        btn.disabled = false;
+        btn.textContent = "Generate Fresh Recommendations";
+        text.textContent = `Done — generated ${job.recommendationsCount ?? 0} recommendations.`;
+        meta.textContent = "";
+      } else if (job.status === "failed") {
+        btn.disabled = false;
+        btn.textContent = "Generate Fresh Recommendations";
+        text.textContent = `Failed: ${job.error || "Unknown error"}`;
+        meta.textContent = "";
+      }
+    }
+
+    async function loadDashboard() {
+      const res = await fetch("/api/dashboard");
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || "Failed to load recommendations.");
+        return;
+      }
+
+      const activeRun = (data.recentRuns || []).find((r) => r.id === data.activeRunId);
+      document.getElementById("scheduleSub").textContent = data.brand?.nextReportAt
+        ? `Next 15-day auto run: ${formatDate(data.brand.nextReportAt)}`
+        : "Manual & 15-day recommendation engine";
+      document.getElementById("runMeta").textContent = activeRun
+        ? `Run: ${activeRun.runKey}`
+        : "";
+
+      renderRecommendations(data.recommendations || []);
+      renderJobBanner(data.manualJob);
+
+      if (data.manualJob?.status === "running" && !pollingTimer) {
+        startPollingJob();
+      }
+    }
+
+    function startPollingJob() {
+      if (pollingTimer) return;
+      pollingTimer = setInterval(async () => {
+        const res = await fetch("/api/job");
+        const job = await res.json();
+        renderJobBanner(job);
+        if (job.status !== "running") {
+          clearInterval(pollingTimer);
+          pollingTimer = null;
+          await loadDashboard();
+        }
+      }, 3000);
+    }
+
+    document.getElementById("triggerReportBtn").addEventListener("click", async () => {
+      const res = await fetch("/api/trigger-report", { method: "POST" });
+      const data = await res.json();
+      renderJobBanner(data.manualJob);
+      startPollingJob();
+    });
+
+    document.getElementById("askForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const question = document.getElementById("askInput").value.trim();
+      if (!question) return;
+
+      const askBtn = document.getElementById("askBtn");
+      askBtn.disabled = true;
+      askBtn.textContent = "Answering...";
+
+      try {
+        const res = await fetch("/api/ask-now", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          alert(data.error || "Failed to answer right now.");
+          return;
+        }
+
+        const box = document.getElementById("answerBox");
+        box.classList.add("visible");
+        document.getElementById("directAnswer").textContent = data.answer.direct_answer;
+
+        const cardsWrap = document.getElementById("onDemandCards");
+        cardsWrap.replaceChildren();
+        (data.answer.suggestions || []).forEach((s, idx) => {
+          cardsWrap.appendChild(
+            buildRecommendationCard(idx, {
+              title: s.title,
+              category: s.category,
+              platform: s.suggested_platform,
+              format: s.suggested_format,
+              risk: s.risk,
+              whatToPost: s.what_to_post,
+              whyNow: s.why_now,
+              brandConnection: s.brand_connection,
+              executionNote: s.execution_note,
+              evidenceUrls: s.evidence_urls || [],
+            }),
+          );
+        });
+      } finally {
+        askBtn.disabled = false;
+        askBtn.textContent = "Ask Right Now";
+      }
+    });
+
+    loadDashboard();
+  </script>
+</body>
+</html>

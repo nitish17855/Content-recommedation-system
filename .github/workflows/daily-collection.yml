@@ -1,0 +1,39 @@
+name: Daily Signal Collection & Scheduled 15-Day Report Check
+
+on:
+  schedule:
+    # Runs once daily; report generation triggers ONLY when next_report_at <= now in Neon PostgreSQL
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  collect-and-check-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 24 LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Run daily collector and due-report check
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL_LIGHT: ${{ vars.GEMINI_MODEL_LIGHT || 'gemini-3.5-flash-lite' }}
+          GEMINI_MODEL_REASONING: ${{ vars.GEMINI_MODEL_REASONING || 'gemini-3.8-flash' }}
+          GEMINI_MODEL_CRITIC: ${{ vars.GEMINI_MODEL_CRITIC || 'gemini-3.8-flash' }}
+          GEMINI_MODEL_FALLBACK: ${{ vars.GEMINI_MODEL_FALLBACK || 'gemini-3.5-flash-lite' }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openrouter/free' }}
+        run: npm run collect:daily
+

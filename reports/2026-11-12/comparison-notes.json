@@ -1,0 +1,78 @@
+{
+  "report_date": "2026-11-12",
+  "evaluation_instructions": "Review each recommendation and record decision (Accept | Revise | Reject) plus reason (Relevant | Too generic | Forced service connection | Too late | Weak evidence | Not creative enough | Risky | Not actionable). Owner acceptance measures selection only, not post performance.",
+  "pipeline_reviews": [
+    {
+      "index": 1,
+      "title": "The Fast Site, Blind Bot Paradox",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "title": "The 40% AI Content Shift",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "title": "Feature Dumps vs. Everyday Narratives",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "title": "Moving Beyond 'Publish and Pray' for Indian Websites",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 5,
+      "title": "Beyond the Last Click: Why Journey Visibility Matters",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 6,
+      "title": "The Fine Line Between Bold Rebranding and Brand Confusion",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    }
+  ],
+  "baseline_reviews": [
+    {
+      "index": 1,
+      "concept": "Decoding the 'Crawled - Currently Not Indexed' dilemma for Indian website owners",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 2,
+      "concept": "Safeguarding origin servers and Googlebot when migrating to a CDN",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 3,
+      "concept": "Navigating Google Ads Customer Journey Insights and Performance Max page feeds",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    },
+    {
+      "index": 4,
+      "concept": "Managing global brand lists across regional marketing campaigns",
+      "decision": null,
+      "reason": null,
+      "notes": ""
+    }
+  ]
+}

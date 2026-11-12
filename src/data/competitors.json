@@ -1,0 +1,102 @@
+{
+  "direct_india": [
+    {
+      "name": "PageTraffic",
+      "website": "https://www.pagetraffic.in",
+      "market": "India",
+      "positioning": "Long-standing India SEO agency (since 2002) pivoting into AI-Driven SEO / GEO (ChatGPT, Gemini, AI Overviews) with free SEO audits",
+      "notable_content_style": "Educational SEO updates, longevity, transparent tiers and audit lead-magnets",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "Wildnet Technologies",
+      "website": "https://www.wildnettechnologies.com",
+      "market": "India (Noida)",
+      "positioning": "Google Partner & Semrush Agency Partner offering AI-enabled 360-degree digital marketing, SEO, PPC and web development",
+      "notable_content_style": "Infographics, quick marketing tips, tech updates and service highlights",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "GrowthSpree",
+      "website": "https://growthspreeofficial.com",
+      "market": "India",
+      "positioning": "AI-native B2B SaaS and tech marketing agency specializing in ABM, RevOps, paid media and AEO/GEO",
+      "notable_content_style": "Pipeline/RevOps metrics and B2B SaaS playbooks",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "Techmagnate",
+      "website": "https://www.techmagnate.com",
+      "market": "India (Delhi)",
+      "positioning": "Enterprise technical SEO, Google Premier Partner, LLM/AI search optimization and 360-degree digital transformation",
+      "notable_content_style": "Data-driven digital report cards, industry research and corporate authority",
+      "provenance": "publicly_verified"
+    }
+  ],
+  "direct_uk_reference": [
+    {
+      "name": "Go Up",
+      "website": "https://goup.co.uk",
+      "market": "UK (London)",
+      "positioning": "Search marketing, enterprise SEO, Digital PR, CRO, PPC and GEO/AI search optimization",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "POLARIS",
+      "website": "https://polarisagency.com",
+      "market": "UK (London)",
+      "positioning": "Behavioral and technical SEO plus dedicated GEO & AEO for B2B and e-commerce",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "Pearl Lemon",
+      "website": "https://pearllemon.com",
+      "market": "UK (London) / Global",
+      "positioning": "High-velocity SEO, local SEO, B2B lead generation, PPC, content and social promotion",
+      "provenance": "publicly_verified"
+    },
+    {
+      "name": "Found",
+      "website": "https://found.co.uk",
+      "market": "UK (London)",
+      "positioning": "Google Premier Partner combining technical SEO, AI search (Everysearch/Luminr), PPC and programmatic",
+      "provenance": "publicly_verified"
+    }
+  ],
+  "indirect_alternatives": [
+    {
+      "name": "Semrush",
+      "category": "SEO & AI Visibility SaaS",
+      "why_relevant": "Direct DIY alternative to NSP rank tracking and basic SME SEO audits"
+    },
+    {
+      "name": "Ahrefs",
+      "category": "SEO SaaS",
+      "why_relevant": "Direct DIY alternative for backlink, keyword and content gap workflows"
+    },
+    {
+      "name": "Freelance SEO/GEO consultants & in-house teams",
+      "category": "Talent alternative",
+      "why_relevant": "Competes directly with ₹4,999–₹24,999/mo India retainers"
+    }
+  ],
+  "adjacent_creative_references": [
+    {
+      "name": "Ahrefs",
+      "why_admired": "Clear educational breakdowns, data-backed SEO myths debunked, relatable marketer humor"
+    },
+    {
+      "name": "Semrush",
+      "why_admired": "Fast reaction to Google algorithm updates and meme/relatable SEO frustrations"
+    },
+    {
+      "name": "HubSpot",
+      "why_admired": "B2B storytelling and product-context marketing insights"
+    },
+    {
+      "name": "Zomato",
+      "why_admired": "Indian cultural timing and topical wordplay (inspiration for timing, never copy execution)"
+    }
+  ]
+}
+
