@@ -1,15 +1,27 @@
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { loadEnv } from "../config/env.js";
+import crypto from "node:crypto";
+import { eq } from "drizzle-orm";
+import { hasAnyAiKey, loadEnv } from "../config/env.js";
 import { loadSeedDataset } from "../data/loader.js";
 import { createDb } from "../db/client.js";
+import { brandProfiles, services, competitors } from "../db/schema.js";
 import { getDashboardSnapshot } from "../db/repositories/dashboard.js";
-import { loadRecentClustersFromDb } from "../db/repositories/persistence.js";
+import {
+  claimActiveOrNewReportRun,
+  loadRecentClustersFromDb,
+} from "../db/repositories/persistence.js";
 import { collectAndSyncSignals } from "../pipeline/collect-and-sync.js";
 import { runDueReportGeneration } from "../cli/generate-report.js";
 import { GeminiPipelineClient } from "../ai/client.js";
 import { answerOnDemandRequest, selectOnDemandTarget } from "../pipeline/on-demand.js";
+import { normalizeBusinessUrl } from "../pipeline/url-normalize.js";
+import { runWebsiteRecommendationPipeline } from "../pipeline/orchestrator.js";
+import {
+  defaultProgressBroadcaster,
+  createManagedSubscription,
+} from "../pipeline/progress-broadcaster.js";
 
 interface ManualJobState {
   status: "idle" | "running" | "completed" | "failed";
@@ -65,7 +77,7 @@ async function runManualReportJob() {
   const now = new Date();
   const runKey = `manual-${now.toISOString().replace(/[:.]/g, "-")}`;
   manualJob.status = "running";
-  manualJob.phase = "Collecting live RSS signals across 6 feeds and syncing Neon...";
+  manualJob.phase = "Collecting live RSS signals across 18 independent channels (AI/tech, startups, ecommerce, social, campaigns & trends)...";
   manualJob.startedAt = now.toISOString();
   manualJob.finishedAt = null;
   manualJob.runKey = runKey;
@@ -126,15 +138,19 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse) {
     }
     const db = createDb(env.DATABASE_URL);
     const runIdParam = reqUrl.searchParams.get("runId");
+    const brandIdParam = reqUrl.searchParams.get("brandId");
+    const businessKeyParam = reqUrl.searchParams.get("businessKey");
     const requestedRunId = runIdParam ? Number(runIdParam) : undefined;
+    const brandIdentifier = brandIdParam ? Number(brandIdParam) : (businessKeyParam ?? undefined);
     const snapshot = await getDashboardSnapshot(
       db,
       requestedRunId && Number.isFinite(requestedRunId) ? requestedRunId : undefined,
+      brandIdentifier,
     );
     sendJson(res, 200, {
       ...snapshot,
       manualJob,
-      aiConfigured: Boolean(env.GEMINI_API_KEY || env.OPENROUTER_API_KEY),
+      aiConfigured: hasAnyAiKey(env),
     });
     return;
   }
@@ -192,6 +208,254 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse) {
       modelUsed: ai.usageRecords[ai.usageRecords.length - 1]?.model ?? target.model,
       tokenUsage: ai.getTokenSummary(),
       answer,
+    });
+    return;
+  }
+
+  // Slice 6 Endpoint 1: Start website recommendation run with in-flight deduplication
+  if (req.method === "POST" && reqUrl.pathname === "/api/recommendations/start") {
+    const body = await readJsonBody(req);
+    const rawUrl = typeof body.url === "string" ? body.url.trim() : "";
+    if (!rawUrl) {
+      sendJson(res, 400, { error: "Website URL is required." });
+      return;
+    }
+
+    let canonicalUrl: string;
+    let businessKey: string;
+    try {
+      const normalized = normalizeBusinessUrl(rawUrl);
+      canonicalUrl = normalized.canonicalUrl;
+      businessKey = normalized.businessKey;
+    } catch (err) {
+      sendJson(res, 400, { error: err instanceof Error ? err.message : "Invalid website URL." });
+      return;
+    }
+
+    const env = loadEnv();
+    if (!env.DATABASE_URL) {
+      sendJson(res, 500, { error: "DATABASE_URL is not configured." });
+      return;
+    }
+    const db = createDb(env.DATABASE_URL);
+
+    // 1. Resolve or create pending brand profile
+    let [brand] = await db
+      .select()
+      .from(brandProfiles)
+      .where(eq(brandProfiles.businessKey, businessKey))
+      .limit(1);
+
+    if (!brand) {
+      const parsedUrl = new URL(canonicalUrl);
+      const host = parsedUrl.hostname.replace(/^www\./, "");
+      const brandKey = `brand_${businessKey.replace(/^biz_/, "")}`;
+      const [insertedBrand] = await db
+        .insert(brandProfiles)
+        .values({
+          brandKey,
+          businessKey,
+          originalUrl: rawUrl,
+          canonicalUrl,
+          brandName: host,
+          industry: "General",
+          targetMarket: "Global",
+          primaryDomain: host,
+          onboardingStatus: "pending",
+          profileJson: {},
+        })
+        .returning();
+      brand = insertedBrand!;
+    }
+
+    // 2. Claim active or new report run with database-level deduplication
+    const runKey = `run_${Date.now()}_${crypto.randomUUID().slice(0, 8)}`;
+    const workerToken = crypto.randomUUID();
+    const claim = await claimActiveOrNewReportRun(
+      db,
+      brand.id,
+      runKey,
+      {},
+      workerToken,
+    );
+
+    if (claim.reused) {
+      // Return existing active run without re-crawling or restarting work
+      sendJson(res, 200, {
+        runId: claim.run.id,
+        status: "running",
+        reused: true,
+        brandId: brand.id,
+        businessKey,
+      });
+      return;
+    }
+
+    // 3. Launch recommendation pipeline asynchronously in the background
+    const refreshProfile = Boolean(body.refreshProfile);
+    void runWebsiteRecommendationPipeline(db, {
+      url: rawUrl,
+      runId: claim.run.id,
+      workerToken,
+      refreshProfile,
+      broadcaster: defaultProgressBroadcaster,
+    }).catch((err) => {
+      console.error(`[pipeline] Background execution failed for runId=${claim.run.id}:`, err);
+    });
+
+    sendJson(res, 202, {
+      runId: claim.run.id,
+      status: "running",
+      reused: false,
+      brandId: brand.id,
+      businessKey,
+    });
+    return;
+  }
+
+  // Slice 6 Endpoint 2: Real-time progress delivery via Server-Sent Events (SSE)
+  if (req.method === "GET" && reqUrl.pathname === "/api/recommendations/stream") {
+    const runIdParam = reqUrl.searchParams.get("runId");
+    const runId = runIdParam ? Number(runIdParam) : NaN;
+    if (!Number.isFinite(runId) || runId <= 0) {
+      sendJson(res, 400, { error: "A valid positive integer runId query parameter is required." });
+      return;
+    }
+
+    const env = loadEnv();
+    if (!env.DATABASE_URL) {
+      sendJson(res, 500, { error: "DATABASE_URL is not configured." });
+      return;
+    }
+    const db = createDb(env.DATABASE_URL);
+
+    res.writeHead(200, {
+      "Content-Type": "text/event-stream; charset=utf-8",
+      "Cache-Control": "no-cache, no-transform",
+      Connection: "keep-alive",
+      "X-Accel-Buffering": "no",
+    });
+
+    let isClosed = false;
+    let subscription: { unsubscribe: () => void } | null = null;
+
+    const keepAliveTimer = setInterval(() => {
+      if (!isClosed) {
+        res.write(": heartbeat\n\n");
+      }
+    }, 15_000);
+
+    req.on("close", () => {
+      isClosed = true;
+      clearInterval(keepAliveTimer);
+      if (subscription) {
+        subscription.unsubscribe();
+      }
+    });
+
+    try {
+      subscription = await createManagedSubscription(
+        db,
+        runId,
+        (snapshot) => {
+          if (!isClosed) {
+            res.write(`event: progress\ndata: ${JSON.stringify(snapshot)}\n\n`);
+          }
+        },
+        defaultProgressBroadcaster,
+      );
+    } catch (err) {
+      console.error(`[sse] Subscription error for runId=${runId}:`, err);
+      if (!isClosed) {
+        res.write(`event: error\ndata: ${JSON.stringify({ error: String(err) })}\n\n`);
+      }
+    }
+    return;
+  }
+
+  // Slice 6 Endpoint 3: Snapshot status query for recovery and polling fallback
+  if (req.method === "GET" && reqUrl.pathname === "/api/recommendations/status") {
+    const runIdParam = reqUrl.searchParams.get("runId");
+    const runId = runIdParam ? Number(runIdParam) : NaN;
+    if (!Number.isFinite(runId) || runId <= 0) {
+      sendJson(res, 400, { error: "A valid positive integer runId query parameter is required." });
+      return;
+    }
+
+    const env = loadEnv();
+    if (!env.DATABASE_URL) {
+      sendJson(res, 500, { error: "DATABASE_URL is not configured." });
+      return;
+    }
+    const db = createDb(env.DATABASE_URL);
+
+    const snapshot = await defaultProgressBroadcaster.getLatestSnapshot(db, runId);
+    if (!snapshot) {
+      sendJson(res, 404, { error: `No active or recent run found for runId=${runId}` });
+      return;
+    }
+    sendJson(res, 200, snapshot);
+    return;
+  }
+
+  // Slice 6 Endpoint 4: Brand details, verified offerings and trade competitors
+  if (req.method === "GET" && reqUrl.pathname === "/api/brand/details") {
+    const brandIdParam = reqUrl.searchParams.get("brandId");
+    const businessKeyParam = reqUrl.searchParams.get("businessKey");
+
+    const env = loadEnv();
+    if (!env.DATABASE_URL) {
+      sendJson(res, 500, { error: "DATABASE_URL is not configured." });
+      return;
+    }
+    const db = createDb(env.DATABASE_URL);
+
+    let brand = null;
+    if (brandIdParam) {
+      const bId = Number(brandIdParam);
+      if (Number.isFinite(bId)) {
+        const rows = await db.select().from(brandProfiles).where(eq(brandProfiles.id, bId)).limit(1);
+        brand = rows[0] ?? null;
+      }
+    } else if (businessKeyParam) {
+      const rows = await db.select().from(brandProfiles).where(eq(brandProfiles.businessKey, businessKeyParam)).limit(1);
+      brand = rows[0] ?? null;
+    }
+
+    if (!brand) {
+      sendJson(res, 404, { error: "Brand profile not found." });
+      return;
+    }
+
+    const brandServices = await db.select().from(services).where(eq(services.brandProfileId, brand.id));
+    const brandCompetitors = await db.select().from(competitors).where(eq(competitors.brandProfileId, brand.id));
+
+    sendJson(res, 200, {
+      brand: {
+        id: brand.id,
+        brandKey: brand.brandKey,
+        businessKey: brand.businessKey,
+        brandName: brand.brandName,
+        industry: brand.industry,
+        targetMarket: brand.targetMarket,
+        canonicalUrl: brand.canonicalUrl,
+        onboardingStatus: brand.onboardingStatus,
+        lastCrawledAt: brand.lastCrawledAt?.toISOString() ?? null,
+        profileJson: brand.profileJson,
+      },
+      services: brandServices.map((s) => ({
+        serviceId: s.serviceId,
+        name: s.name,
+        category: s.category,
+        detailsJson: s.detailsJson,
+      })),
+      competitors: brandCompetitors.map((c) => ({
+        slug: c.slug,
+        name: c.name,
+        classification: c.classification,
+        website: c.website,
+        detailsJson: c.detailsJson,
+      })),
     });
     return;
   }

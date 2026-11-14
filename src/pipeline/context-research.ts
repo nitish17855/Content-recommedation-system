@@ -32,7 +32,7 @@ export async function researchClusterContext(
     promptName: "context",
     inputPayload: payload,
     schema: ContextPackSchema,
-    maxOutputTokens: 1600,
+    maxOutputTokens: 2000,
     temperature: 0.2,
   });
 

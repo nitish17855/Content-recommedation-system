@@ -1,3 +1,4 @@
+import { getConfiguredGeminiKeys } from "../config/env.js";
 import { GeminiPipelineClient, selectFirstHalfTarget } from "../ai/client.js";
 import {
   OnDemandAnswerSchema,
@@ -84,8 +85,8 @@ export async function answerOnDemandRequest(params: {
 }
 
 export function selectOnDemandTarget(env: Parameters<typeof selectFirstHalfTarget>[0]) {
-  // Prefer Gemini fallback/reasoning when available for fast grounded answers, or OpenRouter when Gemini key absent/exhausted
-  if (env.GEMINI_API_KEY) {
+  // Prefer Gemini fallback/reasoning when available for fast grounded answers, or OpenRouter when Gemini keys absent/exhausted
+  if (getConfiguredGeminiKeys(env).length > 0) {
     return { provider: "gemini" as const, model: env.GEMINI_MODEL_LIGHT };
   }
   return selectFirstHalfTarget(env);

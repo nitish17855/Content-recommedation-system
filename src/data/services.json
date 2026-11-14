@@ -1,5 +1,41 @@
 [
   {
+    "service_id": "b2b-saas-seo-growth",
+    "name": "B2B SaaS SEO & Growth Marketing",
+    "category": "SaaS Growth",
+    "status_india": "confirmed_india",
+    "description": "Full-funnel SaaS marketing specializing in B2B SaaS organic search, AI search visibility (GEO/AEO), product positioning, funnel optimization, pricing analysis, and organic customer acquisition to reduce CAC and scale demo/trial pipeline.",
+    "india_pricing": "Custom SaaS Retainer (Silver ₹14,999/mo · Gold ₹29,999/mo · Enterprise bespoke)",
+    "customer_problems": [
+      "Rising customer acquisition costs (CAC) and paid advertising fatigue",
+      "Organic search traffic failing to convert into qualified SaaS trials, demos, or pipeline",
+      "Losing brand visibility in AI answers (ChatGPT, Perplexity, Gemini, Google AI Overviews)",
+      "Unclear product positioning and differentiation against legacy SaaS competitors",
+      "Top-of-funnel content that fails to capture high-intent B2B software buyers"
+    ],
+    "target_audiences": [
+      "SaaS Founders & Co-Founders",
+      "SaaS CEOs",
+      "Heads of Marketing & CMOs",
+      "Heads of Growth & Growth Product Managers",
+      "Early-stage & Scaling B2B SaaS Companies"
+    ],
+    "business_outcomes": [
+      "Lower blended CAC through compounding organic acquisition",
+      "Higher trial/demo conversion rates",
+      "Authoritative positioning in AI search summaries and traditional search engines"
+    ],
+    "verified_claims": [
+      "SaaS growth agency accelerating SaaS companies through data-driven marketing (.in)",
+      "No long-term lock-in contracts (.com)"
+    ],
+    "source_urls": [
+      "https://nspglobalservices.in/saas-seo-agency/",
+      "https://nspglobalservices.in/saas-content-marketing-agency/",
+      "https://www.nspglobalservices.com/seo-services/"
+    ]
+  },
+  {
     "service_id": "seo-core",
     "name": "Search Engine Optimization (SEO)",
     "category": "SEO",

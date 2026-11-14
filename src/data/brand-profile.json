@@ -8,7 +8,25 @@
   "positioning": {
     "current_global_primary": "SEO & AI Search Agency That Turns Rankings into Enquiries — visibility across Google, ChatGPT, Gemini, Perplexity and AI-powered search combining SEO, GEO/AEO, content, authority and conversion strategy",
     "india_secondary": "B2B SaaS & Full-Service Digital Marketing and SEO Agency serving startups, SMEs and enterprises across India",
+    "saas_growth_focus": "Accelerating pipeline, reducing CAC, and scaling organic discovery for B2B & product-led SaaS companies",
     "provenance": "website_verified (.com primary + .in secondary)"
+  },
+  "primary_target_audience": {
+    "core_segment": "SaaS Companies (B2B SaaS, Early-Stage to Growth Stage, Product-Led Growth and Enterprise)",
+    "decision_maker_roles": [
+      "SaaS Founder / Co-Founder",
+      "SaaS CEO",
+      "Head of Marketing / CMO",
+      "Head of Growth / Growth Product Manager",
+      "Demand Generation Director"
+    ],
+    "core_pain_points": [
+      "Rising customer acquisition costs (CAC) and over-reliance on paid ads",
+      "Traffic erosion from AI search overviews, ChatGPT and Perplexity",
+      "Low demo request and trial-to-paid conversion rates",
+      "Poor product positioning against enterprise competitors",
+      "Ineffective top-of-funnel content that fails to generate qualified SaaS pipeline"
+    ]
   },
   "differentiators": [
     "Data-driven decisions",

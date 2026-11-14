@@ -2,13 +2,14 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { GoogleGenAI } from "@google/genai";
 import { z } from "zod";
-import type { AppEnv } from "../config/env.js";
+import { getConfiguredGeminiKeys, type AppEnv } from "../config/env.js";
 
 export type AiProvider = "gemini" | "openrouter";
 
 export interface StageUsageRecord {
   stage: string;
   provider: AiProvider;
+  keyLabel: string;
   model: string;
   inputTokens: number;
   outputTokens: number;
@@ -26,6 +27,14 @@ interface ProviderCallResult {
 interface AttemptTarget {
   provider: AiProvider;
   model: string;
+  keyIndex?: number;
+  keyLabel?: string;
+}
+
+interface GeminiPoolEntry {
+  keyIndex: number;
+  label: string;
+  sdk: GoogleGenAI;
 }
 
 function stripJsonCodeFences(raw: string): string {
@@ -66,17 +75,27 @@ export function selectFirstHalfTarget(env: AppEnv): AttemptTarget {
 }
 
 export class GeminiPipelineClient {
-  private readonly geminiSdk: GoogleGenAI | null;
+  private readonly geminiPool: GeminiPoolEntry[];
+  private geminiCursor = 0;
   private sharedRulesCache: string | null = null;
+  private openRouterDailyExhausted = false;
+  private readonly exhaustedGeminiKeyModels = new Set<string>();
   public readonly usageRecords: StageUsageRecord[] = [];
 
   constructor(private readonly env: AppEnv) {
-    if (!env.GEMINI_API_KEY && !env.OPENROUTER_API_KEY) {
-      throw new Error("Neither GEMINI_API_KEY nor OPENROUTER_API_KEY is set in .env before running AI stages.");
+    const geminiKeys = getConfiguredGeminiKeys(env);
+    if (geminiKeys.length === 0 && !env.OPENROUTER_API_KEY) {
+      throw new Error("Neither GEMINI_API_KEY(S) nor OPENROUTER_API_KEY is set in .env before running AI stages.");
     }
-    this.geminiSdk = env.GEMINI_API_KEY
-      ? new GoogleGenAI({ apiKey: env.GEMINI_API_KEY, apiVersion: "v1beta" })
-      : null;
+    this.geminiPool = geminiKeys.map((apiKey, idx) => ({
+      keyIndex: idx,
+      label: `gemini#${idx + 1}`,
+      sdk: new GoogleGenAI({ apiKey, apiVersion: "v1beta" }),
+    }));
+  }
+
+  hasGeminiKey(): boolean {
+    return this.geminiPool.length > 0;
   }
 
   private async loadPromptFile(name: string): Promise<string> {
@@ -92,30 +111,66 @@ export class GeminiPipelineClient {
     return `${this.sharedRulesCache}\n\n---\n\n${stagePrompt}`;
   }
 
+  private pushGeminiTargetsForModel(plan: AttemptTarget[], model: string, startOffset: number) {
+    const poolSize = this.geminiPool.length;
+    if (poolSize === 0) return;
+
+    for (let i = 0; i < poolSize; i++) {
+      const entry = this.geminiPool[(startOffset + i) % poolSize]!;
+      const exhaustKey = `${entry.keyIndex}:${model}`;
+      if (this.exhaustedGeminiKeyModels.has(exhaustKey)) continue;
+      if (!plan.some((t) => t.provider === "gemini" && t.keyIndex === entry.keyIndex && t.model === model)) {
+        plan.push({
+          provider: "gemini",
+          model,
+          keyIndex: entry.keyIndex,
+          keyLabel: entry.label,
+        });
+      }
+    }
+  }
+
   private buildAttemptPlan(primaryProvider: AiProvider, primaryModel: string): AttemptTarget[] {
     const plan: AttemptTarget[] = [];
-    const pushUnique = (provider: AiProvider, model: string) => {
-      if (provider === "gemini" && !this.geminiSdk) return;
-      if (provider === "openrouter" && !this.env.OPENROUTER_API_KEY) return;
-      if (!plan.some((t) => t.provider === provider && t.model === model)) {
-        plan.push({ provider, model });
+    const startOffset = this.geminiPool.length > 0 ? this.geminiCursor++ % this.geminiPool.length : 0;
+
+    const pushOpenRouter = () => {
+      if (!this.env.OPENROUTER_API_KEY || this.openRouterDailyExhausted) return;
+      if (!plan.some((t) => t.provider === "openrouter" && t.model === this.env.OPENROUTER_MODEL)) {
+        plan.push({
+          provider: "openrouter",
+          model: this.env.OPENROUTER_MODEL,
+          keyLabel: "openrouter",
+        });
       }
     };
 
-    pushUnique(primaryProvider, primaryModel);
+    const geminiModels = Array.from(
+      new Set(
+        primaryProvider === "openrouter"
+          ? [this.env.GEMINI_MODEL_LIGHT, this.env.GEMINI_MODEL_FALLBACK, this.env.GEMINI_MODEL_REASONING]
+          : [primaryModel, this.env.GEMINI_MODEL_FALLBACK, this.env.GEMINI_MODEL_REASONING, this.env.GEMINI_MODEL_LIGHT],
+      ),
+    );
+
     if (primaryProvider === "openrouter") {
-      // Fall back to Gemini LIGHT / FALLBACK only if OpenRouter cannot serve the stage
-      pushUnique("gemini", this.env.GEMINI_MODEL_LIGHT);
-      pushUnique("gemini", this.env.GEMINI_MODEL_FALLBACK);
+      pushOpenRouter();
+      for (const m of geminiModels) {
+        this.pushGeminiTargetsForModel(plan, m, startOffset);
+      }
     } else {
-      pushUnique("gemini", this.env.GEMINI_MODEL_FALLBACK);
-      pushUnique("openrouter", this.env.OPENROUTER_MODEL);
+      for (const m of geminiModels) {
+        this.pushGeminiTargetsForModel(plan, m, startOffset);
+      }
+      pushOpenRouter();
     }
+
     return plan;
   }
 
   private async callGemini(params: {
     stage: string;
+    keyIndex: number;
     model: string;
     systemInstruction: string;
     inputText: string;
@@ -123,10 +178,11 @@ export class GeminiPipelineClient {
     maxOutputTokens: number;
     temperature: number;
   }): Promise<ProviderCallResult> {
-    if (!this.geminiSdk) {
-      throw new Error("GEMINI_API_KEY is missing.");
+    const entry = this.geminiPool[params.keyIndex];
+    if (!entry) {
+      throw new Error(`Gemini pool entry #${params.keyIndex} is missing.`);
     }
-    const interaction = await this.geminiSdk.interactions.create(
+    const interaction = await entry.sdk.interactions.create(
       {
         model: params.model,
         system_instruction: params.systemInstruction,
@@ -140,7 +196,7 @@ export class GeminiPipelineClient {
         },
       },
       {
-        timeout_ms: 25_000,
+        timeout_ms: 40_000,
         retries: { strategy: "none" },
       },
     );
@@ -273,7 +329,7 @@ export class GeminiPipelineClient {
 
     for (let targetIdx = 0; targetIdx < plan.length; targetIdx++) {
       const target = plan[targetIdx]!;
-      const maxAttempts = target.provider === "gemini" ? 3 : 2;
+      const maxAttempts = target.provider === "gemini" ? (plan.length > 2 ? 1 : 2) : 2;
 
       for (let attempt = 0; attempt < maxAttempts; attempt++) {
         try {
@@ -291,6 +347,7 @@ export class GeminiPipelineClient {
                 })
               : await this.callGemini({
                   stage: params.stage,
+                  keyIndex: target.keyIndex ?? 0,
                   model: target.model,
                   systemInstruction,
                   inputText,
@@ -305,6 +362,7 @@ export class GeminiPipelineClient {
           this.usageRecords.push({
             stage: params.stage,
             provider: target.provider,
+            keyLabel: target.keyLabel ?? target.provider,
             model: result.usedModel,
             inputTokens: result.inputTokens,
             outputTokens: result.outputTokens,
@@ -318,7 +376,12 @@ export class GeminiPipelineClient {
           const { isRateLimit, isTransient } = classifyRetryability(msg);
 
           if (isRateLimit) {
-            // Never retry the same rate-limited model; move directly to fallback target
+            if (target.provider === "openrouter" && msg.includes("free-models-per-day")) {
+              this.openRouterDailyExhausted = true;
+            } else if (target.provider === "gemini" && target.keyIndex !== undefined) {
+              this.exhaustedGeminiKeyModels.add(`${target.keyIndex}:${target.model}`);
+            }
+            // Never retry the same rate-limited key+model; rotate immediately to the next target
             break;
           }
 
@@ -334,7 +397,7 @@ export class GeminiPipelineClient {
       if (targetIdx < plan.length - 1) {
         const nextTarget = plan[targetIdx + 1]!;
         console.warn(
-          `  [AI Fallback] ${params.stage}: ${target.provider}/"${target.model}" failed (${lastError instanceof Error ? lastError.message : String(lastError)}), falling back to ${nextTarget.provider}/"${nextTarget.model}"`,
+          `  [AI Fallback] ${params.stage}: ${target.keyLabel ?? target.provider}/"${target.model}" failed (${lastError instanceof Error ? lastError.message : String(lastError)}), rotating to ${nextTarget.keyLabel ?? nextTarget.provider}/"${nextTarget.model}"`,
         );
       }
     }

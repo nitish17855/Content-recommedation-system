@@ -1,11 +1,16 @@
 import type { AppDb } from "../db/client.js";
-import { persistCollectionRun, syncSeedData } from "../db/repositories/persistence.js";
+import {
+  getActiveSourcesForBrand,
+  loadActiveEventClusters,
+  persistCollectionRun,
+  syncSeedData,
+} from "../db/repositories/persistence.js";
 import type { SeedDataset } from "../data/loader.js";
 import { collectRssSources } from "../sources/rss-collector.js";
 import { SOURCE_REGISTRY } from "../sources/source-registry.js";
 import { normalizeSignals } from "./normalize.js";
 import { deduplicateSignals } from "./deduplicate.js";
-import { clusterSignals } from "./cluster.js";
+import { clusterAndResolveSignals } from "./cluster.js";
 import type { EventCluster, SourceRunResult } from "../ai/schemas.js";
 
 export interface CollectAndSyncResult {
@@ -26,15 +31,29 @@ export async function collectAndSyncSignals(params: {
   lookbackDays: number;
   now?: Date;
   runKeyPrefix?: string;
+  brandProfileId?: number;
 }): Promise<CollectAndSyncResult> {
   const now = params.now ?? new Date();
   const dateStamp = now.toISOString().slice(0, 10);
   const collectionRunKey = `${params.runKeyPrefix ?? "collect"}-${dateStamp}`;
 
-  const { items, sourceRuns } = await collectRssSources(SOURCE_REGISTRY, params.lookbackDays, now);
+  // Use brand-specific sources (baseline + dynamic) if brandProfileId is provided, else fallback to SOURCE_REGISTRY
+  let sourcesToCollect = SOURCE_REGISTRY;
+  if (params.brandProfileId && params.db) {
+    const brandSourcesList = await getActiveSourcesForBrand(params.db, params.brandProfileId);
+    if (brandSourcesList.length > 0) {
+      sourcesToCollect = brandSourcesList;
+    }
+  }
+
+  const { items, sourceRuns } = await collectRssSources(sourcesToCollect, params.lookbackDays, now);
   const normalized = normalizeSignals(items, now);
   const { uniqueSignals, droppedDuplicates } = deduplicateSignals(normalized);
-  const clusters = clusterSignals(uniqueSignals);
+
+  const activeClusters = params.db
+    ? await loadActiveEventClusters(params.db, params.lookbackDays)
+    : [];
+  const clusters = clusterAndResolveSignals(uniqueSignals, activeClusters);
 
   let persistedToDb = false;
   if (params.db) {

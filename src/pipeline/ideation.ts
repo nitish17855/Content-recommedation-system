@@ -16,10 +16,11 @@ export async function generateCreativeRoutes(
 ): Promise<CreativeIdeation> {
   const payload = {
     brand_profile: {
-      brand: seeds.brandProfile.brand,
-      target_market: seeds.brandProfile.target_market,
-      tone: seeds.brandProfile.tone,
-      creative_boundaries: seeds.brandProfile.creative_boundaries,
+      brand: seeds.brandProfile.brand ?? seeds.brandProfile.brand_name ?? seeds.brandProfile.brandName ?? "Brand",
+      industry: seeds.brandProfile.industry ?? "General",
+      target_market: seeds.brandProfile.target_market ?? "India",
+      tone: seeds.brandProfile.tone ?? "Professional and Strategic",
+      creative_boundaries: seeds.brandProfile.creative_boundaries ?? [],
     },
     matched_services: seeds.services.filter((s) =>
       opportunity.matched_services.includes(String(s.service_id)) ||
@@ -35,7 +36,7 @@ export async function generateCreativeRoutes(
     promptName: "ideation",
     inputPayload: payload,
     schema: CreativeIdeationSchema,
-    maxOutputTokens: 1800,
+    maxOutputTokens: 2800,
     temperature: 0.5,
   });
 

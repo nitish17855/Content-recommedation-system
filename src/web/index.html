@@ -3,39 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NSP India — Content Recommendations</title>
+  <title>Autonomous Content Intelligence Platform</title>
   <style>
     :root {
-      --bg: #f7f8fa;
+      --bg: #f8fafc;
       --surface: #ffffff;
       --muted-bg: #f1f5f9;
       --ink: #0f172a;
-      --muted: #475569;
+      --muted: #64748b;
       --border: #e2e8f0;
+      --border-focus: #0f766e;
       --accent: #0f766e;
       --accent-hover: #0d5e58;
-      --accent-soft: #e6f4f1;
+      --accent-soft: #f0fdfa;
+      --accent-border: #99f6e4;
       --amber: #b45309;
-      --amber-soft: #fef3c7;
+      --amber-soft: #fffbeb;
+      --amber-border: #fde68a;
       --red: #b91c1c;
-      --red-soft: #fee2e2;
+      --red-soft: #fef2f2;
+      --red-border: #fecaca;
+      --blue: #1d4ed8;
+      --blue-soft: #eff6ff;
+      --blue-border: #bfdbfe;
+      --green: #15803d;
+      --green-soft: #f0fdf4;
+      --green-border: #bbf7d0;
       --radius: 12px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--ink);
       line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 28px 18px 64px;
+      padding: 24px 20px 80px;
     }
 
     header {
@@ -43,36 +57,68 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 3px 10px;
+      border-radius: 999px;
+      width: fit-content;
+      border: 1px solid var(--accent-border);
     }
 
     h1 {
       margin: 0;
-      font-size: 1.4rem;
-      letter-spacing: -0.02em;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--ink);
     }
 
     .subtitle {
-      margin: 4px 0 0;
+      margin: 0;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
-    .actions {
+    .header-actions {
       display: flex;
       gap: 10px;
       align-items: center;
     }
 
+    /* Buttons */
     button {
       font: inherit;
       font-size: 0.9rem;
       font-weight: 600;
-      padding: 10px 16px;
-      border-radius: 9px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
       border: 1px solid transparent;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.15s ease-in-out;
     }
 
     button:disabled {
@@ -83,35 +129,415 @@
     .btn-primary {
       background: var(--accent);
       color: #fff;
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-primary:hover:not(:disabled) {
       background: var(--accent-hover);
     }
 
-    .banner {
-      display: none;
-      margin-bottom: 18px;
-      padding: 12px 14px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
+    .btn-secondary {
       background: var(--surface);
-      font-size: 0.9rem;
-      justify-content: space-between;
-      gap: 12px;
+      color: var(--ink);
+      border-color: var(--border);
     }
 
-    .banner.visible { display: flex; }
-    .banner.running { background: #eff6ff; border-color: #bfdbfe; color: #1e3a8a; }
-    .banner.completed { background: var(--accent-soft); border-color: #99f6e4; color: #115e59; }
-    .banner.failed { background: var(--red-soft); border-color: #fca5a5; color: #7f1d1d; }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--muted-bg);
+    }
 
+    /* URL Hero Search Box */
+    .hero-search-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .hero-search-label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-search-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .url-input-wrap {
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+    }
+
+    .url-input-wrap input {
+      width: 100%;
+      font: inherit;
+      font-size: 0.98rem;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      background: #fafafa;
+      color: var(--ink);
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+
+    .url-input-wrap input:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+    }
+
+    .hero-options-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    .toggle-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .toggle-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .sample-pills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sample-pill-btn {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--muted-bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .sample-pill-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }
+
+    /* Brand Profile Banner */
+    .brand-banner {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand-banner.visible { display: block; }
+
+    .brand-banner-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .brand-meta-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-domain-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .brand-domain-link:hover { text-decoration: underline; }
+
+    .brand-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .brand-tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--muted-bg);
+      color: #334155;
+    }
+
+    .brand-chips-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.84rem;
+    }
+
+    .chip-block-title {
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+    }
+
+    .chip-offering { background: var(--accent-soft); border-color: var(--accent-border); color: var(--accent); font-weight: 500; }
+    .chip-competitor { background: #fdf2f8; border-color: #fbcfe8; color: #9d174d; font-weight: 500; }
+
+    /* 14-Stage Real-Time Execution Stepper */
+    .stepper-card {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .stepper-card.visible { display: block; }
+
+    .stepper-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .stepper-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .stepper-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 7px;
+      background: var(--muted-bg);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #0f766e, #14b8a6);
+      transition: width 0.3s ease-in-out;
+      border-radius: 999px;
+    }
+
+    .stepper-message-banner {
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-soft);
+      border: 1px solid var(--blue-border);
+      color: var(--blue);
+    }
+
+    .stepper-message-banner.completed {
+      background: var(--green-soft);
+      border-color: var(--green-border);
+      color: var(--green);
+    }
+
+    .stepper-message-banner.failed {
+      background: var(--red-soft);
+      border-color: var(--red-border);
+      color: var(--red);
+    }
+
+    .stepper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 8px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: #fafafa;
+      font-size: 0.84rem;
+      transition: all 0.2s ease;
+    }
+
+    .step-item.running {
+      background: var(--blue-soft);
+      border-color: var(--blue-border);
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .step-item.completed {
+      background: var(--green-soft);
+      border-color: var(--green-border);
+      color: #14532d;
+    }
+
+    .step-item.skipped {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+      color: #64748b;
+    }
+
+    .step-item.failed {
+      background: var(--red-soft);
+      border-color: var(--red-border);
+      color: var(--red);
+    }
+
+    .step-icon-wrap {
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    .step-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-name {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .step-desc {
+      font-size: 0.74rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .step-status-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--muted-bg);
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .step-item.running .step-status-badge { background: #dbeafe; color: #1d4ed8; }
+    .step-item.completed .step-status-badge { background: #dcfce7; color: #15803d; }
+    .step-item.skipped .step-status-badge { background: #e2e8f0; color: #475569; }
+    .step-item.failed .step-status-badge { background: #fee2e2; color: #b91c1c; }
+
+    /* CSS Spinner */
+    .spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(29, 78, 216, 0.3);
+      border-radius: 50%;
+      border-top-color: #1d4ed8;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Ask Panel */
     .ask-panel {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 16px;
-      margin-bottom: 26px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
     }
 
     .ask-row {
@@ -125,9 +551,14 @@
       min-width: 240px;
       font: inherit;
       font-size: 0.94rem;
-      padding: 10px 12px;
-      border-radius: 9px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
       border: 1px solid var(--border);
+    }
+
+    .ask-row input:focus {
+      outline: none;
+      border-color: var(--border-focus);
     }
 
     .answer-box {
@@ -142,24 +573,65 @@
     .direct-answer {
       background: var(--accent-soft);
       border-left: 4px solid var(--accent);
-      padding: 11px 14px;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
       font-size: 0.94rem;
     }
 
+    /* Pulse Panel */
+    .pulse-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pulse-panel > summary {
+      color: var(--ink);
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .pulse-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .pulse-box {
+      background: #fafafa;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .pulse-box strong { color: var(--ink); display: block; margin-bottom: 6px; }
+    .pulse-box ul { margin: 0; padding-left: 18px; }
+    .pulse-box li { margin-bottom: 4px; }
+
+    /* Section Bar */
     .section-bar {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .section-bar h2 {
       margin: 0;
-      font-size: 1.12rem;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     .run-meta {
@@ -167,17 +639,24 @@
       font-size: 0.86rem;
     }
 
+    /* Recommendations List & Cards */
     .recs-list {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow);
     }
 
     .card-top {
@@ -186,7 +665,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 8px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .pills {
@@ -198,27 +677,121 @@
 
     .pill {
       font-size: 0.76rem;
-      font-weight: 600;
+      font-weight: 700;
       padding: 3px 9px;
       border-radius: 999px;
       background: var(--muted-bg);
       color: var(--ink);
     }
 
-    .pill-safe { background: var(--accent-soft); color: var(--accent); }
-    .pill-caution { background: var(--amber-soft); color: var(--amber); }
-    .pill-blocked { background: var(--red-soft); color: var(--red); }
+    .pill-safe { background: var(--green-soft); color: var(--green); border: 1px solid var(--green-border); }
+    .pill-caution { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
+    .pill-blocked { background: var(--red-soft); color: var(--red); border: 1px solid var(--red-border); }
 
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.06rem;
+    .saas-meta-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 8px 0 14px;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.84rem;
     }
 
+    .saas-badge {
+      display: inline-flex;
+      align-items: center;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    /* 8-Question Brief Blocks */
+    .brief-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .brief-block {
+      background: #fafafa;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      font-size: 0.92rem;
+    }
+
+    .brief-block-highlight {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      font-weight: 600;
+      color: #0f766e;
+    }
+
+    .brief-block-warn {
+      background: var(--amber-soft);
+      border-color: var(--amber-border);
+    }
+
+    .brief-label {
+      display: block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .brief-list {
+      margin: 6px 0 0;
+      padding-left: 20px;
+    }
+
+    .brief-list li {
+      margin-bottom: 4px;
+    }
+
+    .script-quote {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin-top: 6px;
+      font-size: 0.9rem;
+    }
+
+    .material-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .material-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .material-links a:hover { text-decoration: underline; }
+
+    /* Post idea fallback */
     .post-idea {
       background: var(--muted-bg);
       border-radius: 8px;
-      padding: 11px 13px;
-      font-size: 0.93rem;
+      padding: 12px 14px;
+      font-size: 0.94rem;
       margin-bottom: 10px;
     }
 
@@ -228,64 +801,130 @@
       color: var(--muted);
     }
 
-    details {
-      margin-top: 10px;
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--accent);
-      user-select: none;
-    }
-
-    .details-body {
-      margin-top: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .details-body a {
-      color: var(--accent);
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    .details-body a:hover { text-decoration: underline; }
-
     .empty-state {
       background: var(--surface);
       border: 1px dashed var(--border);
       border-radius: var(--radius);
-      padding: 24px;
-      color: var(--muted);
+      padding: 40px 20px;
       text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 16px 12px 60px; }
+      .hero-search-row { flex-direction: column; }
+      .stepper-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div>
-        <h1>NSP India — Recommendations</h1>
-        <p id="scheduleSub" class="subtitle">Loading recommendations...</p>
+      <div class="brand-title-wrap">
+        <span class="brand-badge">⚡ Autonomous Intelligence V2</span>
+        <h1>Website-Driven Content Intelligence Engine</h1>
+        <p class="subtitle">Autonomous crawling, offering extraction, trade signal filtering &amp; non-technical creator briefs for any business.</p>
       </div>
-      <div class="actions">
-        <button id="triggerReportBtn" class="btn-primary" type="button">Generate Fresh Recommendations</button>
+      <div class="header-actions">
+        <span id="activeBrandStatusTag" class="pill pill-safe">System Ready</span>
       </div>
     </header>
 
-    <div id="jobBanner" class="banner">
-      <span id="jobBannerText"></span>
-      <span id="jobBannerMeta"></span>
-    </div>
+    <!-- Hero Website Input Box -->
+    <section class="hero-search-card">
+      <div class="hero-search-label">
+        <span>Enter Business Website URL</span>
+        <span style="font-weight: normal; color: var(--muted); font-size: 0.8rem;">Supports B2B SaaS, D2C, Logistics &amp; more</span>
+      </div>
+      <form id="recommendationsForm" class="hero-search-row">
+        <div class="url-input-wrap">
+          <input
+            id="websiteUrlInput"
+            type="text"
+            placeholder="e.g. https://www.nspglobalservices.com or https://bluetokaicoffee.com"
+            value="https://www.nspglobalservices.com/"
+            required
+          />
+        </div>
+        <button id="getRecsBtn" class="btn-primary" type="submit">
+          <span>Get Recommendations</span>
+        </button>
+      </form>
+      <div class="hero-options-row">
+        <label class="toggle-label" title="Ignore 30-day cache and perform a live web crawl & extraction">
+          <input id="forceRefreshToggle" type="checkbox" />
+          <span>Force Refresh Brand Profile (bypass 30-day cache)</span>
+        </label>
+        <div class="sample-pills">
+          <span style="color: var(--muted); font-size: 0.78rem;">Quick samples:</span>
+          <button type="button" class="sample-pill-btn" data-url="https://www.nspglobalservices.com/">NSP (B2B SaaS)</button>
+          <button type="button" class="sample-pill-btn" data-url="https://bluetokaicoffee.com/">Blue Tokai (D2C Coffee)</button>
+          <button type="button" class="sample-pill-btn" data-url="https://www.lineagelogistics.com/">Lineage (Cold Chain)</button>
+        </div>
+      </div>
+    </section>
 
+    <!-- 14-Stage Real-Time Execution Stepper -->
+    <section id="stepperContainer" class="stepper-card">
+      <div class="stepper-header">
+        <div class="stepper-title">
+          <span id="stepperStatusSpinner" class="spinner"></span>
+          <span id="stepperHeading">Autonomous Pipeline Execution</span>
+        </div>
+        <div class="stepper-meta">
+          <span id="stepperElapsedTimer">00:00</span>
+          <span>•</span>
+          <span id="stepperRevision">Rev 0</span>
+        </div>
+      </div>
+      <div class="progress-bar-track">
+        <div id="progressBarFill" class="progress-bar-fill"></div>
+      </div>
+      <div id="stepperBanner" class="stepper-message-banner">
+        <span id="stepperBannerText">Initializing autonomous recommendation engine...</span>
+      </div>
+      <div id="stepperGrid" class="stepper-grid">
+        <!-- 14 stages dynamically injected -->
+      </div>
+    </section>
+
+    <!-- Brand Profile Banner -->
+    <section id="brandProfileBanner" class="brand-banner">
+      <div class="brand-banner-head">
+        <div>
+          <div class="brand-meta-name">
+            <span id="brandNameDisplay">—</span>
+            <a id="brandWebsiteLink" class="brand-domain-link" href="#" target="_blank" rel="noopener noreferrer">↗ Visit website</a>
+          </div>
+          <div class="brand-tags-row">
+            <span id="brandIndustryTag" class="brand-tag">Industry: —</span>
+            <span id="brandMarketTag" class="brand-tag">Market: —</span>
+            <span id="brandStatusTag" class="brand-tag">Onboarding: —</span>
+          </div>
+        </div>
+      </div>
+      <div class="brand-chips-section">
+        <div>
+          <div class="chip-block-title">Verified Brand Offerings / Services</div>
+          <div id="brandOfferingsChips" class="chips-wrap">
+            <span class="chip">No offerings loaded</span>
+          </div>
+        </div>
+        <div>
+          <div class="chip-block-title">Verified Trade Competitors</div>
+          <div id="brandCompetitorsChips" class="chips-wrap">
+            <span class="chip">No competitors loaded</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ask Panel (Interactive On-Demand Answers) -->
     <section class="ask-panel">
       <form id="askForm" class="ask-row">
-        <input id="askInput" type="text" placeholder="Want something right now? Ask for a post topic or marketing angle..." />
+        <input id="askInput" type="text" placeholder="Need content angle right now? Ask a topic, objection or marketing question..." />
         <button id="askBtn" class="btn-primary" type="submit">Ask Right Now</button>
       </form>
       <div id="answerBox" class="answer-box">
@@ -294,6 +933,26 @@
       </div>
     </section>
 
+    <!-- Market Pulse & Competitor Watch Panel -->
+    <details id="marketPulsePanel" class="pulse-panel" style="display: none;">
+      <summary>Trade Market Pulse &amp; Competitor Radar</summary>
+      <div class="pulse-grid">
+        <div class="pulse-box">
+          <strong>Market Pulse</strong>
+          <div id="pulseSummary">—</div>
+        </div>
+        <div class="pulse-box">
+          <strong>Trending in Sector</strong>
+          <ul id="pulseTrends"></ul>
+        </div>
+        <div class="pulse-box">
+          <strong>Competitor Watch</strong>
+          <ul id="pulseCompetitors"></ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Recommendations Stream Container -->
     <section>
       <div class="section-bar">
         <h2 id="recsHeading">Recommended by Engine</h2>
@@ -304,8 +963,31 @@
   </div>
 
   <script>
-    let pollingTimer = null;
+    // Stage configurations for 14-stage stepper
+    const STAGE_DEFINITIONS = [
+      { key: "url_validation", label: "1. URL Validation", desc: "Normalize URL & canonical key" },
+      { key: "brand_lookup", label: "2. Brand Lookup", desc: "Cache & freshness verification" },
+      { key: "website_analysis", label: "3. Website Crawler", desc: "Autonomous depth-1 page crawl" },
+      { key: "brand_extraction", label: "4. Brand Extraction", desc: "Extract positioning & verified offerings" },
+      { key: "competitor_research", label: "5. Competitor Research", desc: "Discover direct & indirect rivals" },
+      { key: "industry_sources", label: "6. Industry Sources", desc: "Discover & validate trade RSS feeds" },
+      { key: "signal_collection", label: "7. Signal Aggregation", desc: "Gather multi-channel trade signals" },
+      { key: "event_clustering", label: "8. Event Clustering", desc: "Brand-aware pre-filter & synergy scoring" },
+      { key: "context_research", label: "9. Context Research", desc: "Multi-source evidence & facts" },
+      { key: "opportunity_matching", label: "10. Archetype Matching", desc: "Map to 6 Universal Archetypes" },
+      { key: "content_ideation", label: "11. Creator Briefs", desc: "8-question non-technical ideation" },
+      { key: "critic_evaluation", label: "12. Objective Critic", desc: "Commercial fit & fact-check audit" },
+      { key: "ranking_persistence", label: "13. Ranking & Storage", desc: "Atomic database persistence" },
+      { key: "completed", label: "14. Complete", desc: "Deliver actionable creator briefs" },
+    ];
 
+    let currentEventSource = null;
+    let timerInterval = null;
+    let timerStartMs = 0;
+    let activeRunId = null;
+    let latestRevisionSeen = -1;
+
+    // Helper DOM creators
     function el(tag, className, text) {
       const node = document.createElement(tag);
       if (className) node.className = className;
@@ -330,10 +1012,16 @@
     }
 
     function formatDate(iso) {
-      if (!iso) return "Not scheduled";
+      if (!iso) return "Not available";
       const d = new Date(iso);
       if (Number.isNaN(d.getTime())) return iso;
       return d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+    }
+
+    function formatCategory(cat) {
+      return String(cat || "")
+        .replace(/_/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase());
     }
 
     function riskClass(risk) {
@@ -341,6 +1029,252 @@
       if (r === "safe") return "pill pill-safe";
       if (r === "caution") return "pill pill-caution";
       return "pill pill-blocked";
+    }
+
+    // Initialize Stepper DOM
+    function initializeStepperGrid() {
+      const grid = document.getElementById("stepperGrid");
+      grid.replaceChildren();
+
+      STAGE_DEFINITIONS.forEach((st) => {
+        const item = el("div", "step-item pending");
+        item.id = `stepItem_${st.key}`;
+
+        const iconWrap = el("div", "step-icon-wrap");
+        iconWrap.id = `stepIcon_${st.key}`;
+        iconWrap.textContent = "○";
+        item.appendChild(iconWrap);
+
+        const info = el("div", "step-info");
+        info.appendChild(el("span", "step-name", st.label));
+        const descSpan = el("span", "step-desc", st.desc);
+        descSpan.id = `stepDesc_${st.key}`;
+        info.appendChild(descSpan);
+        item.appendChild(info);
+
+        const badge = el("span", "step-status-badge", "PENDING");
+        badge.id = `stepBadge_${st.key}`;
+        item.appendChild(badge);
+
+        grid.appendChild(item);
+      });
+    }
+
+    function startTimer() {
+      timerStartMs = Date.now();
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        const elapsedSec = Math.floor((Date.now() - timerStartMs) / 1000);
+        const mins = String(Math.floor(elapsedSec / 60)).padStart(2, "0");
+        const secs = String(elapsedSec % 60).padStart(2, "0");
+        document.getElementById("stepperElapsedTimer").textContent = `${mins}:${secs}`;
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+    }
+
+    // Update 14-stage stepper on progress snapshot
+    function updateProgressUI(snapshot) {
+      if (!snapshot) return;
+
+      if (snapshot.revision !== undefined && snapshot.revision < latestRevisionSeen) {
+        return; // Ignore older revisions
+      }
+      latestRevisionSeen = snapshot.revision ?? latestRevisionSeen;
+
+      document.getElementById("stepperRevision").textContent = `Rev ${snapshot.revision ?? 0}`;
+      const banner = document.getElementById("stepperBanner");
+      const bannerText = document.getElementById("stepperBannerText");
+      const progressBar = document.getElementById("progressBarFill");
+      const spinner = document.getElementById("stepperStatusSpinner");
+
+      bannerText.textContent = snapshot.message || `Running stage: ${snapshot.currentStage}...`;
+
+      // Calculate progress percentage
+      const stages = snapshot.stages || {};
+      const completedCount = snapshot.completedStages ? snapshot.completedStages.length : 0;
+      let pct = Math.min(100, Math.round((completedCount / STAGE_DEFINITIONS.length) * 100));
+      if (snapshot.overallStatus === "completed") pct = 100;
+      progressBar.style.width = `${pct}%`;
+
+      // Update individual stage items
+      STAGE_DEFINITIONS.forEach((st) => {
+        const stageData = stages[st.key] || { status: "pending" };
+        const item = document.getElementById(`stepItem_${st.key}`);
+        const iconWrap = document.getElementById(`stepIcon_${st.key}`);
+        const badge = document.getElementById(`stepBadge_${st.key}`);
+        const descSpan = document.getElementById(`stepDesc_${st.key}`);
+        if (!item) return;
+
+        item.className = `step-item ${stageData.status}`;
+        badge.textContent = stageData.status.toUpperCase();
+
+        if (stageData.details) {
+          descSpan.textContent = stageData.details;
+        }
+
+        iconWrap.replaceChildren();
+        if (stageData.status === "completed") {
+          iconWrap.textContent = "✓";
+        } else if (stageData.status === "running") {
+          iconWrap.appendChild(el("span", "spinner"));
+        } else if (stageData.status === "skipped") {
+          iconWrap.textContent = "↷";
+        } else if (stageData.status === "failed") {
+          iconWrap.textContent = "✕";
+        } else {
+          iconWrap.textContent = "○";
+        }
+      });
+
+      if (snapshot.overallStatus === "completed") {
+        banner.className = "stepper-message-banner completed";
+        spinner.style.display = "none";
+        stopTimer();
+      } else if (snapshot.overallStatus === "failed") {
+        banner.className = "stepper-message-banner failed";
+        bannerText.textContent = `Pipeline Failed: ${snapshot.error || "Unknown execution error."}`;
+        spinner.style.display = "none";
+        stopTimer();
+      } else {
+        banner.className = "stepper-message-banner";
+        spinner.style.display = "inline-block";
+      }
+    }
+
+    // Connect to SSE stream
+    function connectProgressStream(runId, brandId) {
+      if (currentEventSource) {
+        currentEventSource.close();
+      }
+
+      activeRunId = runId;
+      latestRevisionSeen = -1;
+      const stepper = document.getElementById("stepperContainer");
+      stepper.classList.add("visible");
+      startTimer();
+
+      const getRecsBtn = document.getElementById("getRecsBtn");
+      getRecsBtn.disabled = true;
+      getRecsBtn.textContent = "Analyzing Website...";
+
+      const sseUrl = `/api/recommendations/stream?runId=${runId}`;
+      const es = new EventSource(sseUrl);
+      currentEventSource = es;
+
+      es.addEventListener("progress", async (evt) => {
+        try {
+          const snapshot = JSON.parse(evt.data);
+          updateProgressUI(snapshot);
+
+          if (snapshot.overallStatus === "completed") {
+            es.close();
+            currentEventSource = null;
+            getRecsBtn.disabled = false;
+            getRecsBtn.textContent = "Get Recommendations";
+
+            // Refresh Brand Details and Dashboard
+            if (brandId) {
+              await loadBrandDetails(brandId);
+            }
+            await loadDashboardForRun(runId);
+          } else if (snapshot.overallStatus === "failed") {
+            es.close();
+            currentEventSource = null;
+            getRecsBtn.disabled = false;
+            getRecsBtn.textContent = "Get Recommendations";
+          }
+        } catch (err) {
+          console.error("Failed to parse progress event:", err);
+        }
+      });
+
+      es.addEventListener("error", (err) => {
+        console.warn("SSE connection error or closed:", err);
+        // Fallback polling check
+        pollStatusFallback(runId, brandId);
+      });
+    }
+
+    async function pollStatusFallback(runId, brandId) {
+      try {
+        const res = await fetch(`/api/recommendations/status?runId=${runId}`);
+        if (!res.ok) return;
+        const snapshot = await res.json();
+        updateProgressUI(snapshot);
+        if (snapshot.overallStatus === "completed") {
+          if (currentEventSource) currentEventSource.close();
+          const getRecsBtn = document.getElementById("getRecsBtn");
+          getRecsBtn.disabled = false;
+          getRecsBtn.textContent = "Get Recommendations";
+          if (brandId) await loadBrandDetails(brandId);
+          await loadDashboardForRun(runId);
+        }
+      } catch (e) {
+        console.error("Polling fallback failed:", e);
+      }
+    }
+
+    // Fetch and render brand profile details
+    async function loadBrandDetails(brandId) {
+      try {
+        const res = await fetch(`/api/brand/details?brandId=${brandId}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        renderBrandBanner(data);
+      } catch (err) {
+        console.error("Failed to fetch brand details:", err);
+      }
+    }
+
+    function renderBrandBanner(data) {
+      if (!data || !data.brand) return;
+      const b = data.brand;
+      const banner = document.getElementById("brandProfileBanner");
+      banner.classList.add("visible");
+
+      document.getElementById("brandNameDisplay").textContent = b.brandName || "Brand Profile";
+      const link = document.getElementById("brandWebsiteLink");
+      link.href = b.canonicalUrl || "#";
+      link.textContent = `↗ ${b.canonicalUrl || "website"}`;
+
+      document.getElementById("brandIndustryTag").textContent = `Industry: ${b.industry || "General"}`;
+      document.getElementById("brandMarketTag").textContent = `Market: ${b.targetMarket || "Global"}`;
+      document.getElementById("brandStatusTag").textContent = `Status: ${b.onboardingStatus || "completed"}`;
+
+      // Offerings
+      const offWrap = document.getElementById("brandOfferingsChips");
+      offWrap.replaceChildren();
+      if (Array.isArray(data.services) && data.services.length > 0) {
+        data.services.forEach((s) => {
+          offWrap.appendChild(el("span", "chip chip-offering", s.name));
+        });
+      } else {
+        offWrap.appendChild(el("span", "chip", "No verified offerings yet"));
+      }
+
+      // Competitors
+      const compWrap = document.getElementById("brandCompetitorsChips");
+      compWrap.replaceChildren();
+      if (Array.isArray(data.competitors) && data.competitors.length > 0) {
+        data.competitors.forEach((c) => {
+          compWrap.appendChild(el("span", "chip chip-competitor", c.name));
+        });
+      } else {
+        compWrap.appendChild(el("span", "chip", "No competitors mapped yet"));
+      }
+    }
+
+    // Build 8-question non-technical brief cards
+    function addBriefBlock(parent, numberLabel, bodyText, variantClass) {
+      if (!bodyText) return null;
+      const box = el("div", `brief-block${variantClass ? " " + variantClass : ""}`);
+      box.appendChild(el("span", "brief-label", numberLabel));
+      box.appendChild(el("div", null, bodyText));
+      parent.appendChild(box);
+      return box;
     }
 
     function buildRecommendationCard(index, rec) {
@@ -351,43 +1285,150 @@
       pills.appendChild(el("span", "pill", `#${index + 1}`));
       if (rec.platform) pills.appendChild(el("span", "pill", rec.platform));
       if (rec.format) pills.appendChild(el("span", "pill", rec.format));
-      if (rec.category) pills.appendChild(el("span", "pill", rec.category));
+      if (rec.category) pills.appendChild(el("span", "pill", formatCategory(rec.category)));
+      if (rec.opportunityType) pills.appendChild(el("span", "pill", formatCategory(rec.opportunityType)));
+      if (rec.criticVerdict) {
+        const v = String(rec.criticVerdict).toUpperCase();
+        const vClass = v === "ACCEPT" ? "pill pill-safe" : v === "REVISE" ? "pill pill-caution" : "pill pill-blocked";
+        pills.appendChild(el("span", vClass, `Critic: ${v}`));
+      }
+      if (rec.indiaAvailability) {
+        const avClass = String(rec.indiaAvailability).toLowerCase().includes("available in india")
+          ? "pill pill-safe"
+          : "pill pill-caution";
+        pills.appendChild(el("span", avClass, rec.indiaAvailability));
+      }
       pills.appendChild(el("span", riskClass(rec.risk), String(rec.risk || "safe").toUpperCase()));
 
       top.appendChild(pills);
-      if (rec.urgency) top.appendChild(el("span", "run-meta", `Urgency: ${rec.urgency}`));
+      if (rec.urgency) top.appendChild(el("span", "run-meta", `Timing: ${String(rec.urgency).replace(/_/g, " ")}`));
       card.appendChild(top);
 
       card.appendChild(el("h3", null, rec.title));
 
+      const audienceProfile = rec.targetAudienceProfile || rec.targetSaasProfile;
+      const coreProblem = rec.coreBusinessProblem || rec.saasBusinessProblem;
+      if (audienceProfile || coreProblem) {
+        const metaBanner = el("div", "saas-meta-banner");
+        if (audienceProfile) {
+          metaBanner.appendChild(el("span", "saas-badge", `Target Audience: ${audienceProfile}`));
+        }
+        if (coreProblem) {
+          metaBanner.appendChild(el("span", "saas-badge", `Core Problem: ${coreProblem}`));
+        }
+        card.appendChild(metaBanner);
+      }
+
+      // 8-question non-technical brief
+      if (rec.whatHappened || rec.whatToCreate || rec.howToCreate) {
+        const grid = el("div", "brief-grid");
+
+        addBriefBlock(grid, "1. What happened?", rec.whatHappened);
+        addBriefBlock(grid, "2. Why should the brand care?", rec.whyBrandShouldCare || rec.whyNspShouldCare);
+        addBriefBlock(grid, "3. What should we create?", rec.whatToCreate, "brief-block-highlight");
+
+        if (rec.howToCreate) {
+          const howBox = el("div", "brief-block");
+          howBox.appendChild(el("span", "brief-label", "4. How should we create it?"));
+
+          if (rec.howToCreate.opening_line) {
+            const openQ = el("div", "script-quote");
+            openQ.appendChild(el("strong", null, "Opening line: "));
+            openQ.appendChild(document.createTextNode(rec.howToCreate.opening_line));
+            howBox.appendChild(openQ);
+          }
+
+          if (Array.isArray(rec.howToCreate.what_to_show) && rec.howToCreate.what_to_show.length > 0) {
+            howBox.appendChild(el("div", null, "What to show:"));
+            const ul = el("ul", "brief-list");
+            for (const step of rec.howToCreate.what_to_show) {
+              ul.appendChild(el("li", null, step));
+            }
+            howBox.appendChild(ul);
+          }
+
+          if (rec.howToCreate.demonstration_step) {
+            const demo = el("div", "script-quote");
+            demo.appendChild(el("strong", null, "Demo / walkthrough: "));
+            demo.appendChild(document.createTextNode(rec.howToCreate.demonstration_step));
+            howBox.appendChild(demo);
+          }
+
+          if (Array.isArray(rec.howToCreate.on_screen_text) && rec.howToCreate.on_screen_text.length > 0) {
+            const txtLine = el("div", "script-quote");
+            txtLine.appendChild(el("strong", null, "On-screen text: "));
+            txtLine.appendChild(document.createTextNode(rec.howToCreate.on_screen_text.join("  |  ")));
+            howBox.appendChild(txtLine);
+          }
+
+          if (rec.howToCreate.ending_line) {
+            const endQ = el("div", "script-quote");
+            endQ.appendChild(el("strong", null, "Ending line: "));
+            endQ.appendChild(document.createTextNode(rec.howToCreate.ending_line));
+            howBox.appendChild(endQ);
+          }
+
+          grid.appendChild(howBox);
+        }
+
+        if (Array.isArray(rec.whereToGetMaterial) && rec.whereToGetMaterial.length > 0) {
+          const matBox = el("div", "brief-block");
+          matBox.appendChild(el("span", "brief-label", "5. Where do we get the material?"));
+          const links = el("div", "material-links");
+          for (const m of rec.whereToGetMaterial) {
+            const row = el("div", null);
+            row.appendChild(safeLink(m.url, m.label || m.url));
+            if (m.what_to_record_or_screenshot) {
+              row.appendChild(el("div", "run-meta", m.what_to_record_or_screenshot));
+            }
+            links.appendChild(row);
+          }
+          matBox.appendChild(links);
+          grid.appendChild(matBox);
+        }
+
+        addBriefBlock(grid, "6. What should we communicate?", rec.whatToCommunicate);
+
+        if (rec.whenToPublish) {
+          const whenText = rec.whenToPublish.timing_reason
+            ? `${String(rec.whenToPublish.urgency || "").replace(/_/g, " ").toUpperCase()} — ${rec.whenToPublish.timing_reason}`
+            : String(rec.whenToPublish.urgency || "");
+          addBriefBlock(grid, "7. When should we publish?", whenText);
+        }
+
+        if (rec.whatToVerify) {
+          const vBox = el("div", "brief-block brief-block-warn");
+          vBox.appendChild(el("span", "brief-label", "8. What must we verify before posting?"));
+          if (rec.whatToVerify.india_availability) {
+            vBox.appendChild(el("div", null, `Regional availability: ${rec.whatToVerify.india_availability}`));
+          }
+          if (rec.whatToVerify.who_can_use_it) {
+            vBox.appendChild(el("div", null, `Eligible audience: ${rec.whatToVerify.who_can_use_it}`));
+          }
+          if (Array.isArray(rec.whatToVerify.facts_and_claims_to_check) && rec.whatToVerify.facts_and_claims_to_check.length > 0) {
+            const ul = el("ul", "brief-list");
+            for (const f of rec.whatToVerify.facts_and_claims_to_check) {
+              ul.appendChild(el("li", null, f));
+            }
+            vBox.appendChild(ul);
+          }
+          grid.appendChild(vBox);
+        }
+
+        card.appendChild(grid);
+        return card;
+      }
+
+      // Legacy fallback
       if (rec.whatToPost) {
         const box = el("div", "post-idea");
-        const strong = el("strong", null, "What to post: ");
-        box.appendChild(strong);
+        box.appendChild(el("strong", null, "What to post: "));
         box.appendChild(document.createTextNode(rec.whatToPost));
         card.appendChild(box);
       }
-
       if (rec.whyNow) {
         card.appendChild(el("p", "why-line", `Why now: ${rec.whyNow}`));
       }
-
-      const hasDetails = rec.brandConnection || rec.executionNote || (rec.evidenceUrls && rec.evidenceUrls.length > 0);
-      if (hasDetails) {
-        const details = document.createElement("details");
-        details.appendChild(el("summary", null, "Brand fit & sources"));
-        const body = el("div", "details-body");
-        if (rec.brandConnection) body.appendChild(el("div", null, `Brand connection: ${rec.brandConnection}`));
-        if (rec.executionNote) body.appendChild(el("div", null, `Execution note: ${rec.executionNote}`));
-        if (rec.evidenceUrls && rec.evidenceUrls.length > 0) {
-          for (const url of rec.evidenceUrls) {
-            body.appendChild(safeLink(url, url));
-          }
-        }
-        details.appendChild(body);
-        card.appendChild(details);
-      }
-
       return card;
     }
 
@@ -399,12 +1440,13 @@
       heading.textContent = `Recommended by Engine (${items.length})`;
 
       if (items.length === 0) {
-        container.appendChild(el("div", "empty-state", "No recommendations yet. Click 'Generate Fresh Recommendations' above to run the engine now."));
+        container.appendChild(el("div", "empty-state", "No recommendations found for this run. Enter a website URL above and click 'Get Recommendations' to trigger the autonomous engine."));
         return;
       }
 
       items.forEach((item, idx) => {
         const c = item.cardJson || {};
+        const meta = c.metadata || {};
         container.appendChild(
           buildRecommendationCard(idx, {
             title: c.title || item.title,
@@ -412,94 +1454,118 @@
             platform: c.suggested_platform,
             format: c.suggested_format,
             risk: c.risk || item.risk,
-            urgency: c.urgency,
+            criticVerdict: item.criticVerdict || meta.critic_verdict,
+            opportunityType: meta.opportunity_type,
+            targetAudienceProfile: meta.target_audience_profile || meta.target_saas_profile,
+            coreBusinessProblem: meta.core_business_problem || meta.saas_business_problem,
+            urgency: (c.when_to_publish && c.when_to_publish.urgency) || c.urgency,
+            indiaAvailability: c.what_to_verify ? c.what_to_verify.india_availability : null,
+            whatHappened: c.what_happened,
+            whyBrandShouldCare: c.why_brand_should_care || c.why_nsp_should_care,
+            whatToCreate: c.what_to_create,
+            howToCreate: c.how_to_create_it,
+            whereToGetMaterial: c.where_to_get_material,
+            whatToCommunicate: c.what_to_communicate,
+            whenToPublish: c.when_to_publish,
+            whatToVerify: c.what_to_verify,
             whatToPost: c.what_to_post,
             whyNow: c.why_now,
-            brandConnection: c.brand_connection,
-            executionNote: c.execution_note,
-            evidenceUrls: Array.isArray(c.evidence) ? c.evidence.map((e) => e.url).filter(Boolean) : [],
           }),
         );
       });
     }
 
-    function renderJobBanner(job) {
-      const banner = document.getElementById("jobBanner");
-      const text = document.getElementById("jobBannerText");
-      const meta = document.getElementById("jobBannerMeta");
-      const btn = document.getElementById("triggerReportBtn");
-
-      if (!job || job.status === "idle") {
-        banner.className = "banner";
-        btn.disabled = false;
-        btn.textContent = "Generate Fresh Recommendations";
+    function renderMarketPulse(scan) {
+      const panel = document.getElementById("marketPulsePanel");
+      if (!scan || !scan.india_market_pulse) {
+        panel.style.display = "none";
         return;
       }
+      panel.style.display = "block";
+      document.getElementById("pulseSummary").textContent = scan.india_market_pulse;
 
-      banner.className = `banner visible ${job.status}`;
-      if (job.status === "running") {
-        btn.disabled = true;
-        btn.textContent = "Generating...";
-        text.textContent = job.phase || "Running engine...";
-        meta.textContent = job.startedAt ? formatDate(job.startedAt) : "";
-      } else if (job.status === "completed") {
-        btn.disabled = false;
-        btn.textContent = "Generate Fresh Recommendations";
-        text.textContent = `Done — generated ${job.recommendationsCount ?? 0} recommendations.`;
-        meta.textContent = "";
-      } else if (job.status === "failed") {
-        btn.disabled = false;
-        btn.textContent = "Generate Fresh Recommendations";
-        text.textContent = `Failed: ${job.error || "Unknown error"}`;
-        meta.textContent = "";
+      const trendsUl = document.getElementById("pulseTrends");
+      trendsUl.replaceChildren();
+      for (const t of scan.trending_in_nsp_sectors || []) {
+        trendsUl.appendChild(el("li", null, t));
+      }
+
+      const compUl = document.getElementById("pulseCompetitors");
+      compUl.replaceChildren();
+      for (const c of scan.competitor_watch || []) {
+        const li = el("li", null);
+        li.appendChild(el("strong", null, `${c.name_or_group}: `));
+        li.appendChild(document.createTextNode(c.observed_activity + " "));
+        if (c.source_url) li.appendChild(safeLink(c.source_url, "Source"));
+        compUl.appendChild(li);
       }
     }
 
-    async function loadDashboard() {
-      const res = await fetch("/api/dashboard");
+    async function loadDashboardForRun(runId) {
+      const url = runId ? `/api/dashboard?runId=${runId}` : `/api/dashboard`;
+      const res = await fetch(url);
+      if (!res.ok) return;
       const data = await res.json();
-      if (!res.ok) {
-        alert(data.error || "Failed to load recommendations.");
-        return;
-      }
 
-      const activeRun = (data.recentRuns || []).find((r) => r.id === data.activeRunId);
-      document.getElementById("scheduleSub").textContent = data.brand?.nextReportAt
-        ? `Next 15-day auto run: ${formatDate(data.brand.nextReportAt)}`
-        : "Manual & 15-day recommendation engine";
+      const activeRun = (data.recentRuns || []).find((r) => r.id === data.activeRunId) || (data.recentRuns || [])[0];
       document.getElementById("runMeta").textContent = activeRun
-        ? `Run: ${activeRun.runKey}`
+        ? `Active Report: ${activeRun.runKey} (${formatDate(activeRun.startedAt)})`
         : "";
 
+      renderMarketPulse(data.marketScan);
       renderRecommendations(data.recommendations || []);
-      renderJobBanner(data.manualJob);
-
-      if (data.manualJob?.status === "running" && !pollingTimer) {
-        startPollingJob();
+      if (data.brand?.id) {
+        await loadBrandDetails(data.brand.id);
       }
     }
 
-    function startPollingJob() {
-      if (pollingTimer) return;
-      pollingTimer = setInterval(async () => {
-        const res = await fetch("/api/job");
-        const job = await res.json();
-        renderJobBanner(job);
-        if (job.status !== "running") {
-          clearInterval(pollingTimer);
-          pollingTimer = null;
-          await loadDashboard();
-        }
-      }, 3000);
-    }
+    // Form submission: Get Recommendations
+    document.getElementById("recommendationsForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const rawUrl = document.getElementById("websiteUrlInput").value.trim();
+      const refreshProfile = document.getElementById("forceRefreshToggle").checked;
+      if (!rawUrl) return;
 
-    document.getElementById("triggerReportBtn").addEventListener("click", async () => {
-      const res = await fetch("/api/trigger-report", { method: "POST" });
-      const data = await res.json();
-      renderJobBanner(data.manualJob);
-      startPollingJob();
+      const getRecsBtn = document.getElementById("getRecsBtn");
+      getRecsBtn.disabled = true;
+      getRecsBtn.textContent = "Initiating Run...";
+
+      try {
+        const res = await fetch("/api/recommendations/start", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: rawUrl, refreshProfile }),
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          alert(data.error || "Failed to start recommendation run.");
+          getRecsBtn.disabled = false;
+          getRecsBtn.textContent = "Get Recommendations";
+          return;
+        }
+
+        initializeStepperGrid();
+        connectProgressStream(data.runId, data.brandId);
+      } catch (err) {
+        alert("Network error: failed to trigger recommendations.");
+        getRecsBtn.disabled = false;
+        getRecsBtn.textContent = "Get Recommendations";
+      }
     });
 
+    // Quick Sample Pills
+    document.querySelectorAll(".sample-pill-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetUrl = btn.getAttribute("data-url");
+        if (targetUrl) {
+          document.getElementById("websiteUrlInput").value = targetUrl;
+          document.getElementById("websiteUrlInput").focus();
+        }
+      });
+    });
+
+    // Ask Right Now submit
     document.getElementById("askForm").addEventListener("submit", async (e) => {
       e.preventDefault();
       const question = document.getElementById("askInput").value.trim();
@@ -549,7 +1615,9 @@
       }
     });
 
-    loadDashboard();
+    // Initial page load
+    initializeStepperGrid();
+    loadDashboardForRun();
   </script>
 </body>
 </html>

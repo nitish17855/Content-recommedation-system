@@ -10,13 +10,15 @@ const STOPWORDS = new Set([
 
 const DOMAIN_TERMS = [
   "seo", "geo", "aeo", "ai overviews", "ai overview", "ai search", "chatgpt",
-  "gemini", "perplexity", "search console", "core update", "google search",
-  "google ads", "performance max", "pmax", "meta ads", "ecommerce", "e-commerce",
-  "shopify", "d2c", "saas", "b2b", "startup", "startups", "india", "indian",
-  "marketing", "advertising", "digital", "content", "brand", "branding",
-  "conversion", "cro", "analytics", "privacy", "shopping", "structured data",
-  "schema", "crawl", "indexing", "ranking", "rankings", "youtube", "instagram",
-  "linkedin", "festive", "quick commerce", "upi", "fintech", "retail",
+  "gemini", "claude", "anthropic", "openai", "perplexity", "automation", "ai agent",
+  "search console", "core update", "google search", "google ads", "performance max",
+  "pmax", "meta ads", "instagram", "reels", "youtube", "linkedin", "whatsapp",
+  "creator", "creators", "ecommerce", "e-commerce", "shopify", "d2c", "quick commerce",
+  "blinkit", "zepto", "zomato", "retail", "consumer", "startup", "startups", "funding",
+  "saas", "b2b", "india", "indian", "marketing", "advertising", "campaign", "digital",
+  "content", "brand", "branding", "conversion", "cro", "analytics", "privacy",
+  "shopping", "structured data", "schema", "crawl", "indexing", "ranking", "rankings",
+  "festive", "upi", "fintech", "small business", "sme", "canva", "adobe",
 ];
 
 const NON_INDIA_GEO_ONLY = [
@@ -60,12 +62,14 @@ export function stripHtmlToExcerpt(raw: string, maxChars = 420): string {
   return `${plain.slice(0, maxChars - 3).trimEnd()}...`;
 }
 
+const ALLOWED_SHORT_TOKENS = new Set(["ai", "ml", "ui", "ux", "ad", "pr", "ip"]);
+
 export function extractSignificantTokens(text: string): string[] {
   return text
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, " ")
     .split(/\s+/)
-    .filter((w) => w.length >= 3 && !STOPWORDS.has(w));
+    .filter((w) => (w.length >= 3 || ALLOWED_SHORT_TOKENS.has(w)) && !STOPWORDS.has(w));
 }
 
 function extractKeywords(title: string, excerpt: string, categories: string[]): string[] {

@@ -59,14 +59,30 @@ function parseFeedXml(xml: string, source: SourceConfig): RawFeedItem[] {
   const doc = parser.parse(xml) as Record<string, unknown>;
   const items: RawFeedItem[] = [];
 
-  // RSS 2.0
+  // RSS 2.0 (also handles Google Trends <ht:news_item> & <ht:approx_traffic>)
   const rss = doc.rss as Record<string, unknown> | undefined;
   const channel = rss?.channel as Record<string, unknown> | undefined;
   if (channel?.item) {
     for (const raw of asArray(channel.item).slice(0, source.maxItems)) {
       const rec = raw as Record<string, unknown>;
-      const title = textOf(rec.title).trim();
-      const url = textOf(rec.link).trim();
+      const rawTitle = textOf(rec.title).trim();
+      const rawUrl = textOf(rec.link).trim();
+      const newsItems = asArray(rec["ht:news_item"] as Record<string, unknown> | undefined);
+      const firstNews = newsItems[0] as Record<string, unknown> | undefined;
+      const newsUrl = firstNews ? textOf(firstNews["ht:news_item_url"]).trim() : "";
+      const newsTitle = firstNews ? textOf(firstNews["ht:news_item_title"]).trim() : "";
+      const newsSnippet = firstNews ? textOf(firstNews["ht:news_item_snippet"]).trim() : "";
+      const approxTraffic = textOf(rec["ht:approx_traffic"]).trim();
+
+      const url = newsUrl || rawUrl;
+      const title = newsTitle && rawTitle && newsTitle.toLowerCase() !== rawTitle.toLowerCase()
+        ? `${rawTitle}: ${newsTitle}`
+        : rawTitle;
+      const baseExcerpt = textOf(rec.description) || textOf(rec["content:encoded"]) || newsSnippet;
+      const excerptRaw = approxTraffic
+        ? `Google Trends India (${approxTraffic} searches): ${baseExcerpt || newsTitle || rawTitle}`
+        : baseExcerpt;
+
       if (!title || !url) continue;
       items.push({
         sourceId: source.id,
@@ -76,7 +92,7 @@ function parseFeedXml(xml: string, source: SourceConfig): RawFeedItem[] {
         title,
         url,
         publishedAtRaw: textOf(rec.pubDate) || textOf(rec["dc:date"]) || null,
-        excerptRaw: textOf(rec.description) || textOf(rec["content:encoded"]) || "",
+        excerptRaw,
         categories: extractCategories(rec.category),
       });
     }

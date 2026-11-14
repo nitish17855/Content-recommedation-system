@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { loadEnv } from "../config/env.js";
+import { hasAnyAiKey, loadEnv } from "../config/env.js";
 import { loadSeedDataset } from "../data/loader.js";
 import { collectRssSources } from "../sources/rss-collector.js";
 import { SOURCE_REGISTRY } from "../sources/source-registry.js";
@@ -13,7 +13,9 @@ import { researchClusterContext } from "../pipeline/context-research.js";
 import { matchOpportunityToBrand } from "../pipeline/opportunity-match.js";
 import { generateCreativeRoutes } from "../pipeline/ideation.js";
 import { critiqueCreativeRoutes } from "../pipeline/critic.js";
+import { scanIndiaMarketTrends, reorderClustersByMarketScan } from "../pipeline/market-scan.js";
 import { rankAndSelectRecommendations, type EvaluatedCandidate } from "../pipeline/ranking.js";
+import type { MarketScanOutput } from "../ai/schemas.js";
 import { buildComparisonNotesTemplate, generateDirectBaseline } from "../pipeline/report.js";
 
 async function main() {
@@ -36,10 +38,10 @@ async function main() {
   const normalized = normalizeSignals(items, now);
   const { uniqueSignals, droppedDuplicates } = deduplicateSignals(normalized);
   const clusters = clusterSignals(uniqueSignals);
-  const candidates = selectCandidateClusters(clusters, env.MAX_CLUSTERS_FOR_LLM, now);
+  const broadPool = selectCandidateClusters(clusters, 24, now);
 
   console.log(
-    `\nDeterministic summary: uniqueSignals=${uniqueSignals.length}, droppedDuplicates=${droppedDuplicates}, clusters=${clusters.length}, selectedCandidates=${candidates.length}`,
+    `\nDeterministic summary: uniqueSignals=${uniqueSignals.length}, droppedDuplicates=${droppedDuplicates}, clusters=${clusters.length}, broadPool=${broadPool.length}`,
   );
 
   const outDir = path.resolve("reports", dateStamp);
@@ -53,7 +55,7 @@ async function main() {
         source_runs: sourceRuns,
         total_signals: uniqueSignals.length,
         total_clusters: clusters.length,
-        selected_candidate_ids: candidates.map((c) => c.event_id),
+        selected_candidate_ids: broadPool.map((c) => c.event_id),
         clusters,
       },
       null,
@@ -62,13 +64,13 @@ async function main() {
     "utf8",
   );
 
-  if (!env.GEMINI_API_KEY && !env.OPENROUTER_API_KEY) {
-    console.log("\n[STOPPED BEFORE AI STAGES] Neither GEMINI_API_KEY nor OPENROUTER_API_KEY is set in .env.");
+  if (!hasAnyAiKey(env)) {
+    console.log("\n[STOPPED BEFORE AI STAGES] Neither GEMINI_API_KEY(S) nor OPENROUTER_API_KEY is set in .env.");
     console.log("Selected candidate clusters for AI reasoning:");
-    for (const c of candidates) {
+    for (const c of broadPool) {
       console.log(`  * ${c.event_id} [${c.country_relevance}] ${c.cluster_title}`);
     }
-    console.log("\nAdd GEMINI_API_KEY to .env and re-run `npm run report:once` to generate the 14-field report & baseline comparison.");
+    console.log("\nAdd GEMINI_API_KEY / GEMINI_API_KEYS to .env and re-run `npm run report:once` to generate the 8-question report & baseline comparison.");
     return;
   }
 
@@ -76,6 +78,26 @@ async function main() {
   // Multi-provider quota split: OpenRouter free tier (if set) for context + matching, Gemini for ideation + critic
   const ai = new GeminiPipelineClient(env);
   const firstHalf = selectFirstHalfTarget(env);
+  let marketScan: MarketScanOutput | null = null;
+  if (broadPool.length > 0) {
+    try {
+      console.log(`\nRunning Gemini India market & competitor trend check across ${broadPool.length} clusters...`);
+      marketScan = await scanIndiaMarketTrends({
+        ai,
+        model: env.GEMINI_MODEL_LIGHT,
+        clusters: broadPool,
+        seeds,
+      });
+    } catch (scanErr) {
+      console.warn(
+        "  -> [Market Scan Skipped] Falling back to deterministic ranking:",
+        scanErr instanceof Error ? scanErr.message : String(scanErr),
+      );
+    }
+  }
+  const candidates = marketScan
+    ? reorderClustersByMarketScan(broadPool, marketScan, env.MAX_CLUSTERS_FOR_LLM)
+    : broadPool.slice(0, env.MAX_CLUSTERS_FOR_LLM);
   const contextPacks = [];
   const opportunityResults = [];
   const evaluatedPool: EvaluatedCandidate[] = [];
@@ -142,6 +164,7 @@ async function main() {
           actual_models_used: actualModelsUsed,
           token_usage: tokenSummary,
           usage_breakdown: ai.usageRecords,
+          market_scan: marketScan,
           recommendations_count: recommendations.length,
           recommendations,
           context_packs: contextPacks,
